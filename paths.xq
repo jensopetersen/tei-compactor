@@ -9,7 +9,8 @@ declare function functx:substring-after-last-match
 
    replace($arg,concat('^.*',$regex),'')
  } ;
- 
+
+
 declare function local:build-paths($doc as item()*, $attributes-to-suppress as xs:string*, $attributes-with-value-output as xs:string*) as element()* {
     let $paths :=
         (:we gather all element, attribute and text nodes in the document:)
@@ -152,12 +153,16 @@ declare function local:prune-paths($paths as element()) as element() {
                else
                    if (starts-with(functx:substring-after-last-match($child, '/'), '@'))
                    then ''
-                   else $child
-               
+                   else 
+                       if (contains($child, '/'))
+                       then
+                           element {node-name($child)}
+                           {$child/@*, functx:substring-after-last-match(replace($child, '/text\(\)', '[text()]'), '/')}
+                       else $child
       }
 };
 
-declare function local:reconstruct($doc as item()*, $attributes-to-suppress as xs:string*, $attributes-with-value-output as xs:string*) as element()* {
+declare function local:construct-compressed-tree($doc as item()*, $attributes-to-suppress as xs:string*, $attributes-with-value-output as xs:string*) as element()* {
       let $paths := local:build-paths($doc, $attributes-to-suppress, $attributes-with-value-output)
       let $pruned-paths := local:prune-paths($paths)
       return $pruned-paths
@@ -195,8 +200,6 @@ declare function local:build-tree($nodes as element()*) as element()* {
     }
 };
 
-declare function local:paths-to-list($paths as element()) as element() {''};
-
 let $doc := 
 <doc xml:id="x">
     <a>
@@ -222,8 +225,8 @@ let $doc := doc('/db/test/test-doc.xml')
 let $attributes-to-suppress := ''
 (:('xml:id', 'n'):)
 let $attributes-with-value-output := ('type')
-let $target := 'paths'
+let $target := 'tree'
 
 return if ($target eq 'paths')
 then local:build-paths($doc, $attributes-to-suppress, $attributes-with-value-output)
-else local:reconstruct($doc, $attributes-to-suppress, $attributes-with-value-output)
+else local:construct-compressed-tree($doc, $attributes-to-suppress, $attributes-with-value-output)
