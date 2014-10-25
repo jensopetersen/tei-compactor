@@ -1,49 +1,50 @@
 xquery version "3.0";
 
-let $doc :=
+let $doc := 
 <doc xml:id="x">
     <a>
         <b x="1">text1<e>text2</e>text3</b>
         </a>
-    <a>
+    <a u="5">
         <c>
             <d y="2" z="3">text4</d>
             </c>
     </a>
     <a>
         <c>
-            <d y="4">text5</d>
+            <e y="4">text5<p n="6"/>text6</e>
             </c>
     </a>
 </doc>
 
+let $doc := doc('/db/test/test-doc.xml')
+let $c := $doc//c
+
 return 
-    let $paths :=
-        for $node in ($doc//element())
-        let $ancestors := $node/ancestor-or-self::*
-        let $ancestors := 
-          concat(string-join(
-            for $ancestor in $ancestors
-            return concat(name($ancestor), 
-              string-join(
-                let $attributes := $ancestor/attribute()
-                  for $attribute in $attributes
-                  return concat('[@', name($attribute), ']'))
-              , '/')
-            
-        ), if ($node/text())
-          then 'text()'
-          else 'node()')
-        return $ancestors
-        
-        
-    return distinct-values($paths)
-
-#
-
-doc[@xml:id]/a/node()
-doc[@xml:id]/a/b[@x]/text()
-doc[@xml:id]/a/b[@x]/e/text()
-doc[@xml:id]/a/c/node()
-doc[@xml:id]/a/c/d[@y][@z]/text()
-doc[@xml:id]/a/c/d[@y]/text()
+    <counts>
+        <nodes>
+            <node-count>{count($c/node())}</node-count>
+            <node-paths>
+                {for $node in $c/node() 
+                return
+                    <node-path>{$node/string-join(ancestor-or-self::*/name(.), '/')}</node-path> 
+                }
+            </node-paths>
+        </nodes>
+        <text>
+            <text-count>{count($c/text())}</text-count>
+            <text-paths> 
+            {for $node in $c/text() 
+            return
+                <text-path>{$node/string-join(ancestor-or-self::*/name(.), '/')}</text-path> }
+            </text-paths>
+        </text>
+        <elements>
+            <element-count>{count($c/element())}</element-count>
+            <element-paths> 
+                {for $node in $c/element() 
+                return
+                    <element-path>{$node/string-join(ancestor-or-self::*/name(.), '/')}</element-path> }
+            </element-paths>
+        </elements>
+    </counts>
