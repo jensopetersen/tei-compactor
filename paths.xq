@@ -1,6 +1,5 @@
 xquery version "3.0";
 
-let $doc := doc('/db/test/test-doc.xml')
 let $doc := 
 <doc xml:id="x">
     <a>
@@ -18,23 +17,30 @@ let $doc :=
     </a>
 </doc>
 
+let $doc := doc('/db/test/test-doc.xml')
 
-let $doc := doc('/db/apps/shakespeare/data/ham.xml')
+(:let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
 return 
     let $paths :=
-        for $node in ($doc//element(), $doc//attribute(), $doc//text())
-        let $ancestors := $node/ancestor-or-self::*
+(:        we gather all nodes in the document:)
+        let $nodes := ($doc//element(), $doc//attribute(), $doc//text())
+        let $log := util:log("DEBUG", ("##$nodes): ", string-join($nodes, ' || ')))
+        for $node in $nodes
+(:        for each node, we construct its path to the document root element; this path follows the element hierarchy:)
+        let $ancestors := $node/ancestor::*
+        let $log := util:log("DEBUG", ("##$ancestors1): ", concat($node/string(), ':', $node/string-join(ancestor::*/name(.), '/'))))
+        
         let $ancestors := 
-            concat
-            (
                 string-join
                 (
-                for $ancestor in $ancestors
+                for $ancestor at $i in $ancestors
                 return 
                     concat
                     (
+(:                        the ancestor qname:)
                         name($ancestor)
                         ,
+(:                        any attribute attached to the node if it is an element, expressed as as a predicate:)
                         string-join
                         (
                             let $attributes := $ancestor/attribute()
@@ -42,20 +48,23 @@ return
                             return concat('[@', name($attribute), ']'
                         )
                         ,
-                        if (normalize-space(string-join($ancestor/text())) ne '' and $ancestor/element())
-                        then '[text()][element()]'
+(:                        in the case of mixed contents, any text node or element node children, expressed as a predicate:)
+                        if ($ancestor/text() and $ancestor/element())
+                        then concat('[text()][', name($ancestor), ']')
                         else 
-                            if (normalize-space(string-join($ancestor/text())) ne '')
+(:                            then check for text nodes separately, as predicate:)
+                            if ($ancestor/text())
                             then '[text()]'
                             else 
+(:                                and for element nodes separately, as predicate:)
                                 if ($ancestor/element())
-                                then '[element()]'
+                                then concat('[', name($ancestor), ']')
                                 else 'XXX'
                 )
-                    , '/'
+                    , if ($i eq count($ancestors)) then '' else '/'
                     )
                 )
-              , 
+        let $node-type :=      
               if (normalize-space(string-join($node/text())) ne '' and $node/element())
               then '(text(), element())'
               else 
@@ -65,16 +74,20 @@ return
                       if ($node/element())
                       then 'element()'
                       else 
-                          if ($node/attribute())
+                          (:if ($node/attribute())
                           then 'attribute()'
-                          else '' (:attribute value:)
-            )
-        return $ancestors
+                          else:) '' (:attribute value:)
+            
+        return if ($ancestors)
+        then concat($ancestors, if ($node-type) then '/' else '', $node-type)
+        else ''
     let $paths := distinct-values($paths)
     return
         <paths>
             {
             for $path in $paths
+            where string-length($path)
+            order by $path
             return
                 <path>{$path}</path>
             }
