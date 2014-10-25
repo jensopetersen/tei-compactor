@@ -26,14 +26,15 @@ return
         let $nodes := ($doc//element(), $doc//attribute(), $doc//text())
         let $log := util:log("DEBUG", ("##$nodes): ", string-join($nodes, ' || ')))
         for $node in $nodes
-(:        for each node, we construct its path to the document root element; this path follows the element hierarchy:)
+(:        for each node, we construct its path to the document root element:)
         let $ancestors := $node/ancestor::*
         let $log := util:log("DEBUG", ("##$ancestors1): ", concat($node/string(), ':', $node/string-join(ancestor::*/name(.), '/'))))
-        
         let $ancestors := 
                 string-join
                 (
                 for $ancestor at $i in $ancestors
+(:                let $log := util:log("DEBUG", ("##$ancestor---): ", $ancestor)):)
+(:                let $log := util:log("DEBUG", ("##$ancestor-sibling): ", ($ancestor/preceding-sibling::*, $ancestor/following-sibling::*))):)
                 return 
                     concat
                     (
@@ -44,13 +45,19 @@ return
                         string-join
                         (
                             let $attributes := $ancestor/attribute()
+                            let $log := util:log("DEBUG", ("##attributes): ", string-join($attributes, ' | ')))
+                            let $sibling-attributes := ($ancestor/preceding-sibling::*[name($ancestor)]/attribute(), $ancestor/following-sibling::*[name($ancestor)]/attribute())
+                            let $log := util:log("DEBUG", ("##$sibling-attributes1): ", string-join($sibling-attributes, ' | ')))
+                            let $missing-sibling-attributes := $sibling-attributes except $attributes
+                            let $log := util:log("DEBUG", ("##$sibling-attributes2): ", string-join($sibling-attributes, ' | ')))
                             let $attributes := 
                                 for $attribute in $attributes
                                 return concat('[@', name($attribute), ']')
+                            let $missing-sibling-attributes := 
+                                for $missing-sibling-attribute in $missing-sibling-attributes
+                                    return concat('[not(@', name($missing-sibling-attribute), ')]')
                             return 
-                                if (string-join($attributes)) 
-                                then $attributes 
-                                else '[not(attribute())]'
+                                concat(string-join($attributes), string-join($missing-sibling-attributes))
                         ,
 (:                        in the case of mixed contents, any text node or element node children, expressed as a predicate:)
                         if ($ancestor/node() instance of text() and $ancestor/node() instance of element())
@@ -74,11 +81,12 @@ return
                   else
                       if ($node instance of element() and not($node/attribute()))
                       then name($node)
-                      (:else 
+                      else 
                           if ($node instance of attribute())
-                            then concat('[@', name($node), ']/')
-                            :)
-                          else ''
+                            then ''
+(:                                concat('[@', name($node), ']/'):)
+                      
+                          else '[not(attribute())]'
                         
             
         return 
