@@ -10,6 +10,23 @@ declare function functx:substring-after-last-match
    replace($arg,concat('^.*',$regex),'')
  } ;
 
+declare function functx:substring-after-if-contains
+  ( $arg as xs:string? ,
+    $delim as xs:string )  as xs:string? {
+
+   if (contains($arg,$delim))
+   then substring-after($arg,$delim)
+   else $arg
+ } ;
+
+declare function functx:substring-before-if-contains
+  ( $arg as xs:string? ,
+    $delim as xs:string )  as xs:string? {
+
+   if (contains($arg,$delim))
+   then substring-before($arg,$delim)
+   else $arg
+ } ;
 
 declare function local:build-paths($doc as item()*, $attributes-to-suppress as xs:string*, $attributes-with-value-output as xs:string*) as element()* {
     let $paths :=
@@ -162,12 +179,37 @@ declare function local:prune-paths($paths as element()) as element() {
       }
 };
 
+declare function local:make-element-list($element as element()) as element() {
+   
+   element {node-name($element)}
+      {$element/@*,
+          for $child in $element/node()
+          let $depth := $child/@depth
+          let $count := $child/@count
+          let $clean := replace($child, '\[not\(@.*?\)\]', '')
+          let $name := functx:substring-before-if-contains($clean, '[')
+          let $text := if(matches(replace(functx:substring-after-if-contains($clean, '[t'), '\]', ''), 'ext\(\)')) then 'text' else ''
+          let $attributes := 
+            if (contains($clean, '['))
+            then substring-after($clean, '[')
+            else ''
+          let $attributes := replace($attributes, 'text\(\)\]', '')
+          let $attributes := tokenize(normalize-space(replace(replace(replace($attributes, '\[', ' '), '\]', ' '), '@', ' ')), ' ')
+          return
+            element {$name}{attribute depth {$depth}, attribute count {$count}, 
+            for $attribute in $attributes
+            return attribute {$attribute} {'x'},
+            $text}
+      }
+};
+
 declare function local:construct-compressed-tree($doc as item()*, $attributes-to-suppress as xs:string*, $attributes-with-value-output as xs:string*) as element()* {
       let $paths := local:build-paths($doc, $attributes-to-suppress, $attributes-with-value-output)
       let $pruned-paths := local:prune-paths($paths)
-      return $pruned-paths
-               
-      
+      let $element-list := local:make-element-list($pruned-paths)
+      let $compressed-tree := local:build-tree($element-list/*)
+          return $compressed-tree
+            
 };
 
 declare function local:get-level($node as element()) as xs:integer {
