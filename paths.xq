@@ -5,7 +5,7 @@ declare namespace tei="http://www.tei-c.org/ns/1.0";
 let $doc := 
 <doc xml:id="x">
     <a>
-        <b x="1">text1<e>text2</e>text3</b>
+        <b x="1" n="7">text1<e>text2</e>text3</b>
         <b>text0</b>
         </a>
     <a u="5">
@@ -22,8 +22,10 @@ let $doc :=
 
 (:let $doc := doc('/db/test/test-doc.xml'):)
 
-(:let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
+(:  :let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
 
+let $attributes-to-suppress := ('xml:id', 'n')
+let $attributes-with-value-output := ('u')
 return 
     let $paths :=
         (:we gather all nodes in the document:)
@@ -51,27 +53,34 @@ return
                     let $attributes := $ancestor/attribute()
                     (:get the attributes of ancestor sibling with the same name:)
                     let $siblings := ($ancestor/preceding-sibling::*, $ancestor/following-sibling::*)
+                    (:let $log := util:log("DEBUG", ("##$siblings1): ", string-join(for $sibling in $siblings return name($sibling), ' | '))):)
                     let $same-name-siblings := 
                         for $sibling in $siblings
                         where name($sibling) eq name($ancestor)
                         return $sibling
+                    (:let $log := util:log("DEBUG", ("##$ancestor): ", name($ancestor))):)
+                    (:let $log := util:log("DEBUG", ("##$siblings2): ", string-join(for $sibling in $siblings return name($sibling), ' | '))):)
                     let $same-name-sibling-attributes := 
                         for $same-name-sibling in $same-name-siblings
                         return $same-name-sibling/attribute()
+                    (:let $log := util:log("DEBUG", ("##$same-name-sibling-attributes): ", string-join($same-name-sibling-attributes))):)
                     (:filter away the attributes of same-name siblings that are the same as the ancestor attribute:)
                     let $attribute-names := 
                         for $attribute in $attributes
                         return name($attribute)
+                    (:let $log := util:log("DEBUG", ("##$attributes): ", string-join($attributes))):)
                     let $missing-same-name-sibling-attributes := 
                         for $same-name-sibling-attribute in $same-name-sibling-attributes
                         return 
                             if (name($same-name-sibling-attribute) = $attribute-names)
                             then ()
                             else $same-name-sibling-attribute
+                    (:let $log := util:log("DEBUG", ("##$missing-same-name-sibling-attributes): ", string-join($missing-same-name-sibling-attributes))):)
                     (:format attributes as predicates:)
                     let $attributes :=
                         for $attribute in $attributes
-                        return concat('[@', name($attribute), ']')
+                        where not(name($attribute) =  $attributes-to-suppress)
+                        return concat('[@', name($attribute), if (name($attribute) = $attributes-with-value-output) then concat('=', '"', $attribute/string(), '"', ']') else ']')
                     (:format missing attributes as negative predicates:)
                     let $missing-same-name-sibling-attributes :=
                         for $missing-sibling-attribute in $missing-same-name-sibling-attributes
@@ -108,7 +117,7 @@ return
                     if ($node instance of element())
                     then name($node)
                     else
-                        if ($node instance of attribute())
+                        if ($node instance of attribute() and not(name($node) =  $attributes-to-suppress))
                         then concat('@', name($node))
                         else 'YYY'
             (:and return the concatenation of ancestor path and node type with a slash:)
