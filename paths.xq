@@ -19,37 +19,31 @@ let $doc :=
 
 return 
     let $paths :=
-        for $node in ($doc//element(), $doc//attribute(), $doc//text())
-        (:I would have thought that $doc//node() would do the job …:)
-        let $path := 
-            if ($node instance of attribute())
-            then concat($node/string-join(ancestor-or-self::*/name(.), '/'), '/@', name($node))
-            else
-                if ($node instance of text())
-                then concat($node/string-join(ancestor-or-self::*/name(.), '/'), '/text()')
-                else 
-                    if ($node/attribute() and $node/text())
-                    then concat($node/string-join(ancestor-or-self::*/name(.), '/'), 
-                      string-join(
-                        for $attribute in $node/attribute()
-                        let $attr-name := name($attribute)
-                        order by $attr-name
-                        return concat('[@', $attr-name, ']')
-                        , '')
-                      , '[text()]')
-                    else 
-                      if ($node/attribute())
-                      then concat($node/string-join(ancestor-or-self::*/name(.), '/'), 
-                        string-join(
-                          for $attribute in $node/attribute()
-                          let $attr-name := name($attribute)
-                          order by $attr-name
-                          return concat('[@', $attr-name, ']')
-                          , ''))
-                      else
-                        if ($node/text())
-                        then concat($node/string-join(ancestor-or-self::*/name(.), '/'), '[text()]')
-                    else $node/string-join(ancestor-or-self::*/name(.), '/')
-        order by $path ascending
-        return $path
+        for $node in ($doc//element())
+        let $ancestors := $node/ancestor-or-self::*
+        let $ancestors := 
+          concat(string-join(
+            for $ancestor in $ancestors
+            return concat(name($ancestor), 
+              string-join(
+                let $attributes := $ancestor/attribute()
+                  for $attribute in $attributes
+                  return concat('[@', name($attribute), ']'))
+              , '/')
+            
+        ), if ($node/text())
+          then 'text()'
+          else 'node()')
+        return $ancestors
+        
+        
     return distinct-values($paths)
+
+#
+
+doc[@xml:id]/a/node()
+doc[@xml:id]/a/b[@x]/text()
+doc[@xml:id]/a/b[@x]/e/text()
+doc[@xml:id]/a/c/node()
+doc[@xml:id]/a/c/d[@y][@z]/text()
+doc[@xml:id]/a/c/d[@y]/text()
