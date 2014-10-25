@@ -24,10 +24,10 @@ return
                             return concat('[@', name($attribute), ']'
                         )
                         ,
-                        if (normalize-space(string($ancestor/string())) ne ' ' and $ancestor/element())
+                        if (replace(string($ancestor), '\s', '') ne '' and $ancestor/element())
                         then '[text()][element()]'
                         else 
-                            if (normalize-space($ancestor/text()) ne ' ')
+                            if (replace(string($ancestor), '\s', '') ne '')
                             then '[text()]'
                             else 'XXX'
                 )
@@ -35,10 +35,10 @@ return
                     )
                 )
               , 
-              if (normalize-space($node/string()) ne ' ' and $node/element())
+              if (replace(string($node), '\s', '') ne '' and $node/element())
               then '(text(), element())'
               else 
-                  if (normalize-space($node/text()) ne ' ')
+                  if (replace(string($node), '\s', '') ne '')
                   then 'text()'
                   else
                       if ($node/element())
@@ -49,4 +49,12 @@ return
                           else 'YYY'
             )
         return $ancestors
-    return distinct-values($paths)
+    let $paths := distinct-values($paths)
+    return
+        <paths>
+            {
+            for $path in $paths
+            return
+                <path>{$path}</path>
+            }
+        </paths>
