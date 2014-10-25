@@ -2,31 +2,7 @@ xquery version "3.0";
 
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 
-let $doc := 
-<doc xml:id="x">
-    <a>
-        <b x="1" n="7">text1<e>text2</e>text3</b>
-        <b>text0</b>
-        </a>
-    <a u="5">
-        <c>
-            <d y="2" z="3">text4</d>
-            </c>
-    </a>
-    <a>
-        <c>
-            <d y="4">text5<p n="6"/>text6</d>
-            </c>
-    </a>
-</doc>
-
-(:let $doc := doc('/db/test/test-doc.xml'):)
-
-(:  :let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
-
-let $attributes-to-suppress := ('xml:id', 'n')
-let $attributes-with-value-output := ('u')
-return 
+declare function local:build-paths($doc as element()*, $attributes-to-suppress as xs:string*, $attributes-with-value-output as xs:string*) as element()* {
     let $paths :=
         (:we gather all nodes in the document:)
         let $nodes := ($doc//element(), $doc//attribute(), $doc//text())
@@ -119,7 +95,7 @@ return
                     else
                         if ($node instance of attribute() and not(name($node) =  $attributes-to-suppress))
                         then concat('@', name($node))
-                        else 'YYY'
+                        else ''
             (:and return the concatenation of ancestor path and node type with a slash:)
             return 
                 (:if there is no ancestor path, do not attach a node type:)
@@ -130,20 +106,51 @@ return
                     , 
                     if ($node-type) 
                     then '/' 
-                    else 'ZZZ'
+                    else ''
                     , 
                     $node-type
                     )
                 else ''
-        (:only return distinct non-empty paths:)
-        let $paths := distinct-values($paths)
-        return
-            <paths>
-                {
-                for $path in $paths
-                where string-length($path)
-                order by $path
-                return
-                    <path>{$path}</path>
-                }
-            </paths>
+    (:only return distinct non-empty paths:)
+    let $paths-count := count($paths[string-length(.) gt 0])
+    let $distinct-paths := distinct-values($paths)
+    return
+        <paths count="{$paths-count}">
+            {
+            for $path at $n in $distinct-paths
+            let $count := count($paths[. eq $path])
+            let $depth := count(tokenize($path, '/')) - 1
+            where string-length($path)
+            order by $depth, $path
+            return
+                <path depth="{$depth}" count="{$count}" n="{$n}">{$path}</path>
+            }
+        </paths>
+};
+
+let $doc := 
+<doc xml:id="x">
+    <a>
+        <b x="1" n="7">text1<e>text2</e>text3</b>
+        <b>text0</b>
+        </a>
+    <a u="5">
+        <c>
+            <d y="2" z="3">text4</d>
+            </c>
+    </a>
+    <a>
+        <c>
+            <d y="4">text5<p n="6"/>text6</d>
+            </c>
+    </a>
+</doc>
+
+(: let $doc := doc('/db/test/test-doc.xml')//*:)
+(: let $doc := doc('/db/apps/shakespeare/data/ham.xml')//tei:TEI:)
+(: let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml')//tei:TEI:)
+
+let $attributes-to-suppress := ('xml:id', 'n')
+let $attributes-with-value-output := ('type')
+
+return local:build-paths($doc, $attributes-to-suppress, $attributes-with-value-output)
