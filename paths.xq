@@ -119,7 +119,7 @@ declare function local:build-paths($doc as element()*, $attributes-to-suppress a
             {
             for $path at $n in $distinct-paths
             let $count := count($paths[. eq $path])
-            let $depth := count(tokenize($path, '/')) - 1
+            let $depth := count(tokenize($path, '/'))
             where string-length($path)
             order by $depth, $path
             return
@@ -127,6 +127,38 @@ declare function local:build-paths($doc as element()*, $attributes-to-suppress a
             }
         </paths>
 };
+
+declare function local:getLevel($node as element()) as xs:integer {
+  $node/@depth
+};
+
+(: author: Jens Erat, https://stackoverflow.com/questions/21527660/transforming-sequence-of-elements-to-tree :)
+declare function local:build-tree($nodes as element()*) as element()* {
+  let $level := local:getLevel($nodes[1])
+  (: Process all nodes of current level :)
+  for $node in $nodes
+  where $level eq local:getLevel($node)
+    return
+  (: Find next node of current level, if available :)
+  let $next := ($node/following-sibling::*[local:getLevel(.) le $level])[1]
+  (: All nodes between the current node and the next node on same level are children :)
+  let $children := $node/following-sibling::*[$node << . and (not($next) or . << $next)]
+
+  return
+    element { name($node) } {
+      (: Copy node attributes :)
+      $node/@*,
+      (: Copy all other subnodes, including text, pi, elements, comments :)
+      $node/node(),
+
+      (: If there are children, recursively build the subtree :)
+      if ($children)
+      then local:build-tree($children)
+      else ()
+    }
+};
+
+declare function local:paths-to-list($paths as element()) as element() {''};
 
 let $doc := 
 <doc xml:id="x">
