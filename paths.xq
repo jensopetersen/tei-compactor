@@ -1,5 +1,7 @@
 xquery version "3.0";
 
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+
 let $doc := 
 <doc xml:id="x">
     <a>
@@ -20,7 +22,7 @@ let $doc :=
 
 (:let $doc := doc('/db/test/test-doc.xml'):)
 
-(:let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
+let $doc := doc('/db/apps/shakespeare/data/ham.xml')
 
 return 
     let $paths :=
@@ -45,17 +47,39 @@ return
                     (:any attribute attached to sibling elements that is not attached to the ancestor in question, expressed as a negative predicate:)
                     string-join
                     (
+                    let $siblings := ($ancestor/preceding-sibling::*, $ancestor/following-sibling::*)
+                    (:let $log := util:log("DEBUG", ("##$siblings1): ", string-join(for $sibling in $siblings return name($sibling), ' | '))):)
+                    let $same-name-siblings := 
+                        for $sibling in $siblings
+                        where name($sibling) eq name($ancestor)
+                        return $sibling
+                    let $log := util:log("DEBUG", ("##$ancestor): ", name($ancestor)))
+                    (:let $log := util:log("DEBUG", ("##$siblings2): ", string-join(for $sibling in $siblings return name($sibling), ' | '))):)
+                    let $same-name-sibling-attributes := 
+                        for $same-name-sibling in $same-name-siblings
+                        return $same-name-sibling/attribute()
+                    let $log := util:log("DEBUG", ("##$same-name-sibling-attributes): ", string-join($same-name-sibling-attributes)))
                     let $attributes := $ancestor/attribute()
-                    let $sibling-attributes := ($ancestor/preceding-sibling::*[name($ancestor)]/attribute(), $ancestor/following-sibling::*[name($ancestor)]/attribute())
-                    let $missing-sibling-attributes := $sibling-attributes except $attributes
+                    let $attribute-names := 
+                        for $attribute in $attributes
+                        return name($attribute)
+                    let $log := util:log("DEBUG", ("##$attributes): ", string-join($attributes)))
+                    let $missing-same-name-sibling-attributes := 
+                        for $same-name-sibling-attribute in $same-name-sibling-attributes
+                        return 
+                            if (name($same-name-sibling-attribute) = $attribute-names)
+                            then ()
+                            else $same-name-sibling-attribute
+                    let $log := util:log("DEBUG", ("##$missing-same-name-sibling-attributes): ", string-join($missing-same-name-sibling-attributes)))
                     let $attributes :=
                         for $attribute in $attributes
                         return concat('[@', name($attribute), ']')
-                    let $missing-sibling-attributes :=
-                        for $missing-sibling-attribute in $missing-sibling-attributes
+                    let $missing-same-name-sibling-attributes :=
+                        for $missing-sibling-attribute in $missing-same-name-sibling-attributes
                         return concat('[not(@', name($missing-sibling-attribute), ')]')
+                    let $missing-same-name-sibling-attributes := distinct-values($missing-same-name-sibling-attributes)
                     return
-                        concat(string-join($attributes), string-join($missing-sibling-attributes))
+                        concat(string-join($attributes), string-join($missing-same-name-sibling-attributes))
                     ,
                     (:in the case of mixed contents, any text node or element node children, expressed as a predicate:)
                     if ($ancestor/node() instance of text() and $ancestor/node() instance of element())
@@ -82,7 +106,7 @@ return
                 if ($node instance of text())
                 then 'text()'
                 else
-                    if ($node instance of element() and not($node/attribute()))
+                    if ($node instance of element())
                     then name($node)
                     else
                         if ($node instance of attribute())
