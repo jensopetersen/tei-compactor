@@ -12,7 +12,7 @@ declare function functx:substring-after-last-match
  
 declare function local:build-paths($doc as item()*, $attributes-to-suppress as xs:string*, $attributes-with-value-output as xs:string*) as element()* {
     let $paths :=
-        (:we gather all element and text nodes in the document:)
+        (:we gather all element, attribute and text nodes in the document:)
         let $nodes := ($doc/descendant-or-self::element(), $doc/descendant-or-self::text(), $doc/descendant-or-self::attribute())
         return
             for $node in $nodes
@@ -82,23 +82,24 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress as x
                     $node-type
                     )
                 
-    (:only return distinct non-empty paths:)
-(:    let $paths-count := count($paths[string-length(.) gt 0]) + 1:)
+    (:let $paths-count := count($paths[string-length(.) gt 0]) + 1:)
     let $paths-count := count($paths)
-let $distinct-paths := distinct-values($paths)
-    return
+    let $distinct-paths := distinct-values($paths)
+    let $paths :=
         <paths count="{$paths-count}">
             {
-for $path at $n in $distinct-paths
-(:            for $path at $n in ($paths):)
+            for $path at $n in $distinct-paths
+            (:for $path at $n in ($paths):)
             let $count := count($paths[. eq $path])
             let $depth := count(tokenize($path, '/'))
-order by $path, $depth
+            order by $path, $depth
             (:order by string-length($path):)
             return
                 <path depth="{$depth}" count="{$count}" n="{$n}">{$path}</path>
             }
         </paths>
+return $paths
+
 };
 
 
@@ -154,6 +155,14 @@ declare function local:prune-paths($paths as element()) as element() {
                    else $child
                
       }
+};
+
+declare function local:reconstruct($doc as item()*, $attributes-to-suppress as xs:string*, $attributes-with-value-output as xs:string*) as element()* {
+      let $paths := local:build-paths($doc, $attributes-to-suppress, $attributes-with-value-output)
+      let $pruned-paths := local:prune-paths($paths)
+      return $pruned-paths
+               
+      
 };
 
 declare function local:get-level($node as element()) as xs:integer {
@@ -213,5 +222,8 @@ let $doc := doc('/db/test/test-doc.xml')
 let $attributes-to-suppress := ''
 (:('xml:id', 'n'):)
 let $attributes-with-value-output := ('type')
+let $target := 'paths'
 
-return local:build-paths($doc, $attributes-to-suppress, $attributes-with-value-output)
+return if ($target eq 'paths')
+then local:build-paths($doc, $attributes-to-suppress, $attributes-with-value-output)
+else local:reconstruct($doc, $attributes-to-suppress, $attributes-with-value-output)
