@@ -44,20 +44,24 @@ return
                         string-join
                         (
                             let $attributes := $ancestor/attribute()
-                            for $attribute in $attributes
-                            return concat('[@', name($attribute), ']'
-                        )
+                            let $attributes := 
+                                for $attribute in $attributes
+                                return concat('[@', name($attribute), ']')
+                            return 
+                                if (string-join($attributes)) 
+                                then $attributes 
+                                else '[not(attribute())]'
                         ,
 (:                        in the case of mixed contents, any text node or element node children, expressed as a predicate:)
-                        if ($ancestor/text() and $ancestor/element())
+                        if ($ancestor/node() instance of text() and $ancestor/node() instance of element())
                         then concat('[text()][', name($ancestor), ']')
                         else 
 (:                            then check for text nodes separately, as predicate:)
-                            if ($ancestor/text())
+                            if ($ancestor/node() instance of text())
                             then '[text()]'
                             else 
 (:                                and for element nodes separately, as predicate:)
-                                if ($ancestor/element())
+                                if ($ancestor/node() instance of element())
                                 then concat('[', name($ancestor), ']')
                                 else 'XXX'
                 )
@@ -65,22 +69,25 @@ return
                     )
                 )
         let $node-type :=      
-              if (normalize-space(string-join($node/text())) ne '' and $node/element())
-              then '(text(), element())'
-              else 
-                  if (normalize-space(string-join($node/text())) ne '')
+                  if ($node instance of text())
                   then 'text()'
                   else
-                      if ($node/element())
-                      then 'element()'
-                      else 
-                          (:if ($node/attribute())
-                          then 'attribute()'
-                          else:) '' (:attribute value:)
+                      if ($node instance of element() and not($node/attribute()))
+                      then name($node)
+                      (:else 
+                          if ($node instance of attribute())
+                            then concat('[@', name($node), ']/')
+                            :)
+                          else ''
+                        
             
-        return if ($ancestors)
-        then concat($ancestors, if ($node-type) then '/' else '', $node-type)
-        else ''
+        return 
+            if ($ancestors)
+            then concat(
+                $ancestors, 
+                if ($node-type) then '/' else '', 
+                $node-type)
+            else ''
     let $paths := distinct-values($paths)
     return
         <paths>
