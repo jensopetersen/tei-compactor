@@ -2,10 +2,10 @@ xquery version "3.0";
 
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 
-declare function local:build-paths($doc as element()*, $attributes-to-suppress as xs:string*, $attributes-with-value-output as xs:string*) as element()* {
+declare function local:build-paths($doc as item()*, $attributes-to-suppress as xs:string*, $attributes-with-value-output as xs:string*) as element()* {
     let $paths :=
-        (:we gather all nodes in the document:)
-        let $nodes := ($doc//element(), $doc//attribute(), $doc//text())
+        (:we gather all element and text nodes in the document:)
+        let $nodes := $doc/descendant-or-self::node()
         return
             for $node in $nodes
             (:for each node, we construct its path to the document root element:)
@@ -99,29 +99,30 @@ declare function local:build-paths($doc as element()*, $attributes-to-suppress a
             (:and return the concatenation of ancestor path and node type with a slash:)
             return 
                 (:if there is no ancestor path, do not attach a node type:)
-                if ($ancestors)
-                then concat
+                concat
                     (
                     $ancestors
                     , 
-                    if ($node-type) 
+                    if ($ancestors and $node-type) 
                     then '/' 
                     else ''
                     , 
                     $node-type
                     )
-                else ''
+                
     (:only return distinct non-empty paths:)
-    let $paths-count := count($paths[string-length(.) gt 0])
-    let $distinct-paths := distinct-values($paths)
+(:    let $paths-count := count($paths[string-length(.) gt 0]) + 1:)
+    let $paths-count := count($paths)
+    (:let $distinct-paths := distinct-values($paths):)
     return
         <paths count="{$paths-count}">
             {
-            for $path at $n in $distinct-paths
+            (:for $path at $n in $distinct-paths:)
+            for $path at $n in ($paths)
             let $count := count($paths[. eq $path])
             let $depth := count(tokenize($path, '/'))
-            where string-length($path)
-            order by $depth, $path
+            (:order by $depth, $path:)
+            (:order by string-length($path):)
             return
                 <path depth="{$depth}" count="{$count}" n="{$n}">{$path}</path>
             }
@@ -178,11 +179,12 @@ let $doc :=
     </a>
 </doc>
 
-(: let $doc := doc('/db/test/test-doc.xml')//*:)
+let $doc := doc('/db/test/test-doc.xml')
 (: let $doc := doc('/db/apps/shakespeare/data/ham.xml')//tei:TEI:)
 (: let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml')//tei:TEI:)
 
-let $attributes-to-suppress := ('xml:id', 'n')
+let $attributes-to-suppress := ''
+(:('xml:id', 'n'):)
 let $attributes-with-value-output := ('type')
 
 return local:build-paths($doc, $attributes-to-suppress, $attributes-with-value-output)
