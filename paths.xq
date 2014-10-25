@@ -47,7 +47,10 @@ return
                         else 
                             if (normalize-space(string-join($ancestor/text())) ne '')
                             then '[text()]'
-                            else 'XXX'
+                            else 
+                                if ($ancestor/element())
+                                then '[element()]'
+                                else 'XXX'
                 )
                     , '/'
                     )
@@ -64,7 +67,7 @@ return
                       else 
                           if ($node/attribute())
                           then 'attribute()'
-                          else 'YYY'
+                          else '' (:attribute value:)
             )
         return $ancestors
     let $paths := distinct-values($paths)
