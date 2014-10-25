@@ -1,7 +1,15 @@
 xquery version "3.0";
 
 declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare namespace functx = "http://www.functx.com";
 
+declare function functx:substring-after-last-match
+  ( $arg as xs:string? ,
+    $regex as xs:string )  as xs:string {
+
+   replace($arg,concat('^.*',$regex),'')
+ } ;
+ 
 declare function local:build-paths($doc as item()*, $attributes-to-suppress as xs:string*, $attributes-with-value-output as xs:string*) as element()* {
     let $paths :=
         (:we gather all element and text nodes in the document:)
@@ -133,19 +141,34 @@ declare function local:handle-attributes($node as element(), $attributes-to-supp
         concat(string-join($attributes), string-join($missing-same-name-sibling-attributes))
 };
 
-declare function local:getLevel($node as element()) as xs:integer {
+declare function local:prune-paths($paths as element()) as element() {
+  element {node-name($paths)}
+      {$paths/@*, 
+      for $child in $paths/element()
+              return
+               if (($child/preceding-sibling::path/text(), $child/following-sibling::path/text()) = concat($child/text(), '/text()'))
+               then ''
+               else
+                   if (starts-with(functx:substring-after-last-match($child, '/'), '@'))
+                   then ''
+                   else $child
+               
+      }
+};
+
+declare function local:get-level($node as element()) as xs:integer {
   $node/@depth
 };
 
 (: author: Jens Erat, https://stackoverflow.com/questions/21527660/transforming-sequence-of-elements-to-tree :)
 declare function local:build-tree($nodes as element()*) as element()* {
-  let $level := local:getLevel($nodes[1])
+  let $level := local:get-level($nodes[1])
   (: Process all nodes of current level :)
   for $node in $nodes
-  where $level eq local:getLevel($node)
+  where $level eq local:get-level($node)
     return
   (: Find next node of current level, if available :)
-  let $next := ($node/following-sibling::*[local:getLevel(.) le $level])[1]
+  let $next := ($node/following-sibling::*[local:get-level(.) le $level])[1]
   (: All nodes between the current node and the next node on same level are children :)
   let $children := $node/following-sibling::*[$node << . and (not($next) or . << $next)]
 
