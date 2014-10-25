@@ -22,7 +22,7 @@ let $doc :=
 
 (:let $doc := doc('/db/test/test-doc.xml'):)
 
-let $doc := doc('/db/apps/shakespeare/data/ham.xml')
+(:let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
 
 return 
     let $paths :=
@@ -47,33 +47,32 @@ return
                     (:any attribute attached to sibling elements that is not attached to the ancestor in question, expressed as a negative predicate:)
                     string-join
                     (
+                    (:get the ancestor attributes:)
+                    let $attributes := $ancestor/attribute()
+                    (:get the attributes of ancestor sibling with the same name:)
                     let $siblings := ($ancestor/preceding-sibling::*, $ancestor/following-sibling::*)
-                    (:let $log := util:log("DEBUG", ("##$siblings1): ", string-join(for $sibling in $siblings return name($sibling), ' | '))):)
                     let $same-name-siblings := 
                         for $sibling in $siblings
                         where name($sibling) eq name($ancestor)
                         return $sibling
-                    let $log := util:log("DEBUG", ("##$ancestor): ", name($ancestor)))
-                    (:let $log := util:log("DEBUG", ("##$siblings2): ", string-join(for $sibling in $siblings return name($sibling), ' | '))):)
                     let $same-name-sibling-attributes := 
                         for $same-name-sibling in $same-name-siblings
                         return $same-name-sibling/attribute()
-                    let $log := util:log("DEBUG", ("##$same-name-sibling-attributes): ", string-join($same-name-sibling-attributes)))
-                    let $attributes := $ancestor/attribute()
+                    (:filter away the attributes of same-name siblings that are the same as the ancestor attribute:)
                     let $attribute-names := 
                         for $attribute in $attributes
                         return name($attribute)
-                    let $log := util:log("DEBUG", ("##$attributes): ", string-join($attributes)))
                     let $missing-same-name-sibling-attributes := 
                         for $same-name-sibling-attribute in $same-name-sibling-attributes
                         return 
                             if (name($same-name-sibling-attribute) = $attribute-names)
                             then ()
                             else $same-name-sibling-attribute
-                    let $log := util:log("DEBUG", ("##$missing-same-name-sibling-attributes): ", string-join($missing-same-name-sibling-attributes)))
+                    (:format attributes as predicates:)
                     let $attributes :=
                         for $attribute in $attributes
                         return concat('[@', name($attribute), ']')
+                    (:format missing attributes as negative predicates:)
                     let $missing-same-name-sibling-attributes :=
                         for $missing-sibling-attribute in $missing-same-name-sibling-attributes
                         return concat('[not(@', name($missing-sibling-attribute), ')]')
