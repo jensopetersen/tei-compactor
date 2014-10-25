@@ -110,7 +110,7 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress as x
             (:for $path at $n in ($paths):)
             let $count := count($paths[. eq $path])
             let $depth := count(tokenize($path, '/'))
-            order by $path, $depth
+            order by replace(replace($path, '/text()', ' /text()'), '@', ' @') (:make text and attribute nodes follow immediately after their element node:)
             (:order by string-length($path):)
             return
                 <path depth="{$depth}" count="{$count}" n="{$n}">{$path}</path>
