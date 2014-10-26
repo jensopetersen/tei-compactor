@@ -1,0 +1,20 @@
+<doc depth="1" count="1" xml:id="x">
+    <a depth="2" count="2">
+        <b depth="3" count="2" x="x" n="x">text
+            <e depth="4" count="1">text</e>
+        </b>
+        <b depth="3" count="1">text</b>
+    </a>
+    <a depth="2" count="1" u="x">
+        <c depth="3" count="1">
+            <d depth="4" count="2" y="x" z="x">text</d>
+            <d depth="4" count="1" y="x">text</d>
+            <d depth="4" count="1" z="x">text</d>
+        </c>
+        <c depth="3" count="2">
+            <d depth="4" count="4" y="x">text
+                <p depth="5" count="2" n="x"/>
+            </d>
+        </c>
+    </a>
+</doc>
