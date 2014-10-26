@@ -112,7 +112,7 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress as x
             for $path at $n in $distinct-paths
             (:for $path at $n in ($paths):)
             let $count := count($paths[. eq $path])
-            let $depth := count(tokenize($path, '/'))
+            let $depth := count(tokenize(replace($path, '/text\(\)', ''), '/'))
             order by if ($target eq 'paths') then replace(replace($path, '/text()', ' /text()'), '@', ' @') else '' (:make text and attribute else nodes follow immediately after their element node:)
             (:order by string-length($path):)
             return
@@ -122,7 +122,6 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress as x
 return $paths
 
 };
-
 
 declare function local:handle-attributes($node as element(), $attributes-to-suppress as item()*, $attributes-with-value-output as item()*, $target as xs:string) as xs:string? {
     if ($target eq 'paths')
@@ -288,8 +287,9 @@ let $doc := doc('/db/test/test-doc.xml')
 
 let $attributes-to-suppress := ''
 (:('xml:id', 'n'):)
-let $attributes-with-value-output := ('type')
-let $target := 'tree'
+let $attributes-with-value-output := ''
+(:('type'):)
+let $target := 'compressed-tree'
 
 return if ($target eq 'paths')
 then local:build-paths($doc, $attributes-to-suppress, $attributes-with-value-output, $target)
