@@ -239,8 +239,8 @@ let $doc :=
         </a>
     </doc>
 (:let $doc := doc('/db/test/test-doc.xml'):)
-(:let $doc := doc('/db/apps/shakespeare/data/ham.xml')//tei:TEI:)
-let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml')//tei:TEI
+(:let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
+let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml')
 
 let $attributes-to-suppress-from-paths := ''
 (:('xml:id', 'n'):)
