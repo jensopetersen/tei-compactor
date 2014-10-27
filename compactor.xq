@@ -60,11 +60,11 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
                     (:get the ancestor attributes:)
                     local:handle-attributes($ancestor, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $target)
                     )
-                ,
-                (:string-joining with a slash:)
-                if ($i eq count($ancestors))
-                then ''
-                else '/'
+                    ,
+                    (:string-joining with a slash:)
+                    if ($i eq count($ancestors))
+                    then ''
+                    else '/'
                     )
                 )
             (:attach the node type to the ancestor path:)
@@ -75,7 +75,7 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
                     if ($node instance of element())
                     then concat(name($node), local:handle-attributes($node, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $target))
                     else
-                        if ($node instance of attribute() and not(name($node) =  $attributes-to-suppress-from-paths))
+                        if ($node instance of attribute() and not(name($node) = $attributes-to-suppress-from-paths))
                         then concat('@', name($node))
                         else ''
             (:and return the concatenation of ancestor path and node type with a slash:)
@@ -102,7 +102,8 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
             (:for $path at $n in ($paths):)
             let $count := count($paths[. eq $path])
             let $depth := count(tokenize(replace($path, '/text\(\)', ''), '/'))
-            order by replace(replace($path, '/text()', ' /text()'), '@', ' @')(:make text and attribute else nodes follow immediately after their element node:) 
+            order by 
+                replace(replace($path, '/text()', ' /text()'), '@', ' @')(:make text and attribute else nodes follow immediately after their element node:) 
                 
             return
                 <path depth="{$depth}" count="{$count}" sequence-number="{$sequence-number}">{$path}</path>
@@ -113,44 +114,7 @@ return $paths
 };
 (:I am not quite sure that all this "missing attribute" thing is needed (or any good):)
 declare function local:handle-attributes($node as element(), $attributes-to-suppress-from-paths as item()*, $attributes-to-output-with-value as item()*, $target as xs:string) as xs:string? {
-    if ($target eq 'paths')
-    then
-        let $attributes := $node/attribute()
-        (:get the attributes of ancestor sibling with the same name:)
-        let $siblings := ($node/preceding-sibling::*, $node/following-sibling::*)
-        let $same-name-siblings :=
-            for $sibling in $siblings
-            where name($sibling) eq name($node)
-            return $sibling
-        let $same-name-sibling-attributes := 
-            for $same-name-sibling in $same-name-siblings
-            return $same-name-sibling/attribute()
-            (:filter away the attributes of same-name siblings that are the same as the ancestor attribute:)
-        let $attribute-names := 
-            for $attribute in $attributes
-            return name($attribute)
-        let $missing-same-name-sibling-attributes := 
-            for $same-name-sibling-attribute in $same-name-sibling-attributes
-            return
-                if (name($same-name-sibling-attribute) = $attribute-names)
-                then ()
-                else $same-name-sibling-attribute
-        (:format attributes as predicates:)
-        let $attributes :=
-            for $attribute in $attributes
-            where not(name($attribute) =  $attributes-to-suppress-from-paths)
-            return 
-                concat('[@', name($attribute), if (name($attribute) = $attributes-to-output-with-value) then concat('=', '"', $attribute/string(), '"', ']') else ']')
-        (:format missing attributes as negative predicates:)
-        let $missing-same-name-sibling-attributes :=
-            for $missing-sibling-attribute in $missing-same-name-sibling-attributes
-            return 
-                concat('[not(@', name($missing-sibling-attribute), ')]')
-        let $missing-same-name-sibling-attributes := distinct-values($missing-same-name-sibling-attributes)
-        return
-            concat(string-join($attributes), string-join($missing-same-name-sibling-attributes))
-    else 
-        let $attributes := $node/attribute()
+    let $attributes := $node/attribute()
         let $attributes :=
             for $attribute in $attributes
             where not(name($attribute) =  $attributes-to-suppress-from-paths)
@@ -276,7 +240,7 @@ let $doc :=
     </doc>
 (:let $doc := doc('/db/test/test-doc.xml'):)
 (:let $doc := doc('/db/apps/shakespeare/data/ham.xml')//tei:TEI:)
-(:let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml')//tei:TEI:)
+let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml')//tei:TEI
 
 let $attributes-to-suppress-from-paths := ''
 (:('xml:id', 'n'):)
@@ -286,7 +250,7 @@ let $empty-elements-to-remove := ''
 (:('pb', 'lb', 'cb', 'milestone'):)
 let $intermediate-attributes-to-remove-from-trees := ''
 (:('path', 'count', 'sequence-number', 'level'):)
-let $target := 'compressed-tree'
+let $target := 'compacted-tree'
 
 return 
     if ($target eq 'paths')
