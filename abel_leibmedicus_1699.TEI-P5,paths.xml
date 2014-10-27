@@ -1,0 +1,1070 @@
+<!--paths version of http://www.deutschestextarchiv.de/book/download_xml/abel_leibmedicus_1699-->
+<paths count="35694">
+    <path depth="1" count="1" sequence-number="1">TEI</path>
+    <path depth="2" count="1" sequence-number="74">TEI/text</path>
+    <path depth="3" count="1" sequence-number="327">TEI/text/back</path>
+    <path depth="4" count="4" sequence-number="329">TEI/text/back/div[@n]</path>
+    <path depth="5" count="1" sequence-number="334">TEI/text/back/div[@n]/cb</path>
+    <path depth="5" count="102" sequence-number="335">TEI/text/back/div[@n]/div[@n]</path>
+    <path depth="6" count="9" sequence-number="349">TEI/text/back/div[@n]/div[@n]/cb</path>
+    <path depth="6" count="3" sequence-number="357">TEI/text/back/div[@n]/div[@n]/figure</path>
+    <path depth="6" count="43" sequence-number="350"
+        >TEI/text/back/div[@n]/div[@n]/fw[@type][@place]</path>
+    <path depth="6" count="15" sequence-number="571"
+        >TEI/text/back/div[@n]/div[@n]/fw[@type][@place]/text()</path>
+    <path depth="7" count="28" sequence-number="351"
+        >TEI/text/back/div[@n]/div[@n]/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="7" count="24" sequence-number="562"
+        >TEI/text/back/div[@n]/div[@n]/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="8" count="10" sequence-number="352"
+        >TEI/text/back/div[@n]/div[@n]/fw[@type][@place]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="8" count="1" sequence-number="563"
+        >TEI/text/back/div[@n]/div[@n]/fw[@type][@place]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="9" count="9" sequence-number="353"
+        >TEI/text/back/div[@n]/div[@n]/fw[@type][@place]/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="9" count="9" sequence-number="561"
+        >TEI/text/back/div[@n]/div[@n]/fw[@type][@place]/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="6" count="102" sequence-number="336">TEI/text/back/div[@n]/div[@n]/head</path>
+    <path depth="6" count="2" sequence-number="583">TEI/text/back/div[@n]/div[@n]/head/text()</path>
+    <path depth="7" count="116" sequence-number="337"
+        >TEI/text/back/div[@n]/div[@n]/head/hi[@rendition]</path>
+    <path depth="7" count="172" sequence-number="566"
+        >TEI/text/back/div[@n]/div[@n]/head/hi[@rendition]/text()</path>
+    <path depth="8" count="22" sequence-number="338"
+        >TEI/text/back/div[@n]/div[@n]/head/hi[@rendition]/hi[@rendition]</path>
+    <path depth="8" count="1" sequence-number="556"
+        >TEI/text/back/div[@n]/div[@n]/head/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="9" count="21" sequence-number="348"
+        >TEI/text/back/div[@n]/div[@n]/head/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="9" count="21" sequence-number="559"
+        >TEI/text/back/div[@n]/div[@n]/head/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="8" count="78" sequence-number="379"
+        >TEI/text/back/div[@n]/div[@n]/head/hi[@rendition]/lb</path>
+    <path depth="7" count="2" sequence-number="385">TEI/text/back/div[@n]/div[@n]/head/lb</path>
+    <path depth="6" count="195" sequence-number="339">TEI/text/back/div[@n]/div[@n]/lb</path>
+    <path depth="6" count="59" sequence-number="340">TEI/text/back/div[@n]/div[@n]/list</path>
+    <path depth="7" count="393" sequence-number="341">TEI/text/back/div[@n]/div[@n]/list/item</path>
+    <path depth="7" count="398" sequence-number="560"
+        >TEI/text/back/div[@n]/div[@n]/list/item/text()</path>
+    <path depth="8" count="4" sequence-number="365"
+        >TEI/text/back/div[@n]/div[@n]/list/item/fw[@type][@place]</path>
+    <path depth="8" count="2" sequence-number="573"
+        >TEI/text/back/div[@n]/div[@n]/list/item/fw[@type][@place]/text()</path>
+    <path depth="9" count="2" sequence-number="367"
+        >TEI/text/back/div[@n]/div[@n]/list/item/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="9" count="2" sequence-number="574"
+        >TEI/text/back/div[@n]/div[@n]/list/item/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="8" count="318" sequence-number="342"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]</path>
+    <path depth="8" count="137" sequence-number="565"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/text()</path>
+    <path depth="9" count="186" sequence-number="343"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/hi[@rendition]</path>
+    <path depth="10" count="186" sequence-number="344"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="10" count="191" sequence-number="558"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="11" count="1" sequence-number="345"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="11" count="1" sequence-number="557"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="11" count="4" sequence-number="347"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="11" count="1" sequence-number="355"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/hi[@rendition]/hi[@rendition]/supplied</path>
+    <path depth="11" count="1" sequence-number="564"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/hi[@rendition]/hi[@rendition]/supplied/text()</path>
+    <path depth="9" count="5" sequence-number="356"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/lb</path>
+    <path depth="9" count="3" sequence-number="364"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/ref</path>
+    <path depth="9" count="3" sequence-number="572"
+        >TEI/text/back/div[@n]/div[@n]/list/item/hi[@rendition]/ref/text()</path>
+    <path depth="8" count="159" sequence-number="358"
+        >TEI/text/back/div[@n]/div[@n]/list/item/lb</path>
+    <path depth="8" count="1" sequence-number="368"
+        >TEI/text/back/div[@n]/div[@n]/list/item/list</path>
+    <path depth="9" count="4" sequence-number="369"
+        >TEI/text/back/div[@n]/div[@n]/list/item/list/item</path>
+    <path depth="9" count="3" sequence-number="575"
+        >TEI/text/back/div[@n]/div[@n]/list/item/list/item/text()</path>
+    <path depth="10" count="1" sequence-number="372"
+        >TEI/text/back/div[@n]/div[@n]/list/item/list/item/hi[@rendition]</path>
+    <path depth="10" count="1" sequence-number="577"
+        >TEI/text/back/div[@n]/div[@n]/list/item/list/item/hi[@rendition]/text()</path>
+    <path depth="10" count="4" sequence-number="370"
+        >TEI/text/back/div[@n]/div[@n]/list/item/list/item/ref</path>
+    <path depth="10" count="4" sequence-number="576"
+        >TEI/text/back/div[@n]/div[@n]/list/item/list/item/ref/text()</path>
+    <path depth="9" count="3" sequence-number="371"
+        >TEI/text/back/div[@n]/div[@n]/list/item/list/lb</path>
+    <path depth="8" count="2" sequence-number="366"
+        >TEI/text/back/div[@n]/div[@n]/list/item/pb[@n][@facs]</path>
+    <path depth="8" count="235" sequence-number="359"
+        >TEI/text/back/div[@n]/div[@n]/list/item/ref</path>
+    <path depth="8" count="192" sequence-number="567"
+        >TEI/text/back/div[@n]/div[@n]/list/item/ref/text()</path>
+    <path depth="9" count="43" sequence-number="360"
+        >TEI/text/back/div[@n]/div[@n]/list/item/ref/hi[@rendition]</path>
+    <path depth="9" count="43" sequence-number="568"
+        >TEI/text/back/div[@n]/div[@n]/list/item/ref/hi[@rendition]/text()</path>
+    <path depth="7" count="334" sequence-number="346">TEI/text/back/div[@n]/div[@n]/list/lb</path>
+    <path depth="6" count="94" sequence-number="373">TEI/text/back/div[@n]/div[@n]/p</path>
+    <path depth="6" count="976" sequence-number="580">TEI/text/back/div[@n]/div[@n]/p/text()</path>
+    <path depth="7" count="84" sequence-number="381"
+        >TEI/text/back/div[@n]/div[@n]/p/fw[@type][@place]</path>
+    <path depth="7" count="47" sequence-number="581"
+        >TEI/text/back/div[@n]/div[@n]/p/fw[@type][@place]/text()</path>
+    <path depth="8" count="37" sequence-number="383"
+        >TEI/text/back/div[@n]/div[@n]/p/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="8" count="37" sequence-number="582"
+        >TEI/text/back/div[@n]/div[@n]/p/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="7" count="72" sequence-number="374"
+        >TEI/text/back/div[@n]/div[@n]/p/hi[@rendition]</path>
+    <path depth="7" count="84" sequence-number="579"
+        >TEI/text/back/div[@n]/div[@n]/p/hi[@rendition]/text()</path>
+    <path depth="8" count="1" sequence-number="375"
+        >TEI/text/back/div[@n]/div[@n]/p/hi[@rendition]/hi[@rendition]</path>
+    <path depth="8" count="1" sequence-number="578"
+        >TEI/text/back/div[@n]/div[@n]/p/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="8" count="12" sequence-number="384"
+        >TEI/text/back/div[@n]/div[@n]/p/hi[@rendition]/lb</path>
+    <path depth="7" count="901" sequence-number="380">TEI/text/back/div[@n]/div[@n]/p/lb</path>
+    <path depth="7" count="36" sequence-number="382"
+        >TEI/text/back/div[@n]/div[@n]/p/pb[@n][@facs]</path>
+    <path depth="7" count="1" sequence-number="386">TEI/text/back/div[@n]/div[@n]/p/supplied</path>
+    <path depth="7" count="1" sequence-number="584"
+        >TEI/text/back/div[@n]/div[@n]/p/supplied/text()</path>
+    <path depth="6" count="19" sequence-number="354"
+        >TEI/text/back/div[@n]/div[@n]/pb[@n][@facs]</path>
+    <path depth="5" count="23" sequence-number="361">TEI/text/back/div[@n]/fw[@type][@place]</path>
+    <path depth="5" count="7" sequence-number="569"
+        >TEI/text/back/div[@n]/fw[@type][@place]/text()</path>
+    <path depth="6" count="16" sequence-number="363"
+        >TEI/text/back/div[@n]/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="6" count="16" sequence-number="570"
+        >TEI/text/back/div[@n]/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="5" count="4" sequence-number="330">TEI/text/back/div[@n]/head</path>
+    <path depth="5" count="1" sequence-number="555">TEI/text/back/div[@n]/head/text()</path>
+    <path depth="6" count="5" sequence-number="331">TEI/text/back/div[@n]/head/hi[@rendition]</path>
+    <path depth="6" count="7" sequence-number="554"
+        >TEI/text/back/div[@n]/head/hi[@rendition]/text()</path>
+    <path depth="7" count="2" sequence-number="332"
+        >TEI/text/back/div[@n]/head/hi[@rendition]/lb</path>
+    <path depth="5" count="126" sequence-number="333">TEI/text/back/div[@n]/lb</path>
+    <path depth="5" count="4" sequence-number="387">TEI/text/back/div[@n]/list</path>
+    <path depth="6" count="46" sequence-number="388">TEI/text/back/div[@n]/list/item</path>
+    <path depth="6" count="28" sequence-number="587">TEI/text/back/div[@n]/list/item/text()</path>
+    <path depth="7" count="58" sequence-number="389"
+        >TEI/text/back/div[@n]/list/item/hi[@rendition]</path>
+    <path depth="7" count="94" sequence-number="585"
+        >TEI/text/back/div[@n]/list/item/hi[@rendition]/text()</path>
+    <path depth="8" count="36" sequence-number="390"
+        >TEI/text/back/div[@n]/list/item/hi[@rendition]/lb</path>
+    <path depth="7" count="2" sequence-number="394">TEI/text/back/div[@n]/list/item/lb</path>
+    <path depth="7" count="57" sequence-number="391">TEI/text/back/div[@n]/list/item/ref</path>
+    <path depth="7" count="48" sequence-number="586"
+        >TEI/text/back/div[@n]/list/item/ref/text()</path>
+    <path depth="8" count="9" sequence-number="393"
+        >TEI/text/back/div[@n]/list/item/ref/hi[@rendition]</path>
+    <path depth="8" count="9" sequence-number="588"
+        >TEI/text/back/div[@n]/list/item/ref/hi[@rendition]/text()</path>
+    <path depth="6" count="42" sequence-number="392">TEI/text/back/div[@n]/list/lb</path>
+    <path depth="5" count="1" sequence-number="395">TEI/text/back/div[@n]/p</path>
+    <path depth="6" count="1" sequence-number="396">TEI/text/back/div[@n]/p/hi[@rendition]</path>
+    <path depth="6" count="1" sequence-number="590"
+        >TEI/text/back/div[@n]/p/hi[@rendition]/text()</path>
+    <path depth="7" count="1" sequence-number="397"
+        >TEI/text/back/div[@n]/p/hi[@rendition]/hi[@rendition]</path>
+    <path depth="7" count="1" sequence-number="589"
+        >TEI/text/back/div[@n]/p/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="5" count="11" sequence-number="362">TEI/text/back/div[@n]/pb[@n][@facs]</path>
+    <path depth="4" count="1" sequence-number="328">TEI/text/back/figure</path>
+    <path depth="4" count="5" sequence-number="378">TEI/text/back/lb</path>
+    <path depth="4" count="3" sequence-number="377"
+        >TEI/text/back/milestone[@unit][@rendition]</path>
+    <path depth="4" count="2" sequence-number="398">TEI/text/back/pb[@facs][not(@n)]</path>
+    <path depth="4" count="1" sequence-number="376">TEI/text/back/pb[@n][@facs]</path>
+    <path depth="3" count="1" sequence-number="145">TEI/text/body</path>
+    <path depth="4" count="19" sequence-number="149">TEI/text/body/div[@n]</path>
+    <path depth="5" count="134" sequence-number="154">TEI/text/body/div[@n]/div[@n]</path>
+    <path depth="6" count="23" sequence-number="176">TEI/text/body/div[@n]/div[@n]/cit</path>
+    <path depth="7" count="4" sequence-number="257">TEI/text/body/div[@n]/div[@n]/cit/lb</path>
+    <path depth="7" count="27" sequence-number="177">TEI/text/body/div[@n]/div[@n]/cit/quote</path>
+    <path depth="7" count="3" sequence-number="475"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/text()</path>
+    <path depth="8" count="26" sequence-number="178"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/hi[@rendition]</path>
+    <path depth="8" count="13" sequence-number="500"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/hi[@rendition]/text()</path>
+    <path depth="9" count="25" sequence-number="179"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/hi[@rendition]/hi[@rendition]</path>
+    <path depth="9" count="32" sequence-number="472"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="10" count="1" sequence-number="258"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/hi[@rendition]/hi[@rendition]/gap[@unit][@reason]</path>
+    <path depth="10" count="20" sequence-number="181"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="10" count="44" sequence-number="473"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="11" count="1" sequence-number="259"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/hi[@rendition]/hi[@rendition]/hi[@rendition]/gap[@unit][@reason]</path>
+    <path depth="11" count="23" sequence-number="184"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/hi[@rendition]/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="10" count="25" sequence-number="180"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="9" count="10" sequence-number="229"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/hi[@rendition]/lb</path>
+    <path depth="8" count="3" sequence-number="240"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lb</path>
+    <path depth="8" count="2" sequence-number="281"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]</path>
+    <path depth="9" count="6" sequence-number="282"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l</path>
+    <path depth="9" count="1" sequence-number="528"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/text()</path>
+    <path depth="10" count="7" sequence-number="283"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/hi[@rendition]</path>
+    <path depth="11" count="7" sequence-number="284"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]</path>
+    <path depth="11" count="10" sequence-number="529"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="12" count="1" sequence-number="287"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="13" count="1" sequence-number="288"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="13" count="1" sequence-number="530"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="12" count="4" sequence-number="291"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="12" count="1" sequence-number="289"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/note[@place][@n]</path>
+    <path depth="12" count="1" sequence-number="532"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/note[@place][@n]/text()</path>
+    <path depth="13" count="1" sequence-number="290"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/note[@place][@n]/hi[@rendition]</path>
+    <path depth="13" count="1" sequence-number="531"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/note[@place][@n]/hi[@rendition]/text()</path>
+    <path depth="10" count="1" sequence-number="286"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/l/lb</path>
+    <path depth="9" count="4" sequence-number="285"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/lg[@type]/lb</path>
+    <path depth="8" count="3" sequence-number="185"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/note[@place][@n]</path>
+    <path depth="8" count="2" sequence-number="499"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/note[@place][@n]/text()</path>
+    <path depth="9" count="3" sequence-number="186"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/note[@place][@n]/hi[@rendition]</path>
+    <path depth="9" count="3" sequence-number="476"
+        >TEI/text/body/div[@n]/div[@n]/cit/quote/note[@place][@n]/hi[@rendition]/text()</path>
+    <path depth="6" count="2" sequence-number="241">TEI/text/body/div[@n]/div[@n]/figure</path>
+    <path depth="6" count="77" sequence-number="173"
+        >TEI/text/body/div[@n]/div[@n]/fw[@type][@place]</path>
+    <path depth="6" count="41" sequence-number="470"
+        >TEI/text/body/div[@n]/div[@n]/fw[@type][@place]/text()</path>
+    <path depth="7" count="39" sequence-number="174"
+        >TEI/text/body/div[@n]/div[@n]/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="7" count="39" sequence-number="471"
+        >TEI/text/body/div[@n]/div[@n]/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="6" count="134" sequence-number="155">TEI/text/body/div[@n]/div[@n]/head</path>
+    <path depth="6" count="22" sequence-number="461"
+        >TEI/text/body/div[@n]/div[@n]/head/text()</path>
+    <path depth="7" count="288" sequence-number="156"
+        >TEI/text/body/div[@n]/div[@n]/head/hi[@rendition]</path>
+    <path depth="7" count="445" sequence-number="462"
+        >TEI/text/body/div[@n]/div[@n]/head/hi[@rendition]/text()</path>
+    <path depth="8" count="143" sequence-number="171"
+        >TEI/text/body/div[@n]/div[@n]/head/hi[@rendition]/hi[@rendition]</path>
+    <path depth="8" count="143" sequence-number="469"
+        >TEI/text/body/div[@n]/div[@n]/head/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="9" count="3" sequence-number="326"
+        >TEI/text/body/div[@n]/div[@n]/head/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="9" count="3" sequence-number="553"
+        >TEI/text/body/div[@n]/div[@n]/head/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="9" count="3" sequence-number="315"
+        >TEI/text/body/div[@n]/div[@n]/head/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="8" count="48" sequence-number="158"
+        >TEI/text/body/div[@n]/div[@n]/head/hi[@rendition]/lb</path>
+    <path depth="7" count="128" sequence-number="157">TEI/text/body/div[@n]/div[@n]/head/lb</path>
+    <path depth="6" count="532" sequence-number="159">TEI/text/body/div[@n]/div[@n]/lb</path>
+    <path depth="6" count="20" sequence-number="222">TEI/text/body/div[@n]/div[@n]/lg[@type]</path>
+    <path depth="7" count="100" sequence-number="223"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l</path>
+    <path depth="7" count="1" sequence-number="523"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/text()</path>
+    <path depth="8" count="99" sequence-number="224"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/hi[@rendition]</path>
+    <path depth="8" count="27" sequence-number="501"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/hi[@rendition]/text()</path>
+    <path depth="9" count="74" sequence-number="225"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/hi[@rendition]/hi[@rendition]</path>
+    <path depth="9" count="56" sequence-number="496"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="10" count="18" sequence-number="230"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="10" count="18" sequence-number="502"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="9" count="1" sequence-number="227"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/hi[@rendition]/note[@place][@n]</path>
+    <path depth="9" count="1" sequence-number="498"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/hi[@rendition]/note[@place][@n]/text()</path>
+    <path depth="10" count="1" sequence-number="228"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/hi[@rendition]/note[@place][@n]/hi[@rendition]</path>
+    <path depth="10" count="1" sequence-number="497"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/hi[@rendition]/note[@place][@n]/hi[@rendition]/text()</path>
+    <path depth="8" count="1" sequence-number="270"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/note[@place][@n]</path>
+    <path depth="8" count="1" sequence-number="522"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/note[@place][@n]/text()</path>
+    <path depth="9" count="1" sequence-number="271"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/note[@place][@n]/hi[@rendition]</path>
+    <path depth="9" count="1" sequence-number="521"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/l/note[@place][@n]/hi[@rendition]/text()</path>
+    <path depth="7" count="80" sequence-number="226"
+        >TEI/text/body/div[@n]/div[@n]/lg[@type]/lb</path>
+    <path depth="6" count="106" sequence-number="236">TEI/text/body/div[@n]/div[@n]/list</path>
+    <path depth="7" count="46" sequence-number="312"
+        >TEI/text/body/div[@n]/div[@n]/list/fw[@type][@place]</path>
+    <path depth="7" count="20" sequence-number="546"
+        >TEI/text/body/div[@n]/div[@n]/list/fw[@type][@place]/text()</path>
+    <path depth="8" count="26" sequence-number="314"
+        >TEI/text/body/div[@n]/div[@n]/list/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="8" count="26" sequence-number="547"
+        >TEI/text/body/div[@n]/div[@n]/list/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="7" count="606" sequence-number="237">TEI/text/body/div[@n]/div[@n]/list/item</path>
+    <path depth="7" count="480" sequence-number="506"
+        >TEI/text/body/div[@n]/div[@n]/list/item/text()</path>
+    <path depth="8" count="2" sequence-number="244"
+        >TEI/text/body/div[@n]/div[@n]/list/item/fw[@type][@place]</path>
+    <path depth="8" count="1" sequence-number="509"
+        >TEI/text/body/div[@n]/div[@n]/list/item/fw[@type][@place]/text()</path>
+    <path depth="9" count="1" sequence-number="246"
+        >TEI/text/body/div[@n]/div[@n]/list/item/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="9" count="1" sequence-number="510"
+        >TEI/text/body/div[@n]/div[@n]/list/item/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="8" count="445" sequence-number="238"
+        >TEI/text/body/div[@n]/div[@n]/list/item/hi[@rendition]</path>
+    <path depth="8" count="444" sequence-number="507"
+        >TEI/text/body/div[@n]/div[@n]/list/item/hi[@rendition]/text()</path>
+    <path depth="9" count="49" sequence-number="308"
+        >TEI/text/body/div[@n]/div[@n]/list/item/hi[@rendition]/hi[@rendition]</path>
+    <path depth="9" count="49" sequence-number="542"
+        >TEI/text/body/div[@n]/div[@n]/list/item/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="9" count="4" sequence-number="239"
+        >TEI/text/body/div[@n]/div[@n]/list/item/hi[@rendition]/lb</path>
+    <path depth="8" count="31" sequence-number="242"
+        >TEI/text/body/div[@n]/div[@n]/list/item/lb</path>
+    <path depth="8" count="1" sequence-number="245"
+        >TEI/text/body/div[@n]/div[@n]/list/item/pb[@n][@facs]</path>
+    <path depth="7" count="542" sequence-number="243">TEI/text/body/div[@n]/div[@n]/list/lb</path>
+    <path depth="7" count="21" sequence-number="313"
+        >TEI/text/body/div[@n]/div[@n]/list/pb[@n][@facs]</path>
+    <path depth="7" count="4" sequence-number="322"
+        >TEI/text/body/div[@n]/div[@n]/list/trailer[@rendition]</path>
+    <path depth="7" count="7" sequence-number="551"
+        >TEI/text/body/div[@n]/div[@n]/list/trailer[@rendition]/text()</path>
+    <path depth="8" count="2" sequence-number="325"
+        >TEI/text/body/div[@n]/div[@n]/list/trailer[@rendition]/hi[@rendition]</path>
+    <path depth="8" count="2" sequence-number="552"
+        >TEI/text/body/div[@n]/div[@n]/list/trailer[@rendition]/hi[@rendition]/text()</path>
+    <path depth="8" count="4" sequence-number="323"
+        >TEI/text/body/div[@n]/div[@n]/list/trailer[@rendition]/lb</path>
+    <path depth="6" count="1" sequence-number="219"
+        >TEI/text/body/div[@n]/div[@n]/note[@place][@n]</path>
+    <path depth="6" count="5" sequence-number="495"
+        >TEI/text/body/div[@n]/div[@n]/note[@place][@n]/text()</path>
+    <path depth="7" count="3" sequence-number="220"
+        >TEI/text/body/div[@n]/div[@n]/note[@place][@n]/hi[@rendition]</path>
+    <path depth="7" count="3" sequence-number="494"
+        >TEI/text/body/div[@n]/div[@n]/note[@place][@n]/hi[@rendition]/text()</path>
+    <path depth="7" count="2" sequence-number="221"
+        >TEI/text/body/div[@n]/div[@n]/note[@place][@n]/lb</path>
+    <path depth="6" count="317" sequence-number="160">TEI/text/body/div[@n]/div[@n]/p</path>
+    <path depth="6" count="6096" sequence-number="464">TEI/text/body/div[@n]/div[@n]/p/text()</path>
+    <path depth="7" count="3" sequence-number="204">TEI/text/body/div[@n]/div[@n]/p/cit</path>
+    <path depth="8" count="4" sequence-number="205">TEI/text/body/div[@n]/div[@n]/p/cit/quote</path>
+    <path depth="8" count="2" sequence-number="489"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/text()</path>
+    <path depth="9" count="2" sequence-number="206"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/hi[@rendition]</path>
+    <path depth="9" count="1" sequence-number="490"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/hi[@rendition]/text()</path>
+    <path depth="10" count="2" sequence-number="207"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/hi[@rendition]/hi[@rendition]</path>
+    <path depth="10" count="5" sequence-number="487"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="11" count="1" sequence-number="209"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="11" count="2" sequence-number="488"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="12" count="1" sequence-number="210"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/hi[@rendition]/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="11" count="4" sequence-number="208"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="10" count="1" sequence-number="212"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/hi[@rendition]/lb</path>
+    <path depth="9" count="1" sequence-number="211"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lb</path>
+    <path depth="9" count="1" sequence-number="213"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type]</path>
+    <path depth="10" count="5" sequence-number="214"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type]/l</path>
+    <path depth="10" count="1" sequence-number="491"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type]/l/text()</path>
+    <path depth="11" count="5" sequence-number="215"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type]/l/hi[@rendition]</path>
+    <path depth="12" count="5" sequence-number="216"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]</path>
+    <path depth="12" count="1" sequence-number="492"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="13" count="4" sequence-number="218"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="13" count="4" sequence-number="493"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="10" count="4" sequence-number="217"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type]/lb</path>
+    <path depth="9" count="1" sequence-number="272"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type][@rendition]</path>
+    <path depth="10" count="5" sequence-number="273"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type][@rendition]/l</path>
+    <path depth="10" count="7" sequence-number="524"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type][@rendition]/l/text()</path>
+    <path depth="11" count="3" sequence-number="276"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type][@rendition]/l/hi[@rendition]</path>
+    <path depth="11" count="3" sequence-number="525"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type][@rendition]/l/hi[@rendition]/text()</path>
+    <path depth="11" count="5" sequence-number="274"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type][@rendition]/l/lb</path>
+    <path depth="11" count="1" sequence-number="277"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type][@rendition]/l/note[@place][@n]</path>
+    <path depth="12" count="1" sequence-number="278"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type][@rendition]/l/note[@place][@n]/hi[@rendition]</path>
+    <path depth="12" count="1" sequence-number="526"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type][@rendition]/l/note[@place][@n]/hi[@rendition]/text()</path>
+    <path depth="10" count="4" sequence-number="275"
+        >TEI/text/body/div[@n]/div[@n]/p/cit/quote/lg[@type][@rendition]/lb</path>
+    <path depth="7" count="546" sequence-number="163"
+        >TEI/text/body/div[@n]/div[@n]/p/fw[@type][@place]</path>
+    <path depth="7" count="252" sequence-number="465"
+        >TEI/text/body/div[@n]/div[@n]/p/fw[@type][@place]/text()</path>
+    <path depth="8" count="299" sequence-number="164"
+        >TEI/text/body/div[@n]/div[@n]/p/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="8" count="299" sequence-number="466"
+        >TEI/text/body/div[@n]/div[@n]/p/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="7" count="11" sequence-number="169"
+        >TEI/text/body/div[@n]/div[@n]/p/gap[@unit][@reason]</path>
+    <path depth="7" count="1547" sequence-number="161"
+        >TEI/text/body/div[@n]/div[@n]/p/hi[@rendition]</path>
+    <path depth="7" count="2603" sequence-number="463"
+        >TEI/text/body/div[@n]/div[@n]/p/hi[@rendition]/text()</path>
+    <path depth="8" count="31" sequence-number="182"
+        >TEI/text/body/div[@n]/div[@n]/p/hi[@rendition]/hi[@rendition]</path>
+    <path depth="8" count="49" sequence-number="474"
+        >TEI/text/body/div[@n]/div[@n]/p/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="9" count="4" sequence-number="187"
+        >TEI/text/body/div[@n]/div[@n]/p/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="9" count="5" sequence-number="477"
+        >TEI/text/body/div[@n]/div[@n]/p/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="10" count="1" sequence-number="307"
+        >TEI/text/body/div[@n]/div[@n]/p/hi[@rendition]/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="9" count="17" sequence-number="183"
+        >TEI/text/body/div[@n]/div[@n]/p/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="8" count="1071" sequence-number="168"
+        >TEI/text/body/div[@n]/div[@n]/p/hi[@rendition]/lb</path>
+    <path depth="8" count="5" sequence-number="188"
+        >TEI/text/body/div[@n]/div[@n]/p/hi[@rendition]/supplied</path>
+    <path depth="8" count="5" sequence-number="478"
+        >TEI/text/body/div[@n]/div[@n]/p/hi[@rendition]/supplied/text()</path>
+    <path depth="7" count="5366" sequence-number="162">TEI/text/body/div[@n]/div[@n]/p/lb</path>
+    <path depth="7" count="1" sequence-number="316">TEI/text/body/div[@n]/div[@n]/p/list</path>
+    <path depth="8" count="6" sequence-number="317">TEI/text/body/div[@n]/div[@n]/p/list/item</path>
+    <path depth="8" count="6" sequence-number="548"
+        >TEI/text/body/div[@n]/div[@n]/p/list/item/text()</path>
+    <path depth="9" count="1" sequence-number="319"
+        >TEI/text/body/div[@n]/div[@n]/p/list/item/hi[@rendition]</path>
+    <path depth="9" count="1" sequence-number="549"
+        >TEI/text/body/div[@n]/div[@n]/p/list/item/hi[@rendition]/text()</path>
+    <path depth="8" count="5" sequence-number="318">TEI/text/body/div[@n]/div[@n]/p/list/lb</path>
+    <path depth="8" count="1" sequence-number="320"
+        >TEI/text/body/div[@n]/div[@n]/p/list/trailer[@rendition]</path>
+    <path depth="8" count="2" sequence-number="550"
+        >TEI/text/body/div[@n]/div[@n]/p/list/trailer[@rendition]/text()</path>
+    <path depth="9" count="2" sequence-number="321"
+        >TEI/text/body/div[@n]/div[@n]/p/list/trailer[@rendition]/lb</path>
+    <path depth="7" count="173" sequence-number="166"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n]</path>
+    <path depth="7" count="120" sequence-number="468"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n]/text()</path>
+    <path depth="8" count="180" sequence-number="167"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n]/hi[@rendition]</path>
+    <path depth="8" count="272" sequence-number="467"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n]/hi[@rendition]/text()</path>
+    <path depth="9" count="87" sequence-number="170"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n]/hi[@rendition]/lb</path>
+    <path depth="9" count="6" sequence-number="247"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n]/hi[@rendition]/supplied</path>
+    <path depth="9" count="6" sequence-number="511"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n]/hi[@rendition]/supplied/text()</path>
+    <path depth="8" count="7" sequence-number="172"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n]/lb</path>
+    <path depth="7" count="1" sequence-number="248"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next]</path>
+    <path depth="8" count="1" sequence-number="249"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next]/hi[@rendition]</path>
+    <path depth="8" count="3" sequence-number="512"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next]/hi[@rendition]/text()</path>
+    <path depth="9" count="2" sequence-number="250"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next]/hi[@rendition]/lb</path>
+    <path depth="7" count="1" sequence-number="192"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next][not(@prev)]</path>
+    <path depth="8" count="1" sequence-number="193"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next][not(@prev)]/hi[@rendition]</path>
+    <path depth="8" count="1" sequence-number="482"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next][not(@prev)]/hi[@rendition]/text()</path>
+    <path depth="9" count="1" sequence-number="195"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next][not(@prev)]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="9" count="10" sequence-number="483"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next][not(@prev)]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="10" count="5" sequence-number="196"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next][not(@prev)]/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="10" count="4" sequence-number="197"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next][not(@prev)]/hi[@rendition]/hi[@rendition]/supplied</path>
+    <path depth="10" count="4" sequence-number="484"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next][not(@prev)]/hi[@rendition]/hi[@rendition]/supplied/text()</path>
+    <path depth="9" count="1" sequence-number="194"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@next][not(@prev)]/hi[@rendition]/lb</path>
+    <path depth="7" count="1" sequence-number="251"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@prev]</path>
+    <path depth="8" count="1" sequence-number="252"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@prev]/hi[@rendition]</path>
+    <path depth="8" count="2" sequence-number="513"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@prev]/hi[@rendition]/text()</path>
+    <path depth="9" count="1" sequence-number="253"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@prev]/hi[@rendition]/lb</path>
+    <path depth="7" count="1" sequence-number="199"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@prev][not(@next)]</path>
+    <path depth="8" count="1" sequence-number="200"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@prev][not(@next)]/hi[@rendition]</path>
+    <path depth="8" count="3" sequence-number="485"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@prev][not(@next)]/hi[@rendition]/text()</path>
+    <path depth="9" count="1" sequence-number="202"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@prev][not(@next)]/hi[@rendition]/lb</path>
+    <path depth="9" count="1" sequence-number="201"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@prev][not(@next)]/hi[@rendition]/supplied</path>
+    <path depth="9" count="1" sequence-number="486"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][@xml:id][@prev][not(@next)]/hi[@rendition]/supplied/text()</path>
+    <path depth="7" count="5" sequence-number="189"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@next)][not(@prev)]</path>
+    <path depth="7" count="8" sequence-number="479"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@next)][not(@prev)]/text()</path>
+    <path depth="8" count="7" sequence-number="190"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@next)][not(@prev)]/hi[@rendition]</path>
+    <path depth="8" count="10" sequence-number="480"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@next)][not(@prev)]/hi[@rendition]/text()</path>
+    <path depth="9" count="3" sequence-number="198"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@next)][not(@prev)]/hi[@rendition]/lb</path>
+    <path depth="8" count="1" sequence-number="203"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@next)][not(@prev)]/lb</path>
+    <path depth="7" count="2" sequence-number="254"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@prev)]</path>
+    <path depth="7" count="1" sequence-number="516"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@prev)]/text()</path>
+    <path depth="8" count="2" sequence-number="255"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@prev)]/hi[@rendition]</path>
+    <path depth="8" count="3" sequence-number="514"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@prev)]/hi[@rendition]/text()</path>
+    <path depth="9" count="1" sequence-number="256"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@prev)]/hi[@rendition]/supplied</path>
+    <path depth="9" count="1" sequence-number="515"
+        >TEI/text/body/div[@n]/div[@n]/p/note[@place][@n][not(@xml:id)][not(@prev)]/hi[@rendition]/supplied/text()</path>
+    <path depth="7" count="238" sequence-number="165"
+        >TEI/text/body/div[@n]/div[@n]/p/pb[@n][@facs]</path>
+    <path depth="7" count="1" sequence-number="260">TEI/text/body/div[@n]/div[@n]/p/quote</path>
+    <path depth="8" count="1" sequence-number="261"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]</path>
+    <path depth="9" count="4" sequence-number="262"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/l</path>
+    <path depth="10" count="5" sequence-number="263"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/l/hi[@rendition]</path>
+    <path depth="10" count="1" sequence-number="518"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/l/hi[@rendition]/text()</path>
+    <path depth="11" count="5" sequence-number="264"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]</path>
+    <path depth="11" count="3" sequence-number="519"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="12" count="2" sequence-number="265"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="12" count="2" sequence-number="517"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="12" count="1" sequence-number="269"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="12" count="3" sequence-number="267"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/supplied</path>
+    <path depth="12" count="3" sequence-number="520"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/l/hi[@rendition]/hi[@rendition]/supplied/text()</path>
+    <path depth="10" count="1" sequence-number="268"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/l/lb</path>
+    <path depth="9" count="3" sequence-number="266"
+        >TEI/text/body/div[@n]/div[@n]/p/quote/lg[@type]/lb</path>
+    <path depth="7" count="9" sequence-number="191">TEI/text/body/div[@n]/div[@n]/p/supplied</path>
+    <path depth="7" count="9" sequence-number="481"
+        >TEI/text/body/div[@n]/div[@n]/p/supplied/text()</path>
+    <path depth="6" count="32" sequence-number="175"
+        >TEI/text/body/div[@n]/div[@n]/pb[@n][@facs]</path>
+    <path depth="6" count="2" sequence-number="292">TEI/text/body/div[@n]/div[@n]/table</path>
+    <path depth="7" count="7" sequence-number="293">TEI/text/body/div[@n]/div[@n]/table/row</path>
+    <path depth="8" count="2" sequence-number="311"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell</path>
+    <path depth="8" count="2" sequence-number="545"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell/text()</path>
+    <path depth="8" count="3" sequence-number="304"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@next]</path>
+    <path depth="8" count="3" sequence-number="539"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@next]/text()</path>
+    <path depth="8" count="2" sequence-number="299"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@next][not(@rows)][not(@xml:id)]</path>
+    <path depth="8" count="1" sequence-number="536"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@next][not(@rows)][not(@xml:id)]/text()</path>
+    <path depth="9" count="1" sequence-number="309"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@next][not(@rows)][not(@xml:id)]/hi[@rendition]</path>
+    <path depth="9" count="1" sequence-number="543"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@next][not(@rows)][not(@xml:id)]/hi[@rendition]/text()</path>
+    <path depth="8" count="1" sequence-number="294"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@next][not(@xml:id)]</path>
+    <path depth="8" count="1" sequence-number="533"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@next][not(@xml:id)]/text()</path>
+    <path depth="8" count="2" sequence-number="300"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@rows][@xml:id][not(@next)]</path>
+    <path depth="9" count="2" sequence-number="301"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@rows][@xml:id][not(@next)]/hi[@rendition]</path>
+    <path depth="9" count="2" sequence-number="537"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@rows][@xml:id][not(@next)]/hi[@rendition]/text()</path>
+    <path depth="8" count="1" sequence-number="302"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@rows][not(@next)][not(@xml:id)]</path>
+    <path depth="8" count="2" sequence-number="538"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@rows][not(@next)][not(@xml:id)]/text()</path>
+    <path depth="9" count="1" sequence-number="303"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@rows][not(@next)][not(@xml:id)]/lb</path>
+    <path depth="8" count="1" sequence-number="295"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@xml:id][not(@next)]</path>
+    <path depth="9" count="1" sequence-number="296"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@xml:id][not(@next)]/hi[@rendition]</path>
+    <path depth="9" count="1" sequence-number="534"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[@xml:id][not(@next)]/hi[@rendition]/text()</path>
+    <path depth="8" count="2" sequence-number="305"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[not(@next)]</path>
+    <path depth="8" count="2" sequence-number="540"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[not(@next)]/text()</path>
+    <path depth="9" count="1" sequence-number="306"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[not(@next)]/hi[@rendition]</path>
+    <path depth="9" count="1" sequence-number="541"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[not(@next)]/hi[@rendition]/text()</path>
+    <path depth="8" count="1" sequence-number="310"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[not(@next)][not(@rows)][not(@xml:id)]</path>
+    <path depth="8" count="1" sequence-number="544"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[not(@next)][not(@rows)][not(@xml:id)]/text()</path>
+    <path depth="8" count="1" sequence-number="297"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[not(@next)][not(@xml:id)]</path>
+    <path depth="9" count="1" sequence-number="298"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[not(@next)][not(@xml:id)]/hi[@rendition]</path>
+    <path depth="9" count="1" sequence-number="535"
+        >TEI/text/body/div[@n]/div[@n]/table/row/cell[not(@next)][not(@xml:id)]/hi[@rendition]/text()</path>
+    <path depth="5" count="37" sequence-number="233">TEI/text/body/div[@n]/fw[@type][@place]</path>
+    <path depth="5" count="9" sequence-number="508"
+        >TEI/text/body/div[@n]/fw[@type][@place]/text()</path>
+    <path depth="6" count="28" sequence-number="234"
+        >TEI/text/body/div[@n]/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="6" count="28" sequence-number="505"
+        >TEI/text/body/div[@n]/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="5" count="19" sequence-number="150">TEI/text/body/div[@n]/head</path>
+    <path depth="5" count="2" sequence-number="460">TEI/text/body/div[@n]/head/text()</path>
+    <path depth="6" count="30" sequence-number="151"
+        >TEI/text/body/div[@n]/head/hi[@rendition]</path>
+    <path depth="6" count="33" sequence-number="459"
+        >TEI/text/body/div[@n]/head/hi[@rendition]/text()</path>
+    <path depth="7" count="5" sequence-number="280"
+        >TEI/text/body/div[@n]/head/hi[@rendition]/hi[@rendition]</path>
+    <path depth="7" count="8" sequence-number="527"
+        >TEI/text/body/div[@n]/head/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="8" count="3" sequence-number="324"
+        >TEI/text/body/div[@n]/head/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="7" count="8" sequence-number="279"
+        >TEI/text/body/div[@n]/head/hi[@rendition]/lb</path>
+    <path depth="6" count="9" sequence-number="152">TEI/text/body/div[@n]/head/lb</path>
+    <path depth="5" count="168" sequence-number="153">TEI/text/body/div[@n]/lb</path>
+    <path depth="5" count="17" sequence-number="235">TEI/text/body/div[@n]/pb[@n][@facs]</path>
+    <path depth="4" count="10" sequence-number="231">TEI/text/body/fw[@type][@place]</path>
+    <path depth="4" count="4" sequence-number="503">TEI/text/body/fw[@type][@place]/text()</path>
+    <path depth="5" count="6" sequence-number="232"
+        >TEI/text/body/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="5" count="6" sequence-number="504"
+        >TEI/text/body/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="4" count="39" sequence-number="146">TEI/text/body/lb</path>
+    <path depth="4" count="12" sequence-number="148"
+        >TEI/text/body/milestone[@unit][@rendition]</path>
+    <path depth="4" count="6" sequence-number="147">TEI/text/body/pb[@n][@facs]</path>
+    <path depth="3" count="1" sequence-number="75">TEI/text/front</path>
+    <path depth="4" count="1" sequence-number="100">TEI/text/front/div[@n][not(@type)]</path>
+    <path depth="5" count="1" sequence-number="110">TEI/text/front/div[@n][not(@type)]/figure</path>
+    <path depth="5" count="1" sequence-number="101">TEI/text/front/div[@n][not(@type)]/head</path>
+    <path depth="5" count="1" sequence-number="440"
+        >TEI/text/front/div[@n][not(@type)]/head/text()</path>
+    <path depth="5" count="2" sequence-number="102">TEI/text/front/div[@n][not(@type)]/lb</path>
+    <path depth="5" count="1" sequence-number="103">TEI/text/front/div[@n][not(@type)]/p</path>
+    <path depth="5" count="146" sequence-number="442"
+        >TEI/text/front/div[@n][not(@type)]/p/text()</path>
+    <path depth="6" count="15" sequence-number="106"
+        >TEI/text/front/div[@n][not(@type)]/p/fw[@type][@place]</path>
+    <path depth="6" count="9" sequence-number="443"
+        >TEI/text/front/div[@n][not(@type)]/p/fw[@type][@place]/text()</path>
+    <path depth="7" count="6" sequence-number="108"
+        >TEI/text/front/div[@n][not(@type)]/p/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="7" count="6" sequence-number="444"
+        >TEI/text/front/div[@n][not(@type)]/p/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="6" count="26" sequence-number="104"
+        >TEI/text/front/div[@n][not(@type)]/p/hi[@rendition]</path>
+    <path depth="6" count="42" sequence-number="441"
+        >TEI/text/front/div[@n][not(@type)]/p/hi[@rendition]/text()</path>
+    <path depth="7" count="16" sequence-number="109"
+        >TEI/text/front/div[@n][not(@type)]/p/hi[@rendition]/lb</path>
+    <path depth="6" count="144" sequence-number="105">TEI/text/front/div[@n][not(@type)]/p/lb</path>
+    <path depth="6" count="6" sequence-number="107"
+        >TEI/text/front/div[@n][not(@type)]/p/pb[@facs]</path>
+    <path depth="4" count="1" sequence-number="112">TEI/text/front/div[@type][not(@n)]</path>
+    <path depth="5" count="18" sequence-number="117">TEI/text/front/div[@type][not(@n)]/div</path>
+    <path depth="6" count="2" sequence-number="140"
+        >TEI/text/front/div[@type][not(@n)]/div/fw[@type][@place]</path>
+    <path depth="6" count="2" sequence-number="457"
+        >TEI/text/front/div[@type][not(@n)]/div/fw[@type][@place]/text()</path>
+    <path depth="6" count="18" sequence-number="118"
+        >TEI/text/front/div[@type][not(@n)]/div/head</path>
+    <path depth="7" count="18" sequence-number="119"
+        >TEI/text/front/div[@type][not(@n)]/div/head/hi[@rendition]</path>
+    <path depth="7" count="4" sequence-number="447"
+        >TEI/text/front/div[@type][not(@n)]/div/head/hi[@rendition]/text()</path>
+    <path depth="8" count="16" sequence-number="134"
+        >TEI/text/front/div[@type][not(@n)]/div/head/hi[@rendition]/hi[@rendition]</path>
+    <path depth="8" count="34" sequence-number="453"
+        >TEI/text/front/div[@type][not(@n)]/div/head/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="9" count="18" sequence-number="135"
+        >TEI/text/front/div[@type][not(@n)]/div/head/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="8" count="2" sequence-number="120"
+        >TEI/text/front/div[@type][not(@n)]/div/head/hi[@rendition]/lb</path>
+    <path depth="6" count="21" sequence-number="121"
+        >TEI/text/front/div[@type][not(@n)]/div/lb</path>
+    <path depth="6" count="18" sequence-number="122"
+        >TEI/text/front/div[@type][not(@n)]/div/list</path>
+    <path depth="7" count="2" sequence-number="136"
+        >TEI/text/front/div[@type][not(@n)]/div/list/fw[@type][@place]</path>
+    <path depth="7" count="2" sequence-number="454"
+        >TEI/text/front/div[@type][not(@n)]/div/list/fw[@type][@place]/text()</path>
+    <path depth="8" count="1" sequence-number="137"
+        >TEI/text/front/div[@type][not(@n)]/div/list/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="8" count="1" sequence-number="455"
+        >TEI/text/front/div[@type][not(@n)]/div/list/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="7" count="45" sequence-number="123"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item</path>
+    <path depth="7" count="320" sequence-number="448"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/text()</path>
+    <path depth="8" count="17" sequence-number="129"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/fw[@type][@place]</path>
+    <path depth="8" count="14" sequence-number="451"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/fw[@type][@place]/text()</path>
+    <path depth="9" count="9" sequence-number="130"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="9" count="9" sequence-number="450"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="8" count="235" sequence-number="124"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/hi[@rendition]</path>
+    <path depth="8" count="308" sequence-number="449"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/hi[@rendition]/text()</path>
+    <path depth="9" count="1" sequence-number="142"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/hi[@rendition]/hi[@rendition]</path>
+    <path depth="9" count="2" sequence-number="458"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="10" count="1" sequence-number="143"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/hi[@rendition]/hi[@rendition]/lb</path>
+    <path depth="9" count="74" sequence-number="125"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/hi[@rendition]/lb</path>
+    <path depth="8" count="131" sequence-number="128"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/lb</path>
+    <path depth="8" count="8" sequence-number="131"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/pb[@facs]</path>
+    <path depth="8" count="134" sequence-number="126"
+        >TEI/text/front/div[@type][not(@n)]/div/list/item/space[@dim]</path>
+    <path depth="7" count="29" sequence-number="127"
+        >TEI/text/front/div[@type][not(@n)]/div/list/lb</path>
+    <path depth="7" count="1" sequence-number="138"
+        >TEI/text/front/div[@type][not(@n)]/div/list/pb[@facs]</path>
+    <path depth="6" count="1" sequence-number="141"
+        >TEI/text/front/div[@type][not(@n)]/div/pb[@facs]</path>
+    <path depth="5" count="5" sequence-number="132"
+        >TEI/text/front/div[@type][not(@n)]/fw[@type][@place]</path>
+    <path depth="5" count="4" sequence-number="452"
+        >TEI/text/front/div[@type][not(@n)]/fw[@type][@place]/text()</path>
+    <path depth="6" count="1" sequence-number="139"
+        >TEI/text/front/div[@type][not(@n)]/fw[@type][@place]/hi[@rendition]</path>
+    <path depth="6" count="1" sequence-number="456"
+        >TEI/text/front/div[@type][not(@n)]/fw[@type][@place]/hi[@rendition]/text()</path>
+    <path depth="5" count="1" sequence-number="113">TEI/text/front/div[@type][not(@n)]/head</path>
+    <path depth="6" count="1" sequence-number="114"
+        >TEI/text/front/div[@type][not(@n)]/head/hi[@rendition]</path>
+    <path depth="7" count="1" sequence-number="115"
+        >TEI/text/front/div[@type][not(@n)]/head/hi[@rendition]/hi[@rendition]</path>
+    <path depth="7" count="1" sequence-number="446"
+        >TEI/text/front/div[@type][not(@n)]/head/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="5" count="22" sequence-number="116">TEI/text/front/div[@type][not(@n)]/lb</path>
+    <path depth="5" count="1" sequence-number="144"
+        >TEI/text/front/div[@type][not(@n)]/milestone[@unit][@rendition]</path>
+    <path depth="5" count="2" sequence-number="133"
+        >TEI/text/front/div[@type][not(@n)]/pb[@facs]</path>
+    <path depth="4" count="1" sequence-number="77">TEI/text/front/figure</path>
+    <path depth="4" count="3" sequence-number="111">TEI/text/front/fw[@type][@place]</path>
+    <path depth="4" count="3" sequence-number="445">TEI/text/front/fw[@type][@place]/text()</path>
+    <path depth="4" count="5" sequence-number="99">TEI/text/front/lb</path>
+    <path depth="4" count="3" sequence-number="98"
+        >TEI/text/front/milestone[@unit][@rendition]</path>
+    <path depth="4" count="8" sequence-number="76">TEI/text/front/pb[@facs]</path>
+    <path depth="4" count="1" sequence-number="78">TEI/text/front/titlePage[@type]</path>
+    <path depth="5" count="1" sequence-number="79">TEI/text/front/titlePage[@type]/byline</path>
+    <path depth="6" count="1" sequence-number="80"
+        >TEI/text/front/titlePage[@type]/byline/docAuthor</path>
+    <path depth="7" count="1" sequence-number="81"
+        >TEI/text/front/titlePage[@type]/byline/docAuthor/hi[@rendition]</path>
+    <path depth="7" count="1" sequence-number="432"
+        >TEI/text/front/titlePage[@type]/byline/docAuthor/hi[@rendition]/text()</path>
+    <path depth="7" count="1" sequence-number="82"
+        >TEI/text/front/titlePage[@type]/byline/docAuthor/lb</path>
+    <path depth="5" count="1" sequence-number="92">TEI/text/front/titlePage[@type]/docImprint</path>
+    <path depth="5" count="1" sequence-number="439"
+        >TEI/text/front/titlePage[@type]/docImprint/text()</path>
+    <path depth="6" count="1" sequence-number="97"
+        >TEI/text/front/titlePage[@type]/docImprint/docDate</path>
+    <path depth="6" count="1" sequence-number="438"
+        >TEI/text/front/titlePage[@type]/docImprint/docDate/text()</path>
+    <path depth="6" count="2" sequence-number="94"
+        >TEI/text/front/titlePage[@type]/docImprint/lb</path>
+    <path depth="6" count="1" sequence-number="93"
+        >TEI/text/front/titlePage[@type]/docImprint/pubPlace</path>
+    <path depth="6" count="1" sequence-number="436"
+        >TEI/text/front/titlePage[@type]/docImprint/pubPlace/text()</path>
+    <path depth="6" count="1" sequence-number="95"
+        >TEI/text/front/titlePage[@type]/docImprint/publisher</path>
+    <path depth="7" count="1" sequence-number="96"
+        >TEI/text/front/titlePage[@type]/docImprint/publisher/hi[@rendition]</path>
+    <path depth="7" count="1" sequence-number="437"
+        >TEI/text/front/titlePage[@type]/docImprint/publisher/hi[@rendition]/text()</path>
+    <path depth="5" count="1" sequence-number="83">TEI/text/front/titlePage[@type]/docTitle</path>
+    <path depth="6" count="1" sequence-number="88"
+        >TEI/text/front/titlePage[@type]/docTitle/lb</path>
+    <path depth="6" count="2" sequence-number="84"
+        >TEI/text/front/titlePage[@type]/docTitle/titlePart[@type]</path>
+    <path depth="6" count="14" sequence-number="434"
+        >TEI/text/front/titlePage[@type]/docTitle/titlePart[@type]/text()</path>
+    <path depth="7" count="5" sequence-number="85"
+        >TEI/text/front/titlePage[@type]/docTitle/titlePart[@type]/hi[@rendition]</path>
+    <path depth="7" count="4" sequence-number="433"
+        >TEI/text/front/titlePage[@type]/docTitle/titlePart[@type]/hi[@rendition]/text()</path>
+    <path depth="8" count="1" sequence-number="87"
+        >TEI/text/front/titlePage[@type]/docTitle/titlePart[@type]/hi[@rendition]/hi[@rendition]</path>
+    <path depth="8" count="1" sequence-number="435"
+        >TEI/text/front/titlePage[@type]/docTitle/titlePart[@type]/hi[@rendition]/hi[@rendition]/text()</path>
+    <path depth="7" count="14" sequence-number="86"
+        >TEI/text/front/titlePage[@type]/docTitle/titlePart[@type]/lb</path>
+    <path depth="5" count="1" sequence-number="89">TEI/text/front/titlePage[@type]/figure</path>
+    <path depth="5" count="1" sequence-number="91">TEI/text/front/titlePage[@type]/lb</path>
+    <path depth="5" count="1" sequence-number="90"
+        >TEI/text/front/titlePage[@type]/milestone[@unit][@rendition]</path>
+    <path depth="2" count="1" sequence-number="2">TEI/teiHeader</path>
+    <path depth="3" count="1" sequence-number="65">TEI/teiHeader/encodingDesc</path>
+    <path depth="4" count="1" sequence-number="66">TEI/teiHeader/encodingDesc/editorialDecl</path>
+    <path depth="5" count="1" sequence-number="67">TEI/teiHeader/encodingDesc/editorialDecl/p</path>
+    <path depth="5" count="3" sequence-number="428"
+        >TEI/teiHeader/encodingDesc/editorialDecl/p/text()</path>
+    <path depth="6" count="2" sequence-number="68"
+        >TEI/teiHeader/encodingDesc/editorialDecl/p/ref[@target]</path>
+    <path depth="6" count="2" sequence-number="429"
+        >TEI/teiHeader/encodingDesc/editorialDecl/p/ref[@target]/text()</path>
+    <path depth="3" count="1" sequence-number="3">TEI/teiHeader/fileDesc</path>
+    <path depth="4" count="1" sequence-number="22">TEI/teiHeader/fileDesc/editionStmt</path>
+    <path depth="5" count="1" sequence-number="23">TEI/teiHeader/fileDesc/editionStmt/edition</path>
+    <path depth="5" count="1" sequence-number="408"
+        >TEI/teiHeader/fileDesc/editionStmt/edition/text()</path>
+    <path depth="4" count="1" sequence-number="24">TEI/teiHeader/fileDesc/extent</path>
+    <path depth="5" count="4" sequence-number="25"
+        >TEI/teiHeader/fileDesc/extent/measure[@type]</path>
+    <path depth="5" count="4" sequence-number="409"
+        >TEI/teiHeader/fileDesc/extent/measure[@type]/text()</path>
+    <path depth="4" count="1" sequence-number="26">TEI/teiHeader/fileDesc/publicationStmt</path>
+    <path depth="5" count="1" sequence-number="34"
+        >TEI/teiHeader/fileDesc/publicationStmt/availability</path>
+    <path depth="6" count="1" sequence-number="35"
+        >TEI/teiHeader/fileDesc/publicationStmt/availability/licence[@target]</path>
+    <path depth="7" count="1" sequence-number="36"
+        >TEI/teiHeader/fileDesc/publicationStmt/availability/licence[@target]/p</path>
+    <path depth="7" count="1" sequence-number="415"
+        >TEI/teiHeader/fileDesc/publicationStmt/availability/licence[@target]/p/text()</path>
+    <path depth="5" count="1" sequence-number="28"
+        >TEI/teiHeader/fileDesc/publicationStmt/date[@type]</path>
+    <path depth="5" count="1" sequence-number="411"
+        >TEI/teiHeader/fileDesc/publicationStmt/date[@type]/text()</path>
+    <path depth="5" count="1" sequence-number="37"
+        >TEI/teiHeader/fileDesc/publicationStmt/idno</path>
+    <path depth="6" count="6" sequence-number="38"
+        >TEI/teiHeader/fileDesc/publicationStmt/idno/idno[@type]</path>
+    <path depth="6" count="6" sequence-number="416"
+        >TEI/teiHeader/fileDesc/publicationStmt/idno/idno[@type]/text()</path>
+    <path depth="5" count="1" sequence-number="27"
+        >TEI/teiHeader/fileDesc/publicationStmt/pubPlace</path>
+    <path depth="5" count="1" sequence-number="410"
+        >TEI/teiHeader/fileDesc/publicationStmt/pubPlace/text()</path>
+    <path depth="5" count="1" sequence-number="29"
+        >TEI/teiHeader/fileDesc/publicationStmt/publisher[@xml:id]</path>
+    <path depth="6" count="1" sequence-number="32"
+        >TEI/teiHeader/fileDesc/publicationStmt/publisher[@xml:id]/address</path>
+    <path depth="7" count="1" sequence-number="33"
+        >TEI/teiHeader/fileDesc/publicationStmt/publisher[@xml:id]/address/addrLine</path>
+    <path depth="7" count="1" sequence-number="414"
+        >TEI/teiHeader/fileDesc/publicationStmt/publisher[@xml:id]/address/addrLine/text()</path>
+    <path depth="6" count="1" sequence-number="30"
+        >TEI/teiHeader/fileDesc/publicationStmt/publisher[@xml:id]/email</path>
+    <path depth="6" count="1" sequence-number="412"
+        >TEI/teiHeader/fileDesc/publicationStmt/publisher[@xml:id]/email/text()</path>
+    <path depth="6" count="2" sequence-number="31"
+        >TEI/teiHeader/fileDesc/publicationStmt/publisher[@xml:id]/orgName[@role]</path>
+    <path depth="6" count="2" sequence-number="413"
+        >TEI/teiHeader/fileDesc/publicationStmt/publisher[@xml:id]/orgName[@role]/text()</path>
+    <path depth="4" count="1" sequence-number="39">TEI/teiHeader/fileDesc/sourceDesc</path>
+    <path depth="5" count="1" sequence-number="41">TEI/teiHeader/fileDesc/sourceDesc/biblFull</path>
+    <path depth="6" count="1" sequence-number="48"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/editionStmt</path>
+    <path depth="7" count="1" sequence-number="49"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/editionStmt/edition[@n]</path>
+    <path depth="6" count="1" sequence-number="50"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/extent</path>
+    <path depth="7" count="1" sequence-number="51"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/extent/measure[@type]</path>
+    <path depth="7" count="1" sequence-number="421"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/extent/measure[@type]/text()</path>
+    <path depth="6" count="1" sequence-number="52"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt</path>
+    <path depth="7" count="1" sequence-number="54"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/date[@type]</path>
+    <path depth="7" count="1" sequence-number="423"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/date[@type]/text()</path>
+    <path depth="7" count="1" sequence-number="53"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/pubPlace</path>
+    <path depth="7" count="1" sequence-number="422"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/pubPlace/text()</path>
+    <path depth="7" count="1" sequence-number="55"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/publisher</path>
+    <path depth="8" count="1" sequence-number="56"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/publisher/name</path>
+    <path depth="8" count="1" sequence-number="424"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/publicationStmt/publisher/name/text()</path>
+    <path depth="6" count="1" sequence-number="42"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt</path>
+    <path depth="7" count="1" sequence-number="44"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/author</path>
+    <path depth="8" count="1" sequence-number="45"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/author/persName[@ref]</path>
+    <path depth="9" count="1" sequence-number="47"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/author/persName[@ref]/forename</path>
+    <path depth="9" count="1" sequence-number="420"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/author/persName[@ref]/forename/text()</path>
+    <path depth="9" count="1" sequence-number="46"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/author/persName[@ref]/surname</path>
+    <path depth="9" count="1" sequence-number="419"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/author/persName[@ref]/surname/text()</path>
+    <path depth="7" count="2" sequence-number="43"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/title[@level][@type]</path>
+    <path depth="7" count="2" sequence-number="418"
+        >TEI/teiHeader/fileDesc/sourceDesc/biblFull/titleStmt/title[@level][@type]/text()</path>
+    <path depth="5" count="1" sequence-number="40"
+        >TEI/teiHeader/fileDesc/sourceDesc/bibl[@type]</path>
+    <path depth="5" count="1" sequence-number="417"
+        >TEI/teiHeader/fileDesc/sourceDesc/bibl[@type]/text()</path>
+    <path depth="5" count="1" sequence-number="57">TEI/teiHeader/fileDesc/sourceDesc/msDesc</path>
+    <path depth="6" count="1" sequence-number="58"
+        >TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier</path>
+    <path depth="7" count="1" sequence-number="60"
+        >TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/idno</path>
+    <path depth="8" count="3" sequence-number="61"
+        >TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/idno/idno[@type]</path>
+    <path depth="8" count="3" sequence-number="426"
+        >TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/idno/idno[@type]/text()</path>
+    <path depth="7" count="1" sequence-number="59"
+        >TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository</path>
+    <path depth="7" count="1" sequence-number="425"
+        >TEI/teiHeader/fileDesc/sourceDesc/msDesc/msIdentifier/repository/text()</path>
+    <path depth="6" count="1" sequence-number="62"
+        >TEI/teiHeader/fileDesc/sourceDesc/msDesc/physDesc</path>
+    <path depth="7" count="1" sequence-number="63"
+        >TEI/teiHeader/fileDesc/sourceDesc/msDesc/physDesc/typeDesc</path>
+    <path depth="8" count="1" sequence-number="64"
+        >TEI/teiHeader/fileDesc/sourceDesc/msDesc/physDesc/typeDesc/p</path>
+    <path depth="8" count="1" sequence-number="427"
+        >TEI/teiHeader/fileDesc/sourceDesc/msDesc/physDesc/typeDesc/p/text()</path>
+    <path depth="4" count="1" sequence-number="4">TEI/teiHeader/fileDesc/titleStmt</path>
+    <path depth="5" count="1" sequence-number="6">TEI/teiHeader/fileDesc/titleStmt/author</path>
+    <path depth="6" count="1" sequence-number="7"
+        >TEI/teiHeader/fileDesc/titleStmt/author/persName[@ref]</path>
+    <path depth="7" count="1" sequence-number="9"
+        >TEI/teiHeader/fileDesc/titleStmt/author/persName[@ref]/forename</path>
+    <path depth="7" count="1" sequence-number="401"
+        >TEI/teiHeader/fileDesc/titleStmt/author/persName[@ref]/forename/text()</path>
+    <path depth="7" count="1" sequence-number="8"
+        >TEI/teiHeader/fileDesc/titleStmt/author/persName[@ref]/surname</path>
+    <path depth="7" count="1" sequence-number="400"
+        >TEI/teiHeader/fileDesc/titleStmt/author/persName[@ref]/surname/text()</path>
+    <path depth="5" count="7" sequence-number="10"
+        >TEI/teiHeader/fileDesc/titleStmt/editor[@corresp]</path>
+    <path depth="6" count="4" sequence-number="14"
+        >TEI/teiHeader/fileDesc/titleStmt/editor[@corresp]/persName</path>
+    <path depth="7" count="4" sequence-number="16"
+        >TEI/teiHeader/fileDesc/titleStmt/editor[@corresp]/persName/forename</path>
+    <path depth="7" count="4" sequence-number="405"
+        >TEI/teiHeader/fileDesc/titleStmt/editor[@corresp]/persName/forename/text()</path>
+    <path depth="7" count="4" sequence-number="15"
+        >TEI/teiHeader/fileDesc/titleStmt/editor[@corresp]/persName/surname</path>
+    <path depth="7" count="4" sequence-number="404"
+        >TEI/teiHeader/fileDesc/titleStmt/editor[@corresp]/persName/surname/text()</path>
+    <path depth="6" count="3" sequence-number="11"
+        >TEI/teiHeader/fileDesc/titleStmt/editor[@corresp]/persName[@ref]</path>
+    <path depth="7" count="3" sequence-number="13"
+        >TEI/teiHeader/fileDesc/titleStmt/editor[@corresp]/persName[@ref]/forename</path>
+    <path depth="7" count="3" sequence-number="403"
+        >TEI/teiHeader/fileDesc/titleStmt/editor[@corresp]/persName[@ref]/forename/text()</path>
+    <path depth="7" count="3" sequence-number="12"
+        >TEI/teiHeader/fileDesc/titleStmt/editor[@corresp]/persName[@ref]/surname</path>
+    <path depth="7" count="3" sequence-number="402"
+        >TEI/teiHeader/fileDesc/titleStmt/editor[@corresp]/persName[@ref]/surname/text()</path>
+    <path depth="5" count="1" sequence-number="17">TEI/teiHeader/fileDesc/titleStmt/respStmt</path>
+    <path depth="6" count="1" sequence-number="18"
+        >TEI/teiHeader/fileDesc/titleStmt/respStmt/orgName[@ref]</path>
+    <path depth="6" count="1" sequence-number="406"
+        >TEI/teiHeader/fileDesc/titleStmt/respStmt/orgName[@ref]/text()</path>
+    <path depth="6" count="1" sequence-number="19"
+        >TEI/teiHeader/fileDesc/titleStmt/respStmt/resp</path>
+    <path depth="7" count="1" sequence-number="20"
+        >TEI/teiHeader/fileDesc/titleStmt/respStmt/resp/note[@type]</path>
+    <path depth="7" count="1" sequence-number="407"
+        >TEI/teiHeader/fileDesc/titleStmt/respStmt/resp/note[@type]/text()</path>
+    <path depth="7" count="1" sequence-number="21"
+        >TEI/teiHeader/fileDesc/titleStmt/respStmt/resp/ref[@target]</path>
+    <path depth="5" count="2" sequence-number="5"
+        >TEI/teiHeader/fileDesc/titleStmt/title[@type]</path>
+    <path depth="5" count="2" sequence-number="399"
+        >TEI/teiHeader/fileDesc/titleStmt/title[@type]/text()</path>
+    <path depth="3" count="1" sequence-number="69">TEI/teiHeader/profileDesc</path>
+    <path depth="4" count="1" sequence-number="72">TEI/teiHeader/profileDesc/textClass</path>
+    <path depth="5" count="6" sequence-number="73"
+        >TEI/teiHeader/profileDesc/textClass/classCode[@scheme]</path>
+    <path depth="5" count="6" sequence-number="431"
+        >TEI/teiHeader/profileDesc/textClass/classCode[@scheme]/text()</path>
+    <path depth="4" count="1" sequence-number="70">TEI/teiHeader/profileDesc/langUsage</path>
+    <path depth="5" count="1" sequence-number="71"
+        >TEI/teiHeader/profileDesc/langUsage/language[@ident]</path>
+    <path depth="5" count="1" sequence-number="430"
+        >TEI/teiHeader/profileDesc/langUsage/language[@ident]/text()</path>
+</paths>
