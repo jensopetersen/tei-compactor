@@ -29,6 +29,26 @@ declare function functx:substring-before-if-contains
    else $arg
  } ;
 
+declare function local:add-ns-node(
+ $elem as element(),
+ $prefix as xs:string,
+ $ns-uri as xs:string
+) as element() {
+   element { node-name($elem) } {
+       for $prefix in in-scope-prefixes($elem)
+       return
+           try {
+               namespace { $prefix } { namespace-uri-for-prefix($prefix, $elem) }
+           } catch * {
+               ()
+           },
+       namespace { $prefix } { $ns-uri },
+       for $attribute in $elem/@*
+              return attribute {name($attribute)} {$attribute},
+       $elem/node()
+   }
+};
+
 declare function local:build-paths($doc as item()*, $attributes-to-suppress-from-paths as xs:string*, $attributes-to-output-with-value as xs:string*, $empty-elements-to-remove as xs:string*, $target as xs:string) as element()* {
     let $paths :=
         (:we gather nodes from the document; comments and pis are not yet supported:)
@@ -183,28 +203,31 @@ declare function local:make-element-list($element as element()) as element() {
       }
 };
 
-declare function local:construct-compacted-tree($doc as item()*, $attributes-to-suppress-from-paths as xs:string*, $attributes-to-output-with-value as xs:string*, $empty-elements-to-remove as xs:string*, $path-attributes-to-remove-from-trees as xs:string*, $target as xs:string) as element()* {
+declare function local:construct-compacted-tree($doc as item()*, $attributes-to-suppress-from-paths as xs:string*, $attributes-to-output-with-value as xs:string*, $empty-elements-to-remove as xs:string*, $path-attributes-to-remove-from-trees as xs:string*, $default-namespaced-element as element(), $target as xs:string) as element()* {
     let $paths := local:build-paths($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $target)
     let $pruned-paths := local:prune-paths($paths)
     let $element-list := local:make-element-list($pruned-paths)
     let $compacted-tree := local:build-tree($element-list/*, $path-attributes-to-remove-from-trees)
-        return $compacted-tree
-};
+    let $compacted-tree := 
+            element {node-name($default-namespaced-element)}
+        {$default-namespaced-element/@*, $compacted-tree/*}
+    let $compacted-tree := local:add-ns-node($compacted-tree, "ext", "http://exist-db.org/mods/extension")
+    let $compacted-tree := local:add-ns-node($compacted-tree, "xsi", "http://www.w3.org/2001/XMLSchema-instance")
+    let $compacted-tree := local:add-ns-node($compacted-tree, "schemaLocation", "www.tei-c.org/release/xml/tei/custom/schema/xsd/tei_all.xsd")
+    return $compacted-tree
 
-declare function local:get-level($node as element()) as xs:integer {
-    $node/@tc:depth
 };
 
 (: author: Jens Erat, https://stackoverflow.com/questions/21527660/transforming-sequence-of-elements-to-tree :)
-(:slightly modified to exclude attributes:)
+(:slightly modified to exclude attributes and incorporate local:get-level():)
 declare function local:build-tree($nodes as element()*, $path-attributes-to-remove-from-trees as xs:string*) as element()* {
-    let $level := local:get-level($nodes[1])
+    let $level := $nodes[1]/@tc:depth
     (: Process all nodes of current level :)
     for $node in $nodes
-    where $level eq local:get-level($node)
+    where $level eq $node/@tc:depth
     return
     (: Find next node of current level, if available :)
-        let $next := ($node/following-sibling::*[local:get-level(.) le $level])[1]
+        let $next := ($node/following-sibling::*[./@tc:depth le $level])[1]
         (: All nodes between the current node and the next node on same level are children :)
         let $children := $node/following-sibling::*[$node << . and (not($next) or . << $next)]
         return
@@ -253,6 +276,7 @@ let $doc :=
 (:let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
 let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml')
 
+let $default-namespaced-element := <TEI xmlns="http://www.tei-c.org/ns/1.0"/>
 let $attributes-to-suppress-from-paths := ''
 (:('xml:id', 'n'):)
 let $attributes-to-output-with-value := ''
@@ -265,4 +289,4 @@ let $target := 'compacted-tree'
 return 
     if ($target eq 'paths')
     then local:build-paths($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $target)
-    else local:construct-compacted-tree($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $path-attributes-to-remove-from-trees, $target)
+    else local:construct-compacted-tree($doc/*, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $path-attributes-to-remove-from-trees, $default-namespaced-element, $target)
