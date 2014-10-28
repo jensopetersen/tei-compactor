@@ -2,6 +2,7 @@ xquery version "3.0";
 
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare namespace functx = "http://www.functx.com";
+declare namespace tp = "https://github.com/jensopetersen/tei-compactor";
 
 declare function functx:substring-after-last-match
   ( $arg as xs:string? ,
@@ -100,7 +101,7 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
     (:distinct-values() appears to maintain document order, but can this be replied upon?:)
     let $distinct-paths := distinct-values($paths)
     let $paths :=
-        <paths count="{$paths-count}">
+        <paths tp:count="{$paths-count}">
             {
             for $path at $sequence-number in $distinct-paths
             (:for $path at $n in ($paths):)
@@ -110,13 +111,13 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
                 replace(replace($path, '/text()', ' /text()'), '@', ' @')(:make text and attribute else nodes follow immediately after their element node:) 
                 
             return
-                <path depth="{$depth}" count="{$count}" seq-no="{$sequence-number}">{$path}</path>
+                <path tp:depth="{$depth}" tp:count="{$count}" tp:seq-no="{$sequence-number}">{$path}</path>
             }
         </paths>
 return $paths
 
 };
-(:I am not quite sure that all this "missing attribute" thing is needed (or any good):)
+
 declare function local:handle-attributes($node as element(), $attributes-to-suppress-from-paths as item()*, $attributes-to-output-with-value as item()*, $target as xs:string) as xs:string? {
     let $attributes := $node/attribute()
         let $attributes :=
@@ -156,8 +157,9 @@ declare function local:make-element-list($element as element()) as element() {
         {$element/@*
         ,
         for $child in $element/node()
-        let $depth := $child/@depth
-        let $count := $child/@count
+        let $depth := $child/@tp:depth
+        let $count := $child/@tp:count
+        let $seq-no := $child/@tp:seq-no
         (:the following regexes can probably be expressed in a smarter way:)
         let $clean := replace($child, '\[not\(@.*?\)\]', '')
         let $name := functx:substring-before-if-contains($clean, '[')
@@ -173,7 +175,7 @@ declare function local:make-element-list($element as element()) as element() {
       let $attributes := tokenize(normalize-space(replace(replace(replace($attributes, '\[', ' '), '\]', ' '), '@', ' ')), ' ')
       return
           element {$name}
-          {attribute depth {$depth}, attribute count {$count}
+          {attribute tp:depth {$depth}, attribute tp:count {$count}, attribute tp:seq-no {$seq-no}
           , 
           for $attribute in $attributes
           return attribute {$attribute} {'x'},
@@ -190,7 +192,7 @@ declare function local:construct-compacted-tree($doc as item()*, $attributes-to-
 };
 
 declare function local:get-level($node as element()) as xs:integer {
-    $node/@depth
+    $node/@tp:depth
 };
 
 (: author: Jens Erat, https://stackoverflow.com/questions/21527660/transforming-sequence-of-elements-to-tree :)
@@ -251,8 +253,8 @@ let $attributes-to-suppress-from-paths := ''
 let $attributes-to-output-with-value := ''
 (:('type', 'rend', 'rendition'):)
 let $empty-elements-to-remove := ('pb', 'lb', 'cb', 'milestone')
-let $intermediate-attributes-to-remove-from-trees := ''
-(:('path', 'count', 'sequence-number', 'level'):)
+let $path-attributes-to-remove-from-trees := ''
+(:('tp:path', 'tp:count', 'tp:seq-no', 'tp:depth'):)
 
 let $target := 'compacted-tree'
 
