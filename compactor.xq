@@ -34,7 +34,7 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
         let $nodes := 
             (:if we are building a tree, we only need element and text nodes; if we list paths, we need attribute nodes as well:)
             if ($target eq 'paths')
-            then ($doc/descendant-or-self::element(), $doc/descendant-or-self::text(), $doc/descendant-or-self::attribute())
+            then ($doc/descendant-or-self::element(), $doc/descendant-or-self::text(), $doc/descendant-or-self::node()/attribute::*)
             else ($doc/descendant-or-self::element(), $doc/descendant-or-self::text())
         (:we order the nodes in document order (and remove duplicates, though here there should be none here):)
         let $nodes := $nodes/.
