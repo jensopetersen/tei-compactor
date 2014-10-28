@@ -1,418 +1,367 @@
-<!--compacted-tree version of http://www.deutschestextarchiv.de/book/download_xml/abel_leibmedicus_1699 with pb, lb, cb, and milestone elements removed-->
-<TEI depth="1" count="1">
-    <text depth="2" count="1">
-        <back depth="3" count="1">
-            <div depth="4" count="4" n="x">
-                <div depth="5" count="102" n="x">
-                    <figure depth="6" count="3"/>
-                    <fw depth="6" count="15" type="x" place="x">text <hi depth="7" count="24"
-                            rendition="x">text <hi depth="8" count="1" rendition="x">text <hi
-                                    depth="9" count="9" rendition="x">text</hi>
-                            </hi>
-                        </hi>
-                    </fw>
-                    <head depth="6" count="2">text <hi depth="7" count="172" rendition="x">text <hi
-                                depth="8" count="1" rendition="x">text <hi depth="9" count="21"
+<!--compacted-tree version of http://www.deutschestextarchiv.de/book/download_xml/abel_leibmedicus_1699 with pb, lb, cb, and milestone elements removed and with non-tei attributes removed-->
+<TEI>
+    <text>
+        <back>
+            <div n="x">
+                <div n="x">
+                    <figure/>
+                    <fw type="x" place="x">text <hi rendition="x">text <hi rendition="x">text <hi
                                     rendition="x">text</hi>
                             </hi>
                         </hi>
+                    </fw>
+                    <head>text <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
+                                    >text</hi>
+                            </hi>
+                        </hi>
                     </head>
-                    <list depth="6" count="59">
-                        <item depth="7" count="398">text <fw depth="8" count="2" type="x" place="x"
-                                >text <hi depth="9" count="2" rendition="x">text</hi>
+                    <list>
+                        <item>text <fw type="x" place="x">text <hi rendition="x">text</hi>
                             </fw>
-                            <hi depth="8" count="137" rendition="x">text <hi depth="9" count="186"
-                                    rendition="x">
-                                    <hi depth="10" count="191" rendition="x">text <hi depth="11"
-                                            count="1" rendition="x">text</hi>
-                                        <supplied depth="11" count="1">text</supplied>
+                            <hi rendition="x">text <hi rendition="x">
+                                    <hi rendition="x">text <hi rendition="x">text</hi>
+                                        <supplied>text</supplied>
                                     </hi>
                                 </hi>
-                                <ref depth="9" count="3">text</ref>
+                                <ref>text</ref>
                             </hi>
-                            <list depth="8" count="1">
-                                <item depth="9" count="3">text <hi depth="10" count="1"
-                                        rendition="x">text</hi>
-                                    <ref depth="10" count="4">text</ref>
+                            <list>
+                                <item>text <hi rendition="x">text</hi>
+                                    <ref>text</ref>
                                 </item>
                             </list>
-                            <ref depth="8" count="192">text <hi depth="9" count="43" rendition="x"
-                                    >text</hi>
+                            <ref>text <hi rendition="x">text</hi>
                             </ref>
                         </item>
                     </list>
-                    <p depth="6" count="976">text <fw depth="7" count="47" type="x" place="x">text
-                                <hi depth="8" count="37" rendition="x">text</hi>
+                    <p>text <fw type="x" place="x">text <hi rendition="x">text</hi>
                         </fw>
-                        <hi depth="7" count="84" rendition="x">text <hi depth="8" count="1"
-                                rendition="x">text</hi>
+                        <hi rendition="x">text <hi rendition="x">text</hi>
                         </hi>
-                        <supplied depth="7" count="1">text</supplied>
+                        <supplied>text</supplied>
                     </p>
                 </div>
-                <fw depth="5" count="7" type="x" place="x">text <hi depth="6" count="16"
-                        rendition="x">text</hi>
+                <fw type="x" place="x">text <hi rendition="x">text</hi>
                 </fw>
-                <head depth="5" count="1">text <hi depth="6" count="7" rendition="x">text</hi>
+                <head>text <hi rendition="x">text</hi>
                 </head>
-                <list depth="5" count="4">
-                    <item depth="6" count="28">text <hi depth="7" count="94" rendition="x">text</hi>
-                        <ref depth="7" count="48">text <hi depth="8" count="9" rendition="x"
-                                >text</hi>
+                <list>
+                    <item>text <hi rendition="x">text</hi>
+                        <ref>text <hi rendition="x">text</hi>
                         </ref>
                     </item>
                 </list>
-                <p depth="5" count="1">
-                    <hi depth="6" count="1" rendition="x">text <hi depth="7" count="1" rendition="x"
-                            >text</hi>
+                <p>
+                    <hi rendition="x">text <hi rendition="x">text</hi>
                     </hi>
                 </p>
             </div>
-            <figure depth="4" count="1"/>
+            <figure/>
         </back>
-        <body depth="3" count="1">
-            <div depth="4" count="19" n="x">
-                <div depth="5" count="134" n="x">
-                    <cit depth="6" count="23">
-                        <quote depth="7" count="3">text <hi depth="8" count="13" rendition="x">text
-                                    <hi depth="9" count="32" rendition="x">text <gap depth="10"
-                                        count="1" unit="x" reason="x"/>
-                                    <hi depth="10" count="44" rendition="x">text <gap depth="11"
-                                            count="1" unit="x" reason="x"/>
+        <body>
+            <div n="x">
+                <div n="x">
+                    <cit>
+                        <quote>text <hi rendition="x">text <hi rendition="x">text <gap unit="x"
+                                        reason="x"/>
+                                    <hi rendition="x">text <gap unit="x" reason="x"/>
                                     </hi>
                                 </hi>
                             </hi>
-                            <lg depth="8" count="2" type="x">
-                                <l depth="9" count="1">text <hi depth="10" count="7" rendition="x">
-                                        <hi depth="11" count="10" rendition="x">text <hi depth="12"
-                                                count="1" rendition="x">
-                                                <hi depth="13" count="1" rendition="x">text</hi>
+                            <lg type="x">
+                                <l>text <hi rendition="x">
+                                        <hi rendition="x">text <hi rendition="x">
+                                                <hi rendition="x">text</hi>
                                             </hi>
-                                            <note depth="12" count="1" place="x" n="x">text <hi
-                                                  depth="13" count="1" rendition="x">text</hi>
+                                            <note place="x" n="x">text <hi rendition="x">text</hi>
                                             </note>
                                         </hi>
                                     </hi>
                                 </l>
                             </lg>
-                            <note depth="8" count="2" place="x" n="x">text <hi depth="9" count="3"
-                                    rendition="x">text</hi>
+                            <note place="x" n="x">text <hi rendition="x">text</hi>
                             </note>
                         </quote>
                     </cit>
-                    <figure depth="6" count="2"/>
-                    <fw depth="6" count="41" type="x" place="x">text <hi depth="7" count="39"
-                            rendition="x">text</hi>
+                    <figure/>
+                    <fw type="x" place="x">text <hi rendition="x">text</hi>
                     </fw>
-                    <head depth="6" count="22">text <hi depth="7" count="445" rendition="x">text <hi
-                                depth="8" count="143" rendition="x">text <hi depth="9" count="3"
-                                    rendition="x">text</hi>
+                    <head>text <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
+                                    >text</hi>
                             </hi>
                         </hi>
                     </head>
-                    <lg depth="6" count="20" type="x">
-                        <l depth="7" count="1">text <hi depth="8" count="27" rendition="x">text <hi
-                                    depth="9" count="56" rendition="x">text <hi depth="10"
-                                        count="18" rendition="x">text</hi>
+                    <lg type="x">
+                        <l>text <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
+                                        >text</hi>
                                 </hi>
-                                <note depth="9" count="1" place="x" n="x">text <hi depth="10"
-                                        count="1" rendition="x">text</hi>
+                                <note place="x" n="x">text <hi rendition="x">text</hi>
                                 </note>
                             </hi>
-                            <note depth="8" count="1" place="x" n="x">text <hi depth="9" count="1"
-                                    rendition="x">text</hi>
+                            <note place="x" n="x">text <hi rendition="x">text</hi>
                             </note>
                         </l>
                     </lg>
-                    <list depth="6" count="106">
-                        <fw depth="7" count="20" type="x" place="x">text <hi depth="8" count="26"
-                                rendition="x">text</hi>
+                    <list>
+                        <fw type="x" place="x">text <hi rendition="x">text</hi>
                         </fw>
-                        <item depth="7" count="480">text <fw depth="8" count="1" type="x" place="x"
-                                >text <hi depth="9" count="1" rendition="x">text</hi>
+                        <item>text <fw type="x" place="x">text <hi rendition="x">text</hi>
                             </fw>
-                            <hi depth="8" count="444" rendition="x">text <hi depth="9" count="49"
-                                    rendition="x">text</hi>
+                            <hi rendition="x">text <hi rendition="x">text</hi>
                             </hi>
                         </item>
-                        <trailer depth="7" count="7" rendition="x">text <hi depth="8" count="2"
-                                rendition="x">text</hi>
+                        <trailer rendition="x">text <hi rendition="x">text</hi>
                         </trailer>
                     </list>
-                    <note depth="6" count="5" place="x" n="x">text <hi depth="7" count="3"
-                            rendition="x">text</hi>
+                    <note place="x" n="x">text <hi rendition="x">text</hi>
                     </note>
-                    <p depth="6" count="6096">text <cit depth="7" count="3">
-                            <quote depth="8" count="2">text <hi depth="9" count="1" rendition="x"
-                                    >text <hi depth="10" count="5" rendition="x">text <hi depth="11"
-                                            count="2" rendition="x">text</hi>
+                    <p>text <cit>
+                            <quote>text <hi rendition="x">text <hi rendition="x">text <hi
+                                            rendition="x">text</hi>
                                     </hi>
                                 </hi>
-                                <lg depth="9" count="1" type="x">
-                                    <l depth="10" count="1">text <hi depth="11" count="5"
-                                            rendition="x">
-                                            <hi depth="12" count="1" rendition="x">text <hi
-                                                  depth="13" count="4" rendition="x">text</hi>
+                                <lg type="x">
+                                    <l>text <hi rendition="x">
+                                            <hi rendition="x">text <hi rendition="x">text</hi>
                                             </hi>
                                         </hi>
                                     </l>
                                 </lg>
-                                <lg depth="9" count="1" type="x" rendition="x">
-                                    <l depth="10" count="7">text <hi depth="11" count="3"
-                                            rendition="x">text</hi>
-                                        <note depth="11" count="1" place="x" n="x">
-                                            <hi depth="12" count="1" rendition="x">text</hi>
+                                <lg type="x" rendition="x">
+                                    <l>text <hi rendition="x">text</hi>
+                                        <note place="x" n="x">
+                                            <hi rendition="x">text</hi>
                                         </note>
                                     </l>
                                 </lg>
                             </quote>
                         </cit>
-                        <fw depth="7" count="252" type="x" place="x">text <hi depth="8" count="299"
-                                rendition="x">text</hi>
+                        <fw type="x" place="x">text <hi rendition="x">text</hi>
                         </fw>
-                        <gap depth="7" count="11" unit="x" reason="x"/>
-                        <hi depth="7" count="2603" rendition="x">text <hi depth="8" count="49"
-                                rendition="x">text <hi depth="9" count="5" rendition="x">text</hi>
+                        <gap unit="x" reason="x"/>
+                        <hi rendition="x">text <hi rendition="x">text <hi rendition="x">text</hi>
                             </hi>
-                            <supplied depth="8" count="5">text</supplied>
+                            <supplied>text</supplied>
                         </hi>
-                        <list depth="7" count="1">
-                            <item depth="8" count="6">text <hi depth="9" count="1" rendition="x"
-                                    >text</hi>
+                        <list>
+                            <item>text <hi rendition="x">text</hi>
                             </item>
-                            <trailer depth="8" count="2" rendition="x">text</trailer>
+                            <trailer rendition="x">text</trailer>
                         </list>
-                        <note depth="7" count="129" place="x" n="x">text <hi depth="8" count="285"
-                                rendition="x">text <supplied depth="9" count="7">text</supplied>
+                        <note place="x" n="x">text <hi rendition="x">text <supplied>text</supplied>
                             </hi>
                         </note>
-                        <note depth="7" count="2" place="x" n="x" xml:id="x" next="x">
-                            <hi depth="8" count="4" rendition="x">text <hi depth="9" count="10"
-                                    rendition="x">text <supplied depth="10" count="4"
-                                        >text</supplied>
+                        <note place="x" n="x" xml:id="x" next="x">
+                            <hi rendition="x">text <hi rendition="x">text <supplied>text</supplied>
                                 </hi>
                             </hi>
                         </note>
-                        <note depth="7" count="2" place="x" n="x" xml:id="x" prev="x">
-                            <hi depth="8" count="5" rendition="x">text <supplied depth="9" count="1"
-                                    >text</supplied>
+                        <note place="x" n="x" xml:id="x" prev="x">
+                            <hi rendition="x">text <supplied>text</supplied>
                             </hi>
                         </note>
-                        <quote depth="7" count="1">
-                            <lg depth="8" count="1" type="x">
-                                <l depth="9" count="4">
-                                    <hi depth="10" count="1" rendition="x">text <hi depth="11"
-                                            count="3" rendition="x">text <hi depth="12" count="2"
-                                                rendition="x">text</hi>
-                                            <supplied depth="12" count="3">text</supplied>
+                        <quote>
+                            <lg type="x">
+                                <l>
+                                    <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
+                                                >text</hi>
+                                            <supplied>text</supplied>
                                         </hi>
                                     </hi>
                                 </l>
                             </lg>
                         </quote>
-                        <supplied depth="7" count="9">text</supplied>
+                        <supplied>text</supplied>
                     </p>
-                    <table depth="6" count="2">
-                        <row depth="7" count="7">
-                            <cell depth="8" count="5">text <hi depth="9" count="2" rendition="x"
-                                    >text</hi>
+                    <table>
+                        <row>
+                            <cell>text <hi rendition="x">text</hi>
                             </cell>
-                            <cell depth="8" count="5" next="x">text <hi depth="9" count="1"
-                                    rendition="x">text</hi>
+                            <cell next="x">text <hi rendition="x">text</hi>
                             </cell>
-                            <cell depth="8" count="2" rows="x">text</cell>
-                            <cell depth="8" count="2" rows="x" xml:id="x">
-                                <hi depth="9" count="2" rendition="x">text</hi>
+                            <cell rows="x">text</cell>
+                            <cell rows="x" xml:id="x">
+                                <hi rendition="x">text</hi>
                             </cell>
-                            <cell depth="8" count="1" xml:id="x">
-                                <hi depth="9" count="1" rendition="x">text</hi>
+                            <cell xml:id="x">
+                                <hi rendition="x">text</hi>
                             </cell>
                         </row>
                     </table>
                 </div>
-                <fw depth="5" count="9" type="x" place="x">text <hi depth="6" count="28"
-                        rendition="x">text</hi>
+                <fw type="x" place="x">text <hi rendition="x">text</hi>
                 </fw>
-                <head depth="5" count="2">text <hi depth="6" count="33" rendition="x">text <hi
-                            depth="7" count="8" rendition="x">text</hi>
+                <head>text <hi rendition="x">text <hi rendition="x">text</hi>
                     </hi>
                 </head>
             </div>
-            <fw depth="4" count="4" type="x" place="x">text <hi depth="5" count="6" rendition="x"
-                    >text</hi>
+            <fw type="x" place="x">text <hi rendition="x">text</hi>
             </fw>
         </body>
-        <front depth="3" count="1">
-            <div depth="4" count="1" n="x">
-                <figure depth="5" count="1"/>
-                <head depth="5" count="1">text</head>
-                <p depth="5" count="146">text <fw depth="6" count="9" type="x" place="x">text <hi
-                            depth="7" count="6" rendition="x">text</hi>
+        <front>
+            <div n="x">
+                <figure/>
+                <head>text</head>
+                <p>text <fw type="x" place="x">text <hi rendition="x">text</hi>
                     </fw>
-                    <hi depth="6" count="42" rendition="x">text</hi>
+                    <hi rendition="x">text</hi>
                 </p>
             </div>
-            <div depth="4" count="1" type="x">
-                <div depth="5" count="18">
-                    <fw depth="6" count="2" type="x" place="x">text</fw>
-                    <head depth="6" count="18">
-                        <hi depth="7" count="4" rendition="x">text <hi depth="8" count="34"
-                                rendition="x">text</hi>
+            <div type="x">
+                <div>
+                    <fw type="x" place="x">text</fw>
+                    <head>
+                        <hi rendition="x">text <hi rendition="x">text</hi>
                         </hi>
                     </head>
-                    <list depth="6" count="18">
-                        <fw depth="7" count="2" type="x" place="x">text <hi depth="8" count="1"
-                                rendition="x">text</hi>
+                    <list>
+                        <fw type="x" place="x">text <hi rendition="x">text</hi>
                         </fw>
-                        <item depth="7" count="320">text <fw depth="8" count="14" type="x" place="x"
-                                >text <hi depth="9" count="9" rendition="x">text</hi>
+                        <item>text <fw type="x" place="x">text <hi rendition="x">text</hi>
                             </fw>
-                            <hi depth="8" count="308" rendition="x">text <hi depth="9" count="2"
-                                    rendition="x">text</hi>
+                            <hi rendition="x">text <hi rendition="x">text</hi>
                             </hi>
-                            <space depth="8" count="134" dim="x"/>
+                            <space dim="x"/>
                         </item>
                     </list>
                 </div>
-                <fw depth="5" count="4" type="x" place="x">text <hi depth="6" count="1"
-                        rendition="x">text</hi>
+                <fw type="x" place="x">text <hi rendition="x">text</hi>
                 </fw>
-                <head depth="5" count="1">
-                    <hi depth="6" count="1" rendition="x">
-                        <hi depth="7" count="1" rendition="x">text</hi>
+                <head>
+                    <hi rendition="x">
+                        <hi rendition="x">text</hi>
                     </hi>
                 </head>
             </div>
-            <figure depth="4" count="1"/>
-            <fw depth="4" count="3" type="x" place="x">text</fw>
-            <titlePage depth="4" count="1" type="x">
-                <byline depth="5" count="1">
-                    <docAuthor depth="6" count="1">
-                        <hi depth="7" count="1" rendition="x">text</hi>
+            <figure/>
+            <fw type="x" place="x">text</fw>
+            <titlePage type="x">
+                <byline>
+                    <docAuthor>
+                        <hi rendition="x">text</hi>
                     </docAuthor>
                 </byline>
-                <docImprint depth="5" count="1">text <docDate depth="6" count="1">text</docDate>
-                    <pubPlace depth="6" count="1">text</pubPlace>
-                    <publisher depth="6" count="1">
-                        <hi depth="7" count="1" rendition="x">text</hi>
+                <docImprint>text <docDate>text</docDate>
+                    <pubPlace>text</pubPlace>
+                    <publisher>
+                        <hi rendition="x">text</hi>
                     </publisher>
                 </docImprint>
-                <docTitle depth="5" count="1">
-                    <titlePart depth="6" count="14" type="x">text <hi depth="7" count="4"
-                            rendition="x">text <hi depth="8" count="1" rendition="x">text</hi>
+                <docTitle>
+                    <titlePart type="x">text <hi rendition="x">text <hi rendition="x">text</hi>
                         </hi>
                     </titlePart>
                 </docTitle>
-                <figure depth="5" count="1"/>
+                <figure/>
             </titlePage>
         </front>
     </text>
-    <teiHeader depth="2" count="1">
-        <encodingDesc depth="3" count="1">
-            <editorialDecl depth="4" count="1">
-                <p depth="5" count="3">text <ref depth="6" count="2" target="x">text</ref>
+    <teiHeader>
+        <encodingDesc>
+            <editorialDecl>
+                <p>text <ref target="x">text</ref>
                 </p>
             </editorialDecl>
         </encodingDesc>
-        <fileDesc depth="3" count="1">
-            <editionStmt depth="4" count="1">
-                <edition depth="5" count="1">text</edition>
+        <fileDesc>
+            <editionStmt>
+                <edition>text</edition>
             </editionStmt>
-            <extent depth="4" count="1">
-                <measure depth="5" count="4" type="x">text</measure>
+            <extent>
+                <measure type="x">text</measure>
             </extent>
-            <publicationStmt depth="4" count="1">
-                <availability depth="5" count="1">
-                    <licence depth="6" count="1" target="x">
-                        <p depth="7" count="1">text</p>
+            <publicationStmt>
+                <availability>
+                    <licence target="x">
+                        <p>text</p>
                     </licence>
                 </availability>
-                <date depth="5" count="1" type="x">text</date>
-                <idno depth="5" count="1">
-                    <idno depth="6" count="6" type="x">text</idno>
+                <date type="x">text</date>
+                <idno>
+                    <idno type="x">text</idno>
                 </idno>
-                <pubPlace depth="5" count="1">text</pubPlace>
-                <publisher depth="5" count="1" xml:id="x">
-                    <address depth="6" count="1">
-<addrLine depth="7" count="1">text</addrLine>
+                <pubPlace>text</pubPlace>
+                <publisher xml:id="x">
+                    <address>
+<addrLine>text</addrLine>
 </address>
-                    <email depth="6" count="1">text</email>
-                    <orgName depth="6" count="2" role="x">text</orgName>
+                    <email>text</email>
+                    <orgName role="x">text</orgName>
                 </publisher>
             </publicationStmt>
-            <sourceDesc depth="4" count="1">
-                <biblFull depth="5" count="1">
-                    <editionStmt depth="6" count="1">
-                        <edition depth="7" count="1" n="x"/>
+            <sourceDesc>
+                <biblFull>
+                    <editionStmt>
+                        <edition n="x"/>
                     </editionStmt>
-                    <extent depth="6" count="1">
-                        <measure depth="7" count="1" type="x">text</measure>
+                    <extent>
+                        <measure type="x">text</measure>
                     </extent>
-                    <publicationStmt depth="6" count="1">
-                        <date depth="7" count="1" type="x">text</date>
-                        <pubPlace depth="7" count="1">text</pubPlace>
-                        <publisher depth="7" count="1">
-                            <name depth="8" count="1">text</name>
+                    <publicationStmt>
+                        <date type="x">text</date>
+                        <pubPlace>text</pubPlace>
+                        <publisher>
+                            <name>text</name>
                         </publisher>
                     </publicationStmt>
-                    <titleStmt depth="6" count="1">
-                        <author depth="7" count="1">
-                            <persName depth="8" count="1" ref="x">
-                                <forename depth="9" count="1">text</forename>
-                                <surname depth="9" count="1">text</surname>
+                    <titleStmt>
+                        <author>
+                            <persName ref="x">
+                                <forename>text</forename>
+                                <surname>text</surname>
                             </persName>
                         </author>
-                        <title depth="7" count="2" level="x" type="x">text</title>
+                        <title level="x" type="x">text</title>
                     </titleStmt>
                 </biblFull>
-                <bibl depth="5" count="1" type="x">text</bibl>
-                <msDesc depth="5" count="1">
-                    <msIdentifier depth="6" count="1">
-                        <idno depth="7" count="1">
-                            <idno depth="8" count="3" type="x">text</idno>
+                <bibl type="x">text</bibl>
+                <msDesc>
+                    <msIdentifier>
+                        <idno>
+                            <idno type="x">text</idno>
                         </idno>
-                        <repository depth="7" count="1">text</repository>
+                        <repository>text</repository>
                     </msIdentifier>
-                    <physDesc depth="6" count="1">
-                        <typeDesc depth="7" count="1">
-                            <p depth="8" count="1">text</p>
+                    <physDesc>
+                        <typeDesc>
+                            <p>text</p>
                         </typeDesc>
                     </physDesc>
                 </msDesc>
             </sourceDesc>
-            <titleStmt depth="4" count="1">
-                <author depth="5" count="1">
-                    <persName depth="6" count="1" ref="x">
-                        <forename depth="7" count="1">text</forename>
-                        <surname depth="7" count="1">text</surname>
+            <titleStmt>
+                <author>
+                    <persName ref="x">
+                        <forename>text</forename>
+                        <surname>text</surname>
                     </persName>
                 </author>
-                <editor depth="5" count="7" corresp="x">
-                    <persName depth="6" count="4">
-                        <forename depth="7" count="4">text</forename>
-                        <surname depth="7" count="4">text</surname>
+                <editor corresp="x">
+                    <persName>
+                        <forename>text</forename>
+                        <surname>text</surname>
                     </persName>
-                    <persName depth="6" count="3" ref="x">
-                        <forename depth="7" count="3">text</forename>
-                        <surname depth="7" count="3">text</surname>
+                    <persName ref="x">
+                        <forename>text</forename>
+                        <surname>text</surname>
                     </persName>
                 </editor>
-                <respStmt depth="5" count="1">
-                    <orgName depth="6" count="1" ref="x">text</orgName>
-                    <resp depth="6" count="1">
-                        <note depth="7" count="1" type="x">text</note>
-                        <ref depth="7" count="1" target="x"/>
+                <respStmt>
+                    <orgName ref="x">text</orgName>
+                    <resp>
+                        <note type="x">text</note>
+                        <ref target="x"/>
                     </resp>
                 </respStmt>
-                <title depth="5" count="2" type="x">text</title>
+                <title type="x">text</title>
             </titleStmt>
         </fileDesc>
-        <profileDesc depth="3" count="1">
-            <textClass depth="4" count="1">
-                <classCode depth="5" count="6" scheme="x">text</classCode>
+        <profileDesc>
+            <textClass>
+                <classCode scheme="x">text</classCode>
             </textClass>
-            <langUsage depth="4" count="1">
-                <language depth="5" count="1" ident="x">text</language>
+            <langUsage>
+                <language ident="x">text</language>
             </langUsage>
         </profileDesc>
     </teiHeader>

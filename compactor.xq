@@ -1,8 +1,8 @@
 xquery version "3.0";
 
-declare namespace tei="http://www.tei-c.org/ns/1.0";
-declare namespace functx = "http://www.functx.com";
-declare namespace tp = "https://github.com/jensopetersen/tei-compactor";
+declare namespace tei="httc://www.tei-c.org/ns/1.0";
+declare namespace functx = "httc://www.functx.com";
+declare namespace tc = "https://github.com/jensopetersen/tei-compactor";
 
 declare function functx:substring-after-last-match
   ( $arg as xs:string? ,
@@ -101,7 +101,7 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
     (:distinct-values() appears to maintain document order, but can this be replied upon?:)
     let $distinct-paths := distinct-values($paths)
     let $paths :=
-        <paths tp:count="{$paths-count}">
+        <paths tc:count="{$paths-count}">
             {
             for $path at $sequence-number in $distinct-paths
             (:for $path at $n in ($paths):)
@@ -111,7 +111,7 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
                 replace(replace($path, '/text()', ' /text()'), '@', ' @')(:make text and attribute else nodes follow immediately after their element node:) 
                 
             return
-                <path tp:depth="{$depth}" tp:count="{$count}" tp:seq-no="{$sequence-number}">{$path}</path>
+                <path tc:depth="{$depth}" tc:count="{$count}" tc:seq-no="{$sequence-number}">{$path}</path>
             }
         </paths>
 return $paths
@@ -157,9 +157,9 @@ declare function local:make-element-list($element as element()) as element() {
         {$element/@*
         ,
         for $child in $element/node()
-        let $depth := $child/@tp:depth
-        let $count := $child/@tp:count
-        let $seq-no := $child/@tp:seq-no
+        let $depth := $child/@tc:depth
+        let $count := $child/@tc:count
+        let $seq-no := $child/@tc:seq-no
         (:the following regexes can probably be expressed in a smarter way:)
         let $clean := replace($child, '\[not\(@.*?\)\]', '')
         let $name := functx:substring-before-if-contains($clean, '[')
@@ -175,7 +175,7 @@ declare function local:make-element-list($element as element()) as element() {
       let $attributes := tokenize(normalize-space(replace(replace(replace($attributes, '\[', ' '), '\]', ' '), '@', ' ')), ' ')
       return
           element {$name}
-          {attribute tp:depth {$depth}, attribute tp:count {$count}, attribute tp:seq-no {$seq-no}
+          {attribute tc:depth {$depth}, attribute tc:count {$count}, attribute tc:seq-no {$seq-no}
           , 
           for $attribute in $attributes
           return attribute {$attribute} {'x'},
@@ -183,20 +183,21 @@ declare function local:make-element-list($element as element()) as element() {
       }
 };
 
-declare function local:construct-compacted-tree($doc as item()*, $attributes-to-suppress-from-paths as xs:string*, $attributes-to-output-with-value as xs:string*, $empty-elements-to-remove as xs:string*, $target as xs:string) as element()* {
+declare function local:construct-compacted-tree($doc as item()*, $attributes-to-suppress-from-paths as xs:string*, $attributes-to-output-with-value as xs:string*, $empty-elements-to-remove as xs:string*, $path-attributes-to-remove-from-trees as xs:string*, $target as xs:string) as element()* {
     let $paths := local:build-paths($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $target)
     let $pruned-paths := local:prune-paths($paths)
     let $element-list := local:make-element-list($pruned-paths)
-    let $compacted-tree := local:build-tree($element-list/*)
+    let $compacted-tree := local:build-tree($element-list/*, $path-attributes-to-remove-from-trees)
         return $compacted-tree
 };
 
 declare function local:get-level($node as element()) as xs:integer {
-    $node/@tp:depth
+    $node/@tc:depth
 };
 
 (: author: Jens Erat, https://stackoverflow.com/questions/21527660/transforming-sequence-of-elements-to-tree :)
-declare function local:build-tree($nodes as element()*) as element()* {
+(:slightly modified to exclude attributes:)
+declare function local:build-tree($nodes as element()*, $path-attributes-to-remove-from-trees as xs:string*) as element()* {
     let $level := local:get-level($nodes[1])
     (: Process all nodes of current level :)
     for $node in $nodes
@@ -209,14 +210,18 @@ declare function local:build-tree($nodes as element()*) as element()* {
         return
             element { name($node) } {
             (: Copy node attributes :)
-            $node/@*
+            let $attributes := $node/@*
+            return
+                for $attribute in $attributes
+                where not(name($attribute) = $path-attributes-to-remove-from-trees)
+                return attribute {name($attribute)} {$attribute}
             ,
             (: Copy all other subnodes, including text, pi, elements, comments :)
             $node/node()
             ,
             (: If there are children, recursively build the subtree :)
             if ($children)
-            then local:build-tree($children)
+            then local:build-tree($children, $path-attributes-to-remove-from-trees)
             else ()
     }
 };
@@ -253,12 +258,11 @@ let $attributes-to-suppress-from-paths := ''
 let $attributes-to-output-with-value := ''
 (:('type', 'rend', 'rendition'):)
 let $empty-elements-to-remove := ('pb', 'lb', 'cb', 'milestone')
-let $path-attributes-to-remove-from-trees := ''
-(:('tp:path', 'tp:count', 'tp:seq-no', 'tp:depth'):)
+let $path-attributes-to-remove-from-trees := ('tc:path', 'tc:count', 'tc:seq-no', 'tc:depth')
 
 let $target := 'compacted-tree'
 
 return 
     if ($target eq 'paths')
     then local:build-paths($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $target)
-    else local:construct-compacted-tree($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $target)
+    else local:construct-compacted-tree($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $path-attributes-to-remove-from-trees, $target)
