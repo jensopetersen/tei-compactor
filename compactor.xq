@@ -28,7 +28,7 @@ declare function functx:substring-before-if-contains
    else $arg
  } ;
 
-declare function local:build-paths($doc as item()*, $attributes-to-suppress-from-paths as xs:string*, $attributes-to-output-with-value as xs:string*, $target as xs:string) as element()* {
+declare function local:build-paths($doc as item()*, $attributes-to-suppress-from-paths as xs:string*, $attributes-to-output-with-value as xs:string*, $empty-elements-to-remove as xs:string*, $target as xs:string) as element()* {
     let $paths :=
         (:we gather nodes from the document; comments and pis are not yet supported:)
         let $nodes := 
@@ -38,6 +38,10 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
             else ($doc/descendant-or-self::element(), $doc/descendant-or-self::text())
         (:we order the nodes in document order (and remove duplicates, though here there should be none here):)
         let $nodes := $nodes/.
+        let $nodes := 
+            for $node in $nodes
+            where not(name($node) = $empty-elements-to-remove)
+            return $node
         return
             for $node in $nodes
             (:for each node, we construct its path to the document element:)
@@ -106,7 +110,7 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
                 replace(replace($path, '/text()', ' /text()'), '@', ' @')(:make text and attribute else nodes follow immediately after their element node:) 
                 
             return
-                <path depth="{$depth}" count="{$count}" sequence-number="{$sequence-number}">{$path}</path>
+                <path depth="{$depth}" count="{$count}" seq-no="{$sequence-number}">{$path}</path>
             }
         </paths>
 return $paths
@@ -177,8 +181,8 @@ declare function local:make-element-list($element as element()) as element() {
       }
 };
 
-declare function local:construct-compacted-tree($doc as item()*, $attributes-to-suppress-from-paths as xs:string*, $attributes-to-output-with-value as xs:string*, $target as xs:string) as element()* {
-    let $paths := local:build-paths($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $target)
+declare function local:construct-compacted-tree($doc as item()*, $attributes-to-suppress-from-paths as xs:string*, $attributes-to-output-with-value as xs:string*, $empty-elements-to-remove as xs:string*, $target as xs:string) as element()* {
+    let $paths := local:build-paths($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $target)
     let $pruned-paths := local:prune-paths($paths)
     let $element-list := local:make-element-list($pruned-paths)
     let $compacted-tree := local:build-tree($element-list/*)
@@ -246,13 +250,13 @@ let $attributes-to-suppress-from-paths := ''
 (:('xml:id', 'n'):)
 let $attributes-to-output-with-value := ''
 (:('type', 'rend', 'rendition'):)
-let $empty-elements-to-remove := ''
-(:('pb', 'lb', 'cb', 'milestone'):)
+let $empty-elements-to-remove := ('pb', 'lb', 'cb', 'milestone')
 let $intermediate-attributes-to-remove-from-trees := ''
 (:('path', 'count', 'sequence-number', 'level'):)
+
 let $target := 'compacted-tree'
 
 return 
     if ($target eq 'paths')
-    then local:build-paths($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $target)
-    else local:construct-compacted-tree($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $target)
+    then local:build-paths($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $target)
+    else local:construct-compacted-tree($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $target)
