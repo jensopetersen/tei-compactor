@@ -1,4 +1,4 @@
 tei-compactor
 ==============
 
-A script to list all unique paths in a TEI document and construct a TEI instance incorporating only used paths.
+An XQuery script to list all unique paths in a TEI document and to construct on that basis a compact TEI instance incorporating only used paths.
