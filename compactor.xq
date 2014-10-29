@@ -198,7 +198,19 @@ declare function local:make-element-list($element as element()) as element() {
           {attribute tc:depth {$depth}, attribute tc:count {$count}, attribute tc:seq-no {$seq-no}
           , 
           for $attribute in $attributes
-          return attribute {$attribute} {'x'},
+          return attribute {$attribute} {
+              if ($attribute eq 'dim') 
+              then 'horizontal' 
+              else
+                  if ($attribute eq 'level')
+                  then 'a' 
+                  else
+                      if ($attribute eq 'rows')
+                      then '10'
+                      else 
+                          if ($attribute eq 'xml:id')
+                          then concat('uuid-', util:uuid())
+                          else 'x'},
           $text}
       }
 };
@@ -426,6 +438,7 @@ let $orders :=
 (:let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
 let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml')
 
+let $default-namespaced-element := <TEI xmlns="http://www.tei-c.org/ns/1.0"/>
 let $default-namespaced-element := <TEI xmlns="http://www.tei-c.org/ns/1.0"/>
 let $attributes-to-suppress-from-paths := ''
 (:('xml:id', 'n'):)

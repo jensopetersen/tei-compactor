@@ -1,4 +1,5 @@
-<!--compacted-tree version of http://www.deutschestextarchiv.de/book/download_xml/abel_leibmedicus_1699 with pb, lb, cb, and milestone elements removed, with xml:id attribute removed, and with non-tei attributes removed-->
+<!--compacted-tree version of http://www.deutschestextarchiv.de/book/download_xml/abel_leibmedicus_1699 with pb, lb, cb, and milestone elements removed, with default values for xml:id, level, dim, rows attributes, and with non-tei attributes removed-->
+
 
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
@@ -36,7 +37,7 @@
                 <measure type="x">text</measure>
             </extent>
             <publicationStmt>
-                <publisher>
+                <publisher xml:id="uuid-e342758e-3b94-4aed-a550-27cd4546df17">
                     <address>
 <addrLine>text</addrLine>
 </address>
@@ -57,7 +58,7 @@
             <sourceDesc>
                 <biblFull>
                     <titleStmt>
-                        <title level="x" type="x">text</title>
+                        <title level="a" type="x">text</title>
                         <author>
                             <persName ref="x">
                                 <forename>text</forename>
@@ -138,7 +139,7 @@
                             </fw>
                             <hi rendition="x">text <hi rendition="x">text</hi>
                             </hi>
-                            <space dim="x"/>
+                            <space dim="horizontal"/>
                         </item>
                     </list>
                     <fw type="x" place="x">text</fw>
@@ -226,12 +227,14 @@
                         <note place="x" n="x">text <hi rendition="x">text <supplied>text</supplied>
                             </hi>
                         </note>
-                        <note place="x" n="x" next="x">
+                        <note place="x" n="x" xml:id="uuid-8a95d1b3-1740-4da4-b1fe-dc464b52563a"
+                            next="x">
                             <hi rendition="x">text <hi rendition="x">text <supplied>text</supplied>
                                 </hi>
                             </hi>
                         </note>
-                        <note place="x" n="x" prev="x">
+                        <note place="x" n="x" xml:id="uuid-b67675db-a7c1-4521-aefe-2228e7679776"
+                            prev="x">
                             <hi rendition="x">text <supplied>text</supplied>
                             </hi>
                         </note>
@@ -292,7 +295,12 @@
                             </cell>
                             <cell next="x">text <hi rendition="x">text</hi>
                             </cell>
-                            <cell rows="x">text <hi rendition="x">text</hi>
+                            <cell rows="10">text</cell>
+                            <cell rows="10" xml:id="uuid-5f4bc6db-cb6b-44ad-be99-86a6e0332e61">
+                                <hi rendition="x">text</hi>
+                            </cell>
+                            <cell xml:id="uuid-c9d8e61a-deda-4a1c-85e9-256b805822b8">
+                                <hi rendition="x">text</hi>
                             </cell>
                         </row>
                     </table>
