@@ -1,113 +1,10 @@
-<!--compacted-tree version of http://www.deutschestextarchiv.de/book/download_xml/abel_leibmedicus_1699 with pb, lb, cb, and milestone elements removed and with non-tei attributes removed-->
+<!--compacted-tree version of http://www.deutschestextarchiv.de/book/download_xml/abel_leibmedicus_1699 with pb, lb, cb, and milestone elements removed, with xml:id attribute removed, and with non-tei attributes removed-->
+
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-    <text>
-        <back>
-            <div n="x">
-                <div n="x">
-                    <figure/>
-                    <fw type="x" place="x">text
-                        <hi rendition="x">text
-                            <hi rendition="x">text
-                                <hi rendition="x">text</hi>
-                            </hi>
-                        </hi>
-                    </fw>
-                    <head>text
-                        <hi rendition="x">text
-                            <hi rendition="x">text
-                                <hi rendition="x">text</hi>
-                            </hi>
-                        </hi>
-                    </head>
-                    <list>
-                        <item>text
-                            <fw type="x" place="x">text
-                                <hi rendition="x">text</hi>
-                            </fw>
-                            <hi rendition="x">text
-                                <hi rendition="x"/>
-                            </hi>
-                        </item>
-                    </list>
-                </div>
-            </div>
-        </back>
-    </text>
     <teiHeader>
-        <encodingDesc>
-            <editorialDecl>
-                <p>text
-                    <ref target="x">text</ref>
-                </p>
-            </editorialDecl>
-        </encodingDesc>
         <fileDesc>
-            <editionStmt>
-                <edition>text</edition>
-            </editionStmt>
-            <extent>
-                <measure type="x">text</measure>
-            </extent>
-            <publicationStmt>
-                <availability>
-                    <licence target="x">
-                        <p>text</p>
-                    </licence>
-                </availability>
-                <date type="x">text</date>
-                <idno>
-                    <idno type="x">text</idno>
-                </idno>
-                <pubPlace>text</pubPlace>
-                <publisher xml:id="x">
-                    <address>
-<addrLine>text</addrLine>
-</address>
-                    <email>text</email>
-                    <orgName role="x">text</orgName>
-                </publisher>
-            </publicationStmt>
-            <sourceDesc>
-                <biblFull>
-                    <editionStmt>
-                        <edition n="x"/>
-                    </editionStmt>
-                    <extent>
-                        <measure type="x">text</measure>
-                    </extent>
-                    <publicationStmt>
-                        <date type="x">text</date>
-                        <pubPlace>text</pubPlace>
-                        <publisher>
-                            <name>text</name>
-                        </publisher>
-                    </publicationStmt>
-                    <titleStmt>
-                        <author>
-                            <persName ref="x">
-                                <forename>text</forename>
-                                <surname>text</surname>
-                            </persName>
-                        </author>
-                        <title level="x" type="x">text</title>
-                    </titleStmt>
-                </biblFull>
-                <bibl type="x">text</bibl>
-                <msDesc>
-                    <msIdentifier>
-                        <idno>
-                            <idno type="x">text</idno>
-                        </idno>
-                        <repository>text</repository>
-                    </msIdentifier>
-                    <physDesc>
-                        <typeDesc>
-                            <p>text</p>
-                        </typeDesc>
-                    </physDesc>
-                </msDesc>
-            </sourceDesc>
             <titleStmt>
+                <title type="x">text</title>
                 <author>
                     <persName ref="x">
                         <forename>text</forename>
@@ -131,8 +28,72 @@
                         <ref target="x"/>
                     </resp>
                 </respStmt>
-                <title type="x">text</title>
             </titleStmt>
+            <editionStmt>
+                <edition>text</edition>
+            </editionStmt>
+            <extent>
+                <measure type="x">text</measure>
+            </extent>
+            <publicationStmt>
+                <publisher>
+                    <address>
+<addrLine>text</addrLine>
+</address>
+                    <email>text</email>
+                    <orgName role="x">text</orgName>
+                </publisher>
+                <pubPlace>text</pubPlace>
+                <idno>
+                    <idno type="x">text</idno>
+                </idno>
+                <availability>
+                    <licence target="x">
+                        <p>text</p>
+                    </licence>
+                </availability>
+                <date type="x">text</date>
+            </publicationStmt>
+            <sourceDesc>
+                <biblFull>
+                    <titleStmt>
+                        <title level="x" type="x">text</title>
+                        <author>
+                            <persName ref="x">
+                                <forename>text</forename>
+                                <surname>text</surname>
+                            </persName>
+                        </author>
+                    </titleStmt>
+                    <editionStmt>
+                        <edition n="x"/>
+                    </editionStmt>
+                    <extent>
+                        <measure type="x">text</measure>
+                    </extent>
+                    <publicationStmt>
+                        <publisher>
+                            <name>text</name>
+                        </publisher>
+                        <pubPlace>text</pubPlace>
+                        <date type="x">text</date>
+                    </publicationStmt>
+                </biblFull>
+                <bibl type="x">text</bibl>
+                <msDesc>
+                    <msIdentifier>
+                        <repository>text</repository>
+                        <idno>
+                            <idno type="x">text</idno>
+                        </idno>
+                    </msIdentifier>
+                    <physDesc>
+                        <typeDesc>
+                            <p>text</p>
+                        </typeDesc>
+                    </physDesc>
+                </msDesc>
+            </sourceDesc>
         </fileDesc>
         <profileDesc>
             <textClass>
@@ -142,5 +103,262 @@
                 <language ident="x">text</language>
             </langUsage>
         </profileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>text <ref target="x">text</ref>
+                </p>
+            </editorialDecl>
+        </encodingDesc>
     </teiHeader>
+    <text>
+        <front>
+            <div n="x">
+                <head>text</head>
+                <p>text <fw type="x" place="x">text <hi rendition="x">text</hi>
+                    </fw>
+                    <hi rendition="x">text</hi>
+                </p>
+                <figure/>
+            </div>
+            <div type="x">
+                <head>
+                    <hi rendition="x">
+                        <hi rendition="x">text</hi>
+                    </hi>
+                </head>
+                <div>
+                    <head>
+                        <hi rendition="x">text <hi rendition="x">text</hi>
+                        </hi>
+                    </head>
+                    <list>
+                        <fw type="x" place="x">text <hi rendition="x">text</hi>
+                        </fw>
+                        <item>text <fw type="x" place="x">text <hi rendition="x">text</hi>
+                            </fw>
+                            <hi rendition="x">text <hi rendition="x">text</hi>
+                            </hi>
+                            <space dim="x"/>
+                        </item>
+                    </list>
+                    <fw type="x" place="x">text</fw>
+                </div>
+                <fw type="x" place="x">text <hi rendition="x">text</hi>
+                </fw>
+            </div>
+            <figure/>
+            <fw type="x" place="x">text</fw>
+            <titlePage type="x">
+                <byline>
+                    <docAuthor>
+                        <hi rendition="x">text</hi>
+                    </docAuthor>
+                </byline>
+                <docImprint>text <docDate>text</docDate>
+                    <pubPlace>text</pubPlace>
+                    <publisher>
+                        <hi rendition="x">text</hi>
+                    </publisher>
+                </docImprint>
+                <docTitle>
+                    <titlePart type="x">text <hi rendition="x">text <hi rendition="x">text</hi>
+                        </hi>
+                    </titlePart>
+                </docTitle>
+                <figure/>
+            </titlePage>
+        </front>
+        <body>
+            <div n="x">
+                <head>text <hi rendition="x">text <hi rendition="x">text</hi>
+                    </hi>
+                </head>
+                <div n="x">
+                    <head>text <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
+                                    >text</hi>
+                            </hi>
+                        </hi>
+                    </head>
+                    <list>
+                        <fw type="x" place="x">text <hi rendition="x">text</hi>
+                        </fw>
+                        <item>text <fw type="x" place="x">text <hi rendition="x">text</hi>
+                            </fw>
+                            <hi rendition="x">text <hi rendition="x">text</hi>
+                            </hi>
+                        </item>
+                        <trailer rendition="x">text <hi rendition="x">text</hi>
+                        </trailer>
+                    </list>
+                    <p>text <cit>
+                            <quote>text <hi rendition="x">text <hi rendition="x">text <hi
+                                            rendition="x">text</hi>
+                                    </hi>
+                                </hi>
+                                <lg type="x">
+                                    <l>text <hi rendition="x">
+                                            <hi rendition="x">text <hi rendition="x">text</hi>
+                                            </hi>
+                                        </hi>
+                                    </l>
+                                </lg>
+                                <lg type="x" rendition="x">
+                                    <l>text <hi rendition="x">text</hi>
+                                        <note place="x" n="x">
+                                            <hi rendition="x">text</hi>
+                                        </note>
+                                    </l>
+                                </lg>
+                            </quote>
+                        </cit>
+                        <fw type="x" place="x">text <hi rendition="x">text</hi>
+                        </fw>
+                        <gap unit="x" reason="x"/>
+                        <hi rendition="x">text <hi rendition="x">text <hi rendition="x">text</hi>
+                            </hi>
+                            <supplied>text</supplied>
+                        </hi>
+                        <list>
+                            <item>text <hi rendition="x">text</hi>
+                            </item>
+                            <trailer rendition="x">text</trailer>
+                        </list>
+                        <note place="x" n="x">text <hi rendition="x">text <supplied>text</supplied>
+                            </hi>
+                        </note>
+                        <note place="x" n="x" next="x">
+                            <hi rendition="x">text <hi rendition="x">text <supplied>text</supplied>
+                                </hi>
+                            </hi>
+                        </note>
+                        <note place="x" n="x" prev="x">
+                            <hi rendition="x">text <supplied>text</supplied>
+                            </hi>
+                        </note>
+                        <quote>
+                            <lg type="x">
+                                <l>
+                                    <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
+                                                >text</hi>
+                                            <supplied>text</supplied>
+                                        </hi>
+                                    </hi>
+                                </l>
+                            </lg>
+                        </quote>
+                        <supplied>text</supplied>
+                    </p>
+                    <cit>
+                        <quote>text <hi rendition="x">text <hi rendition="x">text <gap unit="x"
+                                        reason="x"/>
+                                    <hi rendition="x">text <gap unit="x" reason="x"/>
+                                    </hi>
+                                </hi>
+                            </hi>
+                            <lg type="x">
+                                <l>text <hi rendition="x">
+                                        <hi rendition="x">text <hi rendition="x">
+                                                <hi rendition="x">text</hi>
+                                            </hi>
+                                            <note place="x" n="x">text <hi rendition="x">text</hi>
+                                            </note>
+                                        </hi>
+                                    </hi>
+                                </l>
+                            </lg>
+                            <note place="x" n="x">text <hi rendition="x">text</hi>
+                            </note>
+                        </quote>
+                    </cit>
+                    <figure/>
+                    <fw type="x" place="x">text <hi rendition="x">text</hi>
+                    </fw>
+                    <lg type="x">
+                        <l>text <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
+                                        >text</hi>
+                                </hi>
+                                <note place="x" n="x">text <hi rendition="x">text</hi>
+                                </note>
+                            </hi>
+                            <note place="x" n="x">text <hi rendition="x">text</hi>
+                            </note>
+                        </l>
+                    </lg>
+                    <note place="x" n="x">text <hi rendition="x">text</hi>
+                    </note>
+                    <table>
+                        <row>
+                            <cell>text <hi rendition="x">text</hi>
+                            </cell>
+                            <cell next="x">text <hi rendition="x">text</hi>
+                            </cell>
+                            <cell rows="x">text <hi rendition="x">text</hi>
+                            </cell>
+                        </row>
+                    </table>
+                </div>
+                <fw type="x" place="x">text <hi rendition="x">text</hi>
+                </fw>
+            </div>
+            <fw type="x" place="x">text <hi rendition="x">text</hi>
+            </fw>
+        </body>
+        <back>
+            <div n="x">
+                <head>text <hi rendition="x">text</hi>
+                </head>
+                <list>
+                    <item>text <hi rendition="x">text</hi>
+                        <ref>text <hi rendition="x">text</hi>
+                        </ref>
+                    </item>
+                </list>
+                <p>
+                    <hi rendition="x">text <hi rendition="x">text</hi>
+                    </hi>
+                </p>
+                <div n="x">
+                    <head>text <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
+                                    >text</hi>
+                            </hi>
+                        </hi>
+                    </head>
+                    <list>
+                        <item>text <fw type="x" place="x">text <hi rendition="x">text</hi>
+                            </fw>
+                            <hi rendition="x">text <hi rendition="x">
+                                    <hi rendition="x">text <hi rendition="x">text</hi>
+                                        <supplied>text</supplied>
+                                    </hi>
+                                </hi>
+                                <ref>text</ref>
+                            </hi>
+                            <list>
+                                <item>text <hi rendition="x">text</hi>
+                                    <ref>text</ref>
+                                </item>
+                            </list>
+                            <ref>text <hi rendition="x">text</hi>
+                            </ref>
+                        </item>
+                    </list>
+                    <p>text <fw type="x" place="x">text <hi rendition="x">text</hi>
+                        </fw>
+                        <hi rendition="x">text <hi rendition="x">text</hi>
+                        </hi>
+                        <supplied>text</supplied>
+                    </p>
+                    <figure/>
+                    <fw type="x" place="x">text <hi rendition="x">text <hi rendition="x">text <hi
+                                    rendition="x">text</hi>
+                            </hi>
+                        </hi>
+                    </fw>
+                </div>
+                <fw type="x" place="x">text <hi rendition="x">text</hi>
+                </fw>
+            </div>
+            <figure/>
+        </back>
+    </text>
 </TEI>

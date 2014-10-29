@@ -203,11 +203,12 @@ declare function local:make-element-list($element as element()) as element() {
       }
 };
 
-declare function local:construct-compacted-tree($doc as item()*, $attributes-to-suppress-from-paths as xs:string*, $attributes-to-output-with-value as xs:string*, $empty-elements-to-remove as xs:string*, $path-attributes-to-remove-from-trees as xs:string*, $default-namespaced-element as element(), $target as xs:string) as element()* {
+declare function local:construct-compacted-tree($doc as item()*, $attributes-to-suppress-from-paths as xs:string*, $attributes-to-output-with-value as xs:string*, $empty-elements-to-remove as xs:string*, $path-attributes-to-remove-from-trees as xs:string*, $default-namespaced-element as element(), $orders as element(), $target as xs:string) as element()* {
     let $paths := local:build-paths($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $target)
     let $pruned-paths := local:prune-paths($paths)
     let $element-list := local:make-element-list($pruned-paths)
     let $compacted-tree := local:build-tree($element-list/*, $path-attributes-to-remove-from-trees)
+    let $compacted-tree := local:order-children($compacted-tree, $orders)
     let $compacted-tree := 
             element {node-name($default-namespaced-element)}
         {$default-namespaced-element/@*, $compacted-tree/*}
@@ -218,16 +219,20 @@ declare function local:construct-compacted-tree($doc as item()*, $attributes-to-
 
 };
 
+declare function local:get-level($node as element()) as xs:integer {
+    $node/@tc:depth
+};
+
 (: author: Jens Erat, https://stackoverflow.com/questions/21527660/transforming-sequence-of-elements-to-tree :)
-(:slightly modified to exclude attributes and incorporate local:get-level():)
+(:slightly modified to exclude attributes:)
 declare function local:build-tree($nodes as element()*, $path-attributes-to-remove-from-trees as xs:string*) as element()* {
-    let $level := $nodes[1]/@tc:depth
+    let $level := local:get-level($nodes[1])
     (: Process all nodes of current level :)
     for $node in $nodes
-    where $level eq $node/@tc:depth
+    where $level eq local:get-level($node)
     return
     (: Find next node of current level, if available :)
-        let $next := ($node/following-sibling::*[./@tc:depth le $level])[1]
+        let $next := ($node/following-sibling::*[local:get-level(.) le $level])[1]
         (: All nodes between the current node and the next node on same level are children :)
         let $children := $node/following-sibling::*[$node << . and (not($next) or . << $next)]
         return
@@ -249,30 +254,175 @@ declare function local:build-tree($nodes as element()*, $path-attributes-to-remo
     }
 };
 
-let $doc := 
-    <doc xml:id="x">
-        <a>
-            <b x="1" n="7">text1<e>text2</e>text3</b>
-            <b>text0</b>
-        </a>
-        <a u="5">
-            <c>
-                <d y="2" z="3">text4-1</d>
-                <d y="3" z="4">text4-2</d>
-                <d y="4">text4-3</d>
-                <d z="4">text4-4</d>
-            </c>
-        </a>
-        <a>
-            <c>
-                <d y="4">text5-1<p n="6"/>text6-1</d>
-            </c>
-            <c>
-                <d y="5">text5-2<p n="7"/>text6-2</d>
-            </c>
-        </a>
-    </doc>
-(:let $doc := doc('/db/test/test-doc.xml'):)
+declare function local:order-children($element as element(), $orders as element()+) as element() {
+    element {node-name($element)}
+        {$element/@*,
+        let $element-name := local-name($element)
+        let $order-local := $orders/order[parents/parent = $element-name]
+        let $order-local := $order-local/children/item/text()
+        let $children := $element/node()
+        let $children-names := 
+            for $child in $children
+            return local-name($child)
+        return
+            if ($children-names = $order-local)
+            then
+                for $item in $order-local
+                return
+                    if ($item eq '*')
+                    then 
+                        for $child in $children[not(local-name(.) = $order-local)]
+                        return 
+                            if ($child instance of element())
+                            then local:order-children($child, $orders)
+                            else ()
+                    else 
+                        for $child in $children[local-name(.) eq $item]
+                        return 
+                            if ($child instance of element())
+                            then local:order-children($child, $orders)
+                            else ()
+                else
+                    for $child in $children
+                    return 
+                        if ($child instance of element())
+                        then 
+                            if ($orders) 
+                            then local:order-children($child, $orders)
+                            else ()
+                        else $child
+                    
+      }
+};
+
+
+let $orders :=
+<orders>
+    <order>
+        <parents>
+            <parent>TEI</parent>
+        </parents>
+        <children>
+            <item>teiHeader</item>
+            <item>text</item>
+        </children>
+    </order>
+    <order>
+        <parents>
+            <parent>teiHeader</parent>
+        </parents>
+        <children>
+            <item>fileDesc</item>
+            <item>profileDesc</item>
+            <item>revisionDesc</item>
+            <item>*</item>
+        </children>
+    </order>
+    <order>
+        <parents>
+            <parent>fileDesc</parent>
+        </parents>
+        <children>
+            <item>titleStmt</item>
+            <item>editionStmt</item>
+            <item>extent</item>
+            <item>publicationStmt</item>
+            <item>seriesStmt</item>
+            <item>notesStmt</item>
+            <item>sourceDesc</item>
+            <item>*</item>
+        </children>
+    </order>
+    <order>
+        <parents>
+            <parent>titleStmt</parent>
+        </parents>
+        <children>
+            <item>title</item>
+            <item>author</item>
+            <item>editor</item>
+            <item>sponsor</item>
+            <item>funder</item>
+            <item>principal</item>
+            <item>respStmt</item>
+            <item>*</item>
+        </children>
+    </order>
+    <order>
+        <parents>
+            <parent>publicationStmt</parent>
+        </parents>
+        <children>
+            <item>publisher</item>
+            <item>distributor</item>
+            <item>authority</item>
+            <item>pubPlace</item>
+            <item>address</item>
+            <item>idno</item>
+            <item>availability</item>
+            <item>date</item>
+            <item>licence</item>
+            <item>*</item>
+        </children>
+    </order>
+    <order>
+        <parents>
+            <parent>biblFull</parent>
+        </parents>
+        <children>
+            <item>titleStmt</item>
+            <item>editionStmt</item>
+            <item>extent</item>
+            <item>publicationStmt</item>
+            <item>sourceDesc</item>
+            <item>*</item>
+        </children>
+    </order>
+    <order>
+        <parents>
+            <parent>msIdentifier</parent>
+        </parents>
+        <children>
+            <item>country</item>
+            <item>region</item>
+            <item>settlement</item>
+            <item>repository</item>
+            <item>collection</item>
+            <item>idno</item>
+            <item>msName</item>
+            <item>*</item>
+        </children>
+    </order>
+    <order>
+        <parents>
+            <parent>text</parent>
+        </parents>
+        <children>
+            <item>front</item>
+            <item>body</item>
+            <item>back</item>
+        </children>
+    </order>
+    <order>
+        <parents>
+            <parent>div</parent>
+        </parents>
+        <children>
+            <item>head</item>
+            <item>list</item>
+            <item>p</item>
+            <item>*</item>
+            <item>trailer</item>
+        </children>
+    </order>
+    <order>
+        <parents>
+            <parent>app</parent>
+        </parents>
+        <children><item>lem</item><item>rdgGrp</item>item><item>rdg</item><item>*</item></children>
+    </order>
+</orders>
+
 (:let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
 let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml')
 
@@ -289,4 +439,4 @@ let $target := 'compacted-tree'
 return 
     if ($target eq 'paths')
     then local:build-paths($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $target)
-    else local:construct-compacted-tree($doc/*, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $path-attributes-to-remove-from-trees, $default-namespaced-element, $target)
+    else local:construct-compacted-tree($doc/*, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $path-attributes-to-remove-from-trees, $default-namespaced-element, $orders, $target)
