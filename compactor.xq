@@ -199,18 +199,24 @@ declare function local:make-element-list($element as element()) as element() {
           , 
           for $attribute in $attributes
           return attribute {$attribute} {
-              if ($attribute eq 'dim') 
+              if ($attribute eq 'dim' and $name eq 'space') 
               then 'horizontal' 
               else
-                  if ($attribute eq 'level')
+                  if ($attribute eq 'level' and $name eq 'title')
                   then 'a' 
                   else
-                      if ($attribute eq 'rows')
-                      then '10'
-                      else 
-                          if ($attribute eq 'xml:id')
-                          then concat('uuid-', util:uuid())
-                          else 'x'},
+                      if ($attribute eq 'type' and $name eq 'castItem')
+                      then 'role'
+                      else
+                          if ($attribute eq 'rows' and $name eq 'cell')
+                          then '1'
+                          else 
+                              if ($attribute eq 'default' and $name eq 'sourceDesc')
+                              then 'true'
+                              else 
+                                  if ($attribute eq 'xml:id')
+                                  then concat('uuid-', util:uuid())
+                                  else 'x'},
           $text}
       }
 };
@@ -418,6 +424,7 @@ let $orders :=
     <order>
         <parents>
             <parent>div</parent>
+            <parent>castGroup</parent>
         </parents>
         <children>
             <item>head</item>
@@ -433,12 +440,17 @@ let $orders :=
         </parents>
         <children><item>lem</item><item>rdgGrp</item>item><item>rdg</item><item>*</item></children>
     </order>
+    <order>
+        <parents>
+            <parent>sp</parent>
+        </parents>
+        <children><item>speaker</item><item>*</item></children>
+    </order>
 </orders>
 
-(:let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
-let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml')
+let $doc := doc('/db/apps/shakespeare/data/ham.xml')
+(:let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml'):)
 
-let $default-namespaced-element := <TEI xmlns="http://www.tei-c.org/ns/1.0"/>
 let $default-namespaced-element := <TEI xmlns="http://www.tei-c.org/ns/1.0"/>
 let $attributes-to-suppress-from-paths := ''
 (:('xml:id', 'n'):)

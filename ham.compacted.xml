@@ -1,69 +1,69 @@
-<!--compacted version of https://github.com/wolfgangmm/ShakespeareDemo/blob/master/data/ham.xml-->
-<TEI depth="1" count="1" xml:id="x">
-    <text depth="2" count="1">
-        <body depth="3" count="1">
-            <div depth="4" count="5" xml:id="x">
-                <div depth="5" count="20" xml:id="x">
-                    <head depth="6" count="20">text</head>
-                    <sp depth="6" count="1137" who="x">
-                        <ab depth="7" count="1094" xml:id="x" n="x">text</ab>
-                        <l depth="7" count="2818" xml:id="x" n="x">text
-                            <stage depth="8" count="127">text</stage>
-                        </l>
-                        <lg depth="7" count="26" type="x">
-                            <l depth="8" count="130" xml:id="x" n="x">text
-                                <stage depth="9" count="1">text</stage>
-                            </l>
-                            <lg depth="8" count="2" type="x">
-                                <l depth="9" count="10" xml:id="x" n="x">text</l>
-                            </lg>
-                        </lg>
-                        <speaker depth="7" count="1137">text</speaker>
-                        <stage depth="7" count="96">text</stage>
-                    </sp>
-                    <stage depth="6" count="40">text</stage>
-                </div>
-                <head depth="5" count="5">text</head>
-            </div>
-        </body>
-        <front depth="3" count="1">
-            <div depth="4" count="1" xml:id="x" type="x">
-                <castList depth="5" count="1">
-                    <castGroup depth="6" count="2">
-                        <castItem depth="7" count="8" type="x">
-                            <role depth="8" count="8" xml:id="x">text</role>
-                        </castItem>
-                        <head depth="7" count="2">text</head>
-                    </castGroup>
-                    <castItem depth="6" count="30" type="x">
-                        <roleDesc depth="7" count="11">text</roleDesc>
-                        <role depth="7" count="29" xml:id="x">text</role>
-                    </castItem>
-                </castList>
-                <head depth="5" count="1">text</head>
-            </div>
-        </front>
-    </text>
-    <teiHeader depth="2" count="1">
-        <fileDesc depth="3" count="1">
-            <publicationStmt depth="4" count="1">
-                <p depth="5" count="7">text
-                    <title depth="6" count="6">text</title>
+<!--compacted version of https://github.com/wolfgangmm/ShakespeareDemo/blob/master/data/ham.xml with pb, lb, cb, and milestone elements removed, with default values for a number of attributes, and with non-tei attributes removed-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>text</title>
+                <author>text</author>
+                <respStmt>
+                    <name>text</name>
+                    <resp>text</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <p>text
+                    <title>text</title>
                 </p>
             </publicationStmt>
-            <sourceDesc depth="4" count="1" default="x">
-                <p depth="5" count="3">text
-                    <title depth="6" count="2">text</title>
+            <sourceDesc default="true">
+                <p>text
+                    <title>text</title>
                 </p>
             </sourceDesc>
-            <titleStmt depth="4" count="1">
-                <author depth="5" count="1">text</author>
-                <respStmt depth="5" count="3">
-                    <name depth="6" count="3">text</name>
-                    <resp depth="6" count="3">text</resp>
-                </respStmt>
-                <title depth="5" count="1">text</title>
-            </titleStmt>
         </fileDesc>
     </teiHeader>
+    <text>
+        <front>
+            <div xml:id="uuid-8b0dabfc-794a-43d2-84b4-ebe3253b293b" type="x">
+                <head>text</head>
+                <castList>
+                    <castGroup>
+                        <head>text</head>
+                        <castItem type="role">
+                            <role xml:id="uuid-c657b0e5-307c-45b1-88f0-93e9a4e958db">text</role>
+                        </castItem>
+                    </castGroup>
+                    <castItem type="role">
+                        <roleDesc>text</roleDesc>
+                        <role xml:id="uuid-61ecd6a6-8056-4bc7-bdde-352ee976e189">text</role>
+                    </castItem>
+                </castList>
+            </div>
+        </front>
+        <body>
+            <div xml:id="uuid-86da69f1-221f-4fbc-95e0-fd4686876177">
+                <head>text</head>
+                <div xml:id="uuid-4e0d42d7-7987-4fc6-aa65-ec000abba2a3">
+                    <head>text</head>
+                    <sp who="x">
+                        <speaker>text</speaker>
+                        <ab xml:id="uuid-0691ff45-072b-4fc9-a7ce-593a657a71a6" n="x">text</ab>
+                        <l xml:id="uuid-0275b9ef-d087-463d-8094-02daed3688b4" n="x">text
+                            <stage>text</stage>
+                        </l>
+                        <lg type="x">
+                            <l xml:id="uuid-e5c2d196-2c5f-4887-955d-37c76fac0860" n="x">text
+                                <stage>text</stage>
+                            </l>
+                            <lg type="x">
+                                <l xml:id="uuid-2c9a54b6-c4e6-4739-8c35-875226333d3d" n="x">text</l>
+                            </lg>
+                        </lg>
+                        <stage>text</stage>
+                    </sp>
+                    <stage>text</stage>
+                </div>
+            </div>
+        </body>
+    </text>
 </TEI>
