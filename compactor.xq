@@ -57,8 +57,6 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
             if ($target eq 'paths')
             then ($doc/descendant-or-self::element(), $doc/descendant-or-self::text(), $doc/descendant-or-self::node()/attribute::*)
             else ($doc/descendant-or-self::element(), $doc/descendant-or-self::text())
-        (:we order the nodes in document order (and remove duplicates, though here there should be none here):)
-        let $nodes := $nodes/.
         let $nodes := 
             for $node in $nodes
             where not(name($node) = $empty-elements-to-remove)
@@ -72,53 +70,52 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
                 (
                 for $ancestor at $i in $ancestors
                 return
-                    (:construct the unique path by concatenating …:)
+                    (:construct the path by concatenating …:)
                     concat
                     (
-                    (:each ancestor qname,:)
+                    (:each ancestor name,:)
                     name($ancestor)
                     ,
-                    (:any attributes attached to ancestor element nodes, expressed as as a predicate:)
-                    (:any attributes attached to sibling elements that are not attached to the ancestor in question, expressed as a negative predicate:)
                     string-join
                     (
-                    (:get the ancestor attributes:)
+                    (:the ancestor attributes, represented as predicates:)
                     local:handle-attributes($ancestor, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $target)
                     )
                     ,
-                    (:string-joining with a slash:)
+                    (:and a slash, except on the node parent:)
                     if ($i eq count($ancestors))
                     then ''
                     else '/'
                     )
                 )
-            (:attach the node type to the ancestor path:)
+            (:attach the type of the node to the ancestor path, adding …:)
             let $node-type :=
+                (:'text()' for text nodes,:)
                 if ($node instance of text())
                 then 'text()'
                 else
+                    (:the name of the node plus any attributes for element nodes,:)
                     if ($node instance of element())
                     then concat(name($node), local:handle-attributes($node, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $target))
                     else
+                        (:and the name of the attribute for attribute nodes, except for the attributes suppressed.:)
                         if ($node instance of attribute() and not(name($node) = $attributes-to-suppress-from-paths))
                         then concat('@', name($node))
                         else ''
             (:and return the concatenation of ancestor path and node type with a slash:)
             return 
-                (:if there is no ancestor path, do not attach a node type:)
                 concat
                     (
                     $ancestors
                     , 
+                    (:if there is no ancestor path, at the document element, do not attach a slash:)
                     if ($ancestors and $node-type) 
                     then '/' 
                     else ''
                     , 
                     $node-type
                     )
-                
     let $paths-count := count($paths)
-    (:distinct-values() appears to maintain document order, but can this be replied upon?:)
     let $distinct-paths := distinct-values($paths)
     let $paths :=
         <paths tc:count="{$paths-count}">
@@ -127,9 +124,8 @@ declare function local:build-paths($doc as item()*, $attributes-to-suppress-from
             (:for $path at $n in ($paths):)
             let $count := count($paths[. eq $path])
             let $depth := count(tokenize(replace($path, '/text\(\)', ''), '/'))
-            order by 
-                replace(replace($path, '/text()', ' /text()'), '@', ' @')(:make text and attribute else nodes follow immediately after their element node:) 
-                
+            (:make text and attribute nodes appear immediately after their element node:) 
+            order by replace(replace($path, '/text()', ' /text()'), '@', ' @')
             return
                 <path tc:depth="{$depth}" tc:count="{$count}" tc:seq-no="{$sequence-number}">{$path}</path>
             }
@@ -144,7 +140,13 @@ declare function local:handle-attributes($node as element(), $attributes-to-supp
             for $attribute in $attributes
             where not(name($attribute) =  $attributes-to-suppress-from-paths)
             return 
-                concat('[@', name($attribute), if (name($attribute) = $attributes-to-output-with-value) then concat('=', '"', $attribute/string(), '"', ']') else ']')
+                concat(
+                    '[@', name($attribute)
+                    , 
+                    if (name($attribute) = $attributes-to-output-with-value) 
+                    then concat('=', '"', $attribute/string(), '"', ']') 
+                    else ']'
+                    )
         return
             string-join($attributes)
 };
@@ -180,7 +182,7 @@ declare function local:make-element-list($element as element()) as element() {
         let $depth := $child/@tc:depth
         let $count := $child/@tc:count
         let $seq-no := $child/@tc:seq-no
-        (:the following regexes can probably be expressed in a smarter way:)
+        (:the following regexes can probably be expressed moe elegantly:)
         let $clean := replace($child, '\[not\(@.*?\)\]', '')
         let $name := functx:substring-before-if-contains($clean, '[')
         let $text :=
@@ -191,32 +193,48 @@ declare function local:make-element-list($element as element()) as element() {
             if (contains($clean, '['))
             then substring-after($clean, '[')
             else ''
-      let $attributes := replace($attributes, 'text\(\)\]', '')
-      let $attributes := tokenize(normalize-space(replace(replace(replace($attributes, '\[', ' '), '\]', ' '), '@', ' ')), ' ')
-      return
-          element {$name}
-          {attribute tc:depth {$depth}, attribute tc:count {$count}, attribute tc:seq-no {$seq-no}
-          , 
-          for $attribute in $attributes
-          return attribute {$attribute} {
-              if ($attribute eq 'dim' and $name eq 'space') 
-              then 'horizontal' 
-              else
-                  if ($attribute eq 'level' and $name eq 'title')
-                  then 'a' 
-                  else
-                      if ($attribute eq 'type' and $name eq 'castItem')
-                      then 'role'
-                      else
-                          if ($attribute eq 'rows' and $name eq 'cell')
-                          then '1'
-                          else 
-                              if ($attribute eq 'default' and $name eq 'sourceDesc')
-                              then 'true'
-                              else 
-                                  if ($attribute eq 'xml:id')
-                                  then concat('uuid-', util:uuid())
-                                  else 'x'},
+            let $attributes := replace($attributes, 'text\(\)\]', '')
+            let $attributes := tokenize($attributes, '\]\[')
+            return
+                element {$name}
+                {attribute tc:depth {$depth}, attribute tc:count {$count}, attribute tc:seq-no {$seq-no}
+                ,
+                for $attribute in $attributes
+                let $attribute := normalize-space(replace(replace(replace($attribute, '\[', ' '), '\]', ' '), '@', ' '))
+                let $attribute-name := functx:substring-before-if-contains($attribute, '=')
+                let $attribute-value := 
+                    if (contains($attribute, '='))
+                    then functx:substring-after-if-contains($attribute, '=')
+                    else ''
+                let $attribute-value := replace($attribute-value, '"', '')
+                return
+                    if ($attribute-name)
+                    then
+                        attribute {$attribute-name} {
+                        if ($attribute-value) 
+                        then $attribute-value
+                        else
+                            if ($attribute eq 'dim' and $name eq 'space')
+                            then 'horizontal'
+                            else
+                                if ($attribute eq 'level' and $name eq 'title')
+                                then 'a'
+                                else
+                                    if ($attribute eq 'type' and $name eq 'castItem')
+                                    then 'role'
+                                    else
+                                        if ($attribute eq 'rows' and $name eq 'cell')
+                                        then '1'
+                                        else
+                                        if ($attribute eq 'default' and $name eq 'sourceDesc')
+                                        then 'true'
+                                        else
+                                        if ($attribute eq 'xml:id')
+                                        then concat('uuid-', util:uuid())
+                                        else 'x'
+          }
+          else ()
+          ,
           $text}
       }
 };
@@ -454,10 +472,10 @@ let $doc := doc('/db/apps/shakespeare/data/ham.xml')
 let $default-namespaced-element := <TEI xmlns="http://www.tei-c.org/ns/1.0"/>
 let $attributes-to-suppress-from-paths := ''
 (:('xml:id', 'n'):)
-let $attributes-to-output-with-value := ''
+let $attributes-to-output-with-value := 'who'
 (:('type', 'rend', 'rendition'):)
 let $empty-elements-to-remove := ('pb', 'lb', 'cb', 'milestone')
-let $path-attributes-to-remove-from-trees := ('tc:path', 'tc:count', 'tc:seq-no', 'tc:depth')
+let $path-attributes-to-remove-from-trees := ('tc:count', 'tc:seq-no', 'tc:depth')
 
 let $target := 'compacted-tree'
 
