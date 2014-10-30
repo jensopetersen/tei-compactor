@@ -1,6 +1,4 @@
-<!--compacted-tree version of http://www.deutschestextarchiv.de/book/download_xml/abel_leibmedicus_1699 with pb, lb, cb, and milestone elements removed, with default values for xml:id, level, dim, rows attributes, and with non-tei attributes removed-->
-
-
+<!--compacted-tree version of http://www.deutschestextarchiv.de/book/download_xml/abel_leibmedicus_1699 with pb, lb, cb, and milestone elements removed, with default values for certain attributes, with actual values for rendition attribute, and with non-tei attributes removed-->
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
     <teiHeader>
         <fileDesc>
@@ -37,7 +35,7 @@
                 <measure type="x">text</measure>
             </extent>
             <publicationStmt>
-                <publisher xml:id="uuid-e342758e-3b94-4aed-a550-27cd4546df17">
+                <publisher xml:id="uuid-ce01afb3-c612-4ac6-bad5-ab406fac7847">
                     <address>
 <addrLine>text</addrLine>
 </address>
@@ -115,36 +113,41 @@
         <front>
             <div n="x">
                 <head>text</head>
-                <p>text <fw type="x" place="x">text <hi rendition="x">text</hi>
+                <p>text <fw type="x" place="x">text <hi rendition="#b">text</hi>
                     </fw>
-                    <hi rendition="x">text</hi>
+                    <hi rendition="#aq">text</hi>
+                    <hi rendition="#c">text</hi>
+                    <hi rendition="#in">text</hi>
                 </p>
                 <figure/>
             </div>
             <div type="x">
                 <head>
-                    <hi rendition="x">
-                        <hi rendition="x">text</hi>
+                    <hi rendition="#c">
+                        <hi rendition="#b">text</hi>
                     </hi>
                 </head>
                 <div>
                     <head>
-                        <hi rendition="x">text <hi rendition="x">text</hi>
+                        <hi rendition="#c">text <hi rendition="#b">text</hi>
                         </hi>
                     </head>
                     <list>
-                        <fw type="x" place="x">text <hi rendition="x">text</hi>
+                        <fw type="x" place="x">text <hi rendition="#fr">text</hi>
                         </fw>
-                        <item>text <fw type="x" place="x">text <hi rendition="x">text</hi>
+                        <item>text <fw type="x" place="x">text <hi rendition="#fr">text</hi>
                             </fw>
-                            <hi rendition="x">text <hi rendition="x">text</hi>
+                            <hi rendition="#aq">text</hi>
+                            <hi rendition="#c">
+                                <hi rendition="#b">text</hi>
                             </hi>
+                            <hi rendition="#fr">text</hi>
                             <space dim="horizontal"/>
                         </item>
                     </list>
                     <fw type="x" place="x">text</fw>
                 </div>
-                <fw type="x" place="x">text <hi rendition="x">text</hi>
+                <fw type="x" place="x">text <hi rendition="#b">text</hi>
                 </fw>
             </div>
             <figure/>
@@ -152,17 +155,20 @@
             <titlePage type="x">
                 <byline>
                     <docAuthor>
-                        <hi rendition="x">text</hi>
+                        <hi rendition="#aq">text</hi>
                     </docAuthor>
                 </byline>
                 <docImprint>text <docDate>text</docDate>
                     <pubPlace>text</pubPlace>
                     <publisher>
-                        <hi rendition="x">text</hi>
+                        <hi rendition="#fr">text</hi>
                     </publisher>
                 </docImprint>
                 <docTitle>
-                    <titlePart type="x">text <hi rendition="x">text <hi rendition="x">text</hi>
+                    <titlePart type="x">text <hi rendition="#aq">text</hi>
+                        <hi rendition="#fr">text</hi>
+                        <hi rendition="#k">
+                            <hi rendition="#aq">text</hi>
                         </hi>
                     </titlePart>
                 </docTitle>
@@ -171,79 +177,123 @@
         </front>
         <body>
             <div n="x">
-                <head>text <hi rendition="x">text <hi rendition="x">text</hi>
+                <head>text <hi rendition="#aq">text</hi>
+                    <hi rendition="#b">text <hi rendition="#fr">text</hi>
                     </hi>
+                    <hi rendition="#fr">text</hi>
                 </head>
                 <div n="x">
-                    <head>text <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
-                                    >text</hi>
+                    <head>text <hi rendition="#aq">text</hi>
+                        <hi rendition="#b">text <hi rendition="#aq">text</hi>
+                            <hi rendition="#fr">text</hi>
+                            <hi rendition="#g">
+                                <hi rendition="#aq">text</hi>
                             </hi>
                         </hi>
+                        <hi rendition="#fr">text</hi>
                     </head>
                     <list>
-                        <fw type="x" place="x">text <hi rendition="x">text</hi>
+                        <fw type="x" place="x">text <hi rendition="#aq">text</hi>
+                            <hi rendition="#b">text</hi>
                         </fw>
-                        <item>text <fw type="x" place="x">text <hi rendition="x">text</hi>
+                        <item>text <fw type="x" place="x">text <hi rendition="#b">text</hi>
                             </fw>
-                            <hi rendition="x">text <hi rendition="x">text</hi>
+                            <hi rendition="#aq">text <hi rendition="#aq">text</hi>
+                                <hi rendition="#et">text</hi>
                             </hi>
+                            <hi rendition="#et">text <hi rendition="#aq">text</hi>
+                            </hi>
+                            <hi rendition="#fr">text</hi>
                         </item>
-                        <trailer rendition="x">text <hi rendition="x">text</hi>
+                        <trailer rendition="#leftBraced">text <hi rendition="#aq">text</hi>
                         </trailer>
                     </list>
                     <p>text <cit>
-                            <quote>text <hi rendition="x">text <hi rendition="x">text <hi
-                                            rendition="x">text</hi>
+                            <quote>text <hi rendition="#fr">text <hi rendition="#et">text</hi>
+                                </hi>
+                                <hi rendition="#i">
+                                    <hi rendition="#aq">text <hi rendition="#et">text</hi>
                                     </hi>
                                 </hi>
                                 <lg type="x">
-                                    <l>text <hi rendition="x">
-                                            <hi rendition="x">text <hi rendition="x">text</hi>
+                                    <l>text <hi rendition="#i">
+                                            <hi rendition="#aq">text <hi rendition="#c">text</hi>
                                             </hi>
                                         </hi>
                                     </l>
                                 </lg>
-                                <lg type="x" rendition="x">
-                                    <l>text <hi rendition="x">text</hi>
+                                <lg type="x" rendition="#fr">
+                                    <l>text <hi rendition="#et">text</hi>
                                         <note place="x" n="x">
-                                            <hi rendition="x">text</hi>
+                                            <hi rendition="#aq">text</hi>
                                         </note>
                                     </l>
                                 </lg>
                             </quote>
                         </cit>
-                        <fw type="x" place="x">text <hi rendition="x">text</hi>
+                        <fw type="x" place="x">text <hi rendition="#aq">text</hi>
+                            <hi rendition="#b">text</hi>
+                            <hi rendition="#fr">text</hi>
                         </fw>
                         <gap unit="x" reason="x"/>
-                        <hi rendition="x">text <hi rendition="x">text <hi rendition="x">text</hi>
-                            </hi>
+                        <hi rendition="#aq">text <hi rendition="#in">text</hi>
                             <supplied>text</supplied>
                         </hi>
+                        <hi rendition="#c">text <hi rendition="#aq">text</hi>
+                            <hi rendition="#b">text</hi>
+                            <hi rendition="#fr">text</hi>
+                        </hi>
+                        <hi rendition="#et">text <hi rendition="#aq">text</hi>
+                            <hi rendition="#et">text <hi rendition="#aq">text</hi>
+                                <hi rendition="#fr">text</hi>
+                            </hi>
+                            <hi rendition="#fr">text</hi>
+                            <hi rendition="#i">
+                                <hi rendition="#aq">text</hi>
+                            </hi>
+                        </hi>
+                        <hi rendition="#fr">text <hi rendition="#c">text</hi>
+                            <hi rendition="#et">text</hi>
+                            <supplied>text</supplied>
+                        </hi>
+                        <hi rendition="#i">
+                            <hi rendition="#aq">text</hi>
+                        </hi>
+                        <hi rendition="#in">text</hi>
                         <list>
-                            <item>text <hi rendition="x">text</hi>
+                            <item>text <hi rendition="#aq">text</hi>
                             </item>
-                            <trailer rendition="x">text</trailer>
+                            <trailer rendition="#leftBraced">text</trailer>
                         </list>
-                        <note place="x" n="x">text <hi rendition="x">text <supplied>text</supplied>
+                        <note place="x" n="x">text <hi rendition="#aq">text
+                                    <supplied>text</supplied>
                             </hi>
                         </note>
-                        <note place="x" n="x" xml:id="uuid-8a95d1b3-1740-4da4-b1fe-dc464b52563a"
+                        <note place="x" n="x" xml:id="uuid-a03b80a7-86fb-47e1-882d-acbc641a64b6"
                             next="x">
-                            <hi rendition="x">text <hi rendition="x">text <supplied>text</supplied>
+                            <hi rendition="#aq">text <hi rendition="#et">text
+                                        <supplied>text</supplied>
                                 </hi>
                             </hi>
                         </note>
-                        <note place="x" n="x" xml:id="uuid-b67675db-a7c1-4521-aefe-2228e7679776"
+                        <note place="x" n="x" xml:id="uuid-c66261f8-b184-4390-8acf-02d1bac21fbf"
                             prev="x">
-                            <hi rendition="x">text <supplied>text</supplied>
+                            <hi rendition="#aq">text <supplied>text</supplied>
                             </hi>
                         </note>
                         <quote>
                             <lg type="x">
                                 <l>
-                                    <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
-                                                >text</hi>
-                                            <supplied>text</supplied>
+                                    <hi rendition="#aq">
+                                        <hi rendition="#i">text <supplied>text</supplied>
+                                        </hi>
+                                    </hi>
+                                    <hi rendition="#c">text <hi rendition="#i">
+                                            <hi rendition="#aq">text</hi>
+                                        </hi>
+                                    </hi>
+                                    <hi rendition="#i">
+                                        <hi rendition="#aq">text <supplied>text</supplied>
                                         </hi>
                                     </hi>
                                 </l>
@@ -252,118 +302,183 @@
                         <supplied>text</supplied>
                     </p>
                     <cit>
-                        <quote>text <hi rendition="x">text <hi rendition="x">text <gap unit="x"
-                                        reason="x"/>
-                                    <hi rendition="x">text <gap unit="x" reason="x"/>
+                        <quote>text <hi rendition="#aq">
+                                <hi rendition="#i">text <gap unit="x" reason="x"/>
+                                    <hi rendition="#c">text</hi>
+                                    <hi rendition="#et">text <gap unit="x" reason="x"/>
                                     </hi>
                                 </hi>
                             </hi>
+                            <hi rendition="#et">text <hi rendition="#aq">
+                                    <hi rendition="#i">text</hi>
+                                </hi>
+                                <hi rendition="#i">
+                                    <hi rendition="#aq">text</hi>
+                                </hi>
+                            </hi>
+                            <hi rendition="#fr">text <hi rendition="#aq">text</hi>
+                                <hi rendition="#et">text <hi rendition="#aq">text</hi>
+                                </hi>
+                            </hi>
+                            <hi rendition="#i">
+                                <hi rendition="#aq">text <hi rendition="#c">text</hi>
+                                    <hi rendition="#et">text</hi>
+                                </hi>
+                                <hi rendition="#fr">text <hi rendition="#et">text</hi>
+                                </hi>
+                            </hi>
                             <lg type="x">
-                                <l>text <hi rendition="x">
-                                        <hi rendition="x">text <hi rendition="x">
-                                                <hi rendition="x">text</hi>
+                                <l>text <hi rendition="#aq">
+                                        <hi rendition="#i">text</hi>
+                                    </hi>
+                                    <hi rendition="#i">
+                                        <hi rendition="#aq">text</hi>
+                                        <hi rendition="#et">
+                                            <hi rendition="#aq">
+                                                <hi rendition="#i">text</hi>
                                             </hi>
-                                            <note place="x" n="x">text <hi rendition="x">text</hi>
+                                            <note place="x" n="x">text <hi rendition="#aq">text</hi>
                                             </note>
                                         </hi>
                                     </hi>
                                 </l>
                             </lg>
-                            <note place="x" n="x">text <hi rendition="x">text</hi>
+                            <note place="x" n="x">text <hi rendition="#aq">text</hi>
                             </note>
                         </quote>
                     </cit>
                     <figure/>
-                    <fw type="x" place="x">text <hi rendition="x">text</hi>
+                    <fw type="x" place="x">text <hi rendition="#aq">text</hi>
+                        <hi rendition="#b">text</hi>
+                        <hi rendition="#fr">text</hi>
                     </fw>
                     <lg type="x">
-                        <l>text <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
-                                        >text</hi>
+                        <l>text <hi rendition="#aq">text <hi rendition="#et">text <hi
+                                        rendition="#et">text</hi>
                                 </hi>
-                                <note place="x" n="x">text <hi rendition="x">text</hi>
+                                <hi rendition="#fr">text</hi>
+                                <hi rendition="#i">text</hi>
+                            </hi>
+                            <hi rendition="#c">text <hi rendition="#fr">text</hi>
+                                <note place="x" n="x">text <hi rendition="#aq">text</hi>
                                 </note>
                             </hi>
-                            <note place="x" n="x">text <hi rendition="x">text</hi>
+                            <hi rendition="#et">text <hi rendition="#aq">text <hi rendition="#i"
+                                        >text</hi>
+                                </hi>
+                                <hi rendition="#et">text <hi rendition="#et">text</hi>
+                                </hi>
+                                <hi rendition="#fr">text</hi>
+                                <hi rendition="#i">
+                                    <hi rendition="#aq">text</hi>
+                                </hi>
+                            </hi>
+                            <hi rendition="#fr">text <hi rendition="#c">text</hi>
+                                <hi rendition="#et">text</hi>
+                            </hi>
+                            <hi rendition="#i">
+                                <hi rendition="#aq">text <hi rendition="#c">text</hi>
+                                    <hi rendition="#et">text</hi>
+                                </hi>
+                            </hi>
+                            <note place="x" n="x">text <hi rendition="#aq">text</hi>
                             </note>
                         </l>
                     </lg>
-                    <note place="x" n="x">text <hi rendition="x">text</hi>
+                    <note place="x" n="x">text <hi rendition="#aq">text</hi>
                     </note>
                     <table>
                         <row>
-                            <cell>text <hi rendition="x">text</hi>
+                            <cell>text <hi rendition="#aq">text</hi>
+                                <hi rendition="#fr">text</hi>
                             </cell>
-                            <cell next="x">text <hi rendition="x">text</hi>
+                            <cell next="x">text <hi rendition="#aq">text</hi>
                             </cell>
-                            <cell rows="10">text</cell>
-                            <cell rows="10" xml:id="uuid-5f4bc6db-cb6b-44ad-be99-86a6e0332e61">
-                                <hi rendition="x">text</hi>
+                            <cell rows="1">text</cell>
+                            <cell rows="1" xml:id="uuid-ada71f18-73fe-478f-b965-2fb5f43ee49b">
+                                <hi rendition="#aq">text</hi>
                             </cell>
-                            <cell xml:id="uuid-c9d8e61a-deda-4a1c-85e9-256b805822b8">
-                                <hi rendition="x">text</hi>
+                            <cell xml:id="uuid-4ba4a956-18ff-4969-8b87-76ffce30fca6">
+                                <hi rendition="#aq">text</hi>
                             </cell>
                         </row>
                     </table>
                 </div>
-                <fw type="x" place="x">text <hi rendition="x">text</hi>
+                <fw type="x" place="x">text <hi rendition="#b">text</hi>
                 </fw>
             </div>
-            <fw type="x" place="x">text <hi rendition="x">text</hi>
+            <fw type="x" place="x">text <hi rendition="#b">text</hi>
             </fw>
         </body>
         <back>
             <div n="x">
-                <head>text <hi rendition="x">text</hi>
+                <head>text <hi rendition="#aq">text</hi>
+                    <hi rendition="#b">text</hi>
                 </head>
                 <list>
-                    <item>text <hi rendition="x">text</hi>
-                        <ref>text <hi rendition="x">text</hi>
+                    <item>text <hi rendition="#aq">text</hi>
+                        <hi rendition="#fr">text</hi>
+                        <ref>text <hi rendition="#aq">text</hi>
                         </ref>
                     </item>
                 </list>
                 <p>
-                    <hi rendition="x">text <hi rendition="x">text</hi>
+                    <hi rendition="#c">text <hi rendition="#g">text</hi>
                     </hi>
                 </p>
                 <div n="x">
-                    <head>text <hi rendition="x">text <hi rendition="x">text <hi rendition="x"
+                    <head>text <hi rendition="#aq">text</hi>
+                        <hi rendition="#b">text <hi rendition="#i">text <hi rendition="#aq"
                                     >text</hi>
                             </hi>
                         </hi>
+                        <hi rendition="#fr">text</hi>
                     </head>
                     <list>
-                        <item>text <fw type="x" place="x">text <hi rendition="x">text</hi>
+                        <item>text <fw type="x" place="x">text <hi rendition="#b">text</hi>
                             </fw>
-                            <hi rendition="x">text <hi rendition="x">
-                                    <hi rendition="x">text <hi rendition="x">text</hi>
+                            <hi rendition="#aq">text <ref>text</ref>
+                            </hi>
+                            <hi rendition="#b">text <hi rendition="#i">
+                                    <hi rendition="#aq">text <hi rendition="#in">text</hi>
                                         <supplied>text</supplied>
                                     </hi>
                                 </hi>
-                                <ref>text</ref>
                             </hi>
+                            <hi rendition="#in">text</hi>
                             <list>
-                                <item>text <hi rendition="x">text</hi>
+                                <item>text <hi rendition="#aq">text</hi>
                                     <ref>text</ref>
                                 </item>
                             </list>
-                            <ref>text <hi rendition="x">text</hi>
+                            <ref>text <hi rendition="#aq">text</hi>
                             </ref>
                         </item>
                     </list>
-                    <p>text <fw type="x" place="x">text <hi rendition="x">text</hi>
+                    <p>text <fw type="x" place="x">text <hi rendition="#aq">text</hi>
+                            <hi rendition="#b">text</hi>
                         </fw>
-                        <hi rendition="x">text <hi rendition="x">text</hi>
+                        <hi rendition="#aq">text</hi>
+                        <hi rendition="#c">text <hi rendition="#g">text</hi>
                         </hi>
+                        <hi rendition="#fr">text</hi>
+                        <hi rendition="#in">text</hi>
                         <supplied>text</supplied>
                     </p>
                     <figure/>
-                    <fw type="x" place="x">text <hi rendition="x">text <hi rendition="x">text <hi
-                                    rendition="x">text</hi>
+                    <fw type="x" place="x">text <hi rendition="#aq">text</hi>
+                        <hi rendition="#b">text <hi rendition="#i">
+                                <hi rendition="#aq">text</hi>
                             </hi>
+                        </hi>
+                        <hi rendition="#i">
+                            <hi rendition="#aq">text</hi>
                         </hi>
                     </fw>
                 </div>
-                <fw type="x" place="x">text <hi rendition="x">text</hi>
+                <fw type="x" place="x">text <hi rendition="#aq">text</hi>
+                    <hi rendition="#b">text</hi>
+                    <hi rendition="#fr">text</hi>
                 </fw>
             </div>
             <figure/>
