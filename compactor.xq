@@ -1,6 +1,6 @@
 xquery version "3.0";
 
-declare namespace tei="httc://www.tei-c.org/ns/1.0";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare namespace functx = "httc://www.functx.com";
 declare namespace tc = "https://github.com/jensopetersen/tei-compactor";
 
@@ -294,8 +294,8 @@ declare function local:order-children($element as element(), $orders as element(
     element {node-name($element)}
         {$element/@*,
         let $element-name := local-name($element)
-        let $order-local := $orders/order[parents/parent = $element-name]
-        let $order-local := $order-local/children/item/text()
+        let $order-local := $orders/order[parent = $element-name]
+        let $order-local := $order-local/children/child/text()
         let $children := $element/node()
         let $children-names := 
             for $child in $children
@@ -303,9 +303,9 @@ declare function local:order-children($element as element(), $orders as element(
         return
             if ($children-names = $order-local)
             then
-                for $item in $order-local
+                for $child in $order-local
                 return
-                    if ($item eq '*')
+                    if ($child eq '*')
                     then 
                         for $child in $children[not(local-name(.) = $order-local)]
                         return 
@@ -313,7 +313,7 @@ declare function local:order-children($element as element(), $orders as element(
                             then local:order-children($child, $orders)
                             else ()
                     else 
-                        for $child in $children[local-name(.) eq $item]
+                        for $child in $children[local-name(.) eq $child]
                         return 
                             if ($child instance of element())
                             then local:order-children($child, $orders)
@@ -335,136 +335,127 @@ declare function local:order-children($element as element(), $orders as element(
 let $orders :=
 <orders>
     <order>
-        <parents>
-            <parent>TEI</parent>
-        </parents>
+        <parent>TEI</parent>
         <children>
-            <item>teiHeader</item>
-            <item>text</item>
+            <child>teiHeader</child>
+            <child>text</child>
         </children>
     </order>
     <order>
-        <parents>
-            <parent>teiHeader</parent>
-        </parents>
+        <parent>teiHeader</parent>
         <children>
-            <item>fileDesc</item>
-            <item>profileDesc</item>
-            <item>revisionDesc</item>
-            <item>*</item>
+            <child>fileDesc</child>
+            <child>profileDesc</child>
+            <child>revisionDesc</child>
+            <child>*</child>
         </children>
     </order>
     <order>
-        <parents>
-            <parent>fileDesc</parent>
-        </parents>
+        <parent>fileDesc</parent>
         <children>
-            <item>titleStmt</item>
-            <item>editionStmt</item>
-            <item>extent</item>
-            <item>publicationStmt</item>
-            <item>seriesStmt</item>
-            <item>notesStmt</item>
-            <item>sourceDesc</item>
-            <item>*</item>
+            <child>titleStmt</child>
+            <child>editionStmt</child>
+            <child>extent</child>
+            <child>publicationStmt</child>
+            <child>seriesStmt</child>
+            <child>notesStmt</child>
+            <child>sourceDesc</child>
+            <child>*</child>
         </children>
     </order>
     <order>
-        <parents>
-            <parent>titleStmt</parent>
-        </parents>
+        <parent>titleStmt</parent>
         <children>
-            <item>title</item>
-            <item>author</item>
-            <item>editor</item>
-            <item>sponsor</item>
-            <item>funder</item>
-            <item>principal</item>
-            <item>respStmt</item>
-            <item>*</item>
+            <child>title</child>
+            <child>author</child>
+            <child>editor</child>
+            <child>sponsor</child>
+            <child>funder</child>
+            <child>principal</child>
+            <child>respStmt</child>
+            <child>*</child>
         </children>
     </order>
     <order>
-        <parents>
-            <parent>publicationStmt</parent>
-        </parents>
+        <parent>publicationStmt</parent>
         <children>
-            <item>publisher</item>
-            <item>distributor</item>
-            <item>authority</item>
-            <item>pubPlace</item>
-            <item>address</item>
-            <item>idno</item>
-            <item>availability</item>
-            <item>date</item>
-            <item>licence</item>
-            <item>*</item>
+            <child>publisher</child>
+            <child>distributor</child>
+            <child>authority</child>
+            <child>pubPlace</child>
+            <child>address</child>
+            <child>idno</child>
+            <child>availability</child>
+            <child>date</child>
+            <child>licence</child>
+            <child>*</child>
         </children>
     </order>
     <order>
-        <parents>
-            <parent>biblFull</parent>
-        </parents>
+        <parent>biblFull</parent>
         <children>
-            <item>titleStmt</item>
-            <item>editionStmt</item>
-            <item>extent</item>
-            <item>publicationStmt</item>
-            <item>sourceDesc</item>
-            <item>*</item>
+            <child>titleStmt</child>
+            <child>editionStmt</child>
+            <child>extent</child>
+            <child>publicationStmt</child>
+            <child>sourceDesc</child>
+            <child>*</child>
         </children>
     </order>
     <order>
-        <parents>
-            <parent>msIdentifier</parent>
-        </parents>
+        <parent>msIdentifier</parent>
         <children>
-            <item>country</item>
-            <item>region</item>
-            <item>settlement</item>
-            <item>repository</item>
-            <item>collection</item>
-            <item>idno</item>
-            <item>msName</item>
-            <item>*</item>
+            <child>country</child>
+            <child>region</child>
+            <child>settlement</child>
+            <child>repository</child>
+            <child>collection</child>
+            <child>idno</child>
+            <child>msName</child>
+            <child>*</child>
         </children>
     </order>
     <order>
-        <parents>
-            <parent>text</parent>
-        </parents>
+        <parent>text</parent>
         <children>
-            <item>front</item>
-            <item>body</item>
-            <item>back</item>
+            <child>front</child>
+            <child>body</child>
+            <child>back</child>
         </children>
     </order>
     <order>
-        <parents>
-            <parent>div</parent>
-            <parent>castGroup</parent>
-        </parents>
+        <parent>div</parent>
         <children>
-            <item>head</item>
-            <item>list</item>
-            <item>p</item>
-            <item>*</item>
-            <item>trailer</item>
+            <child>head</child>
+            <child>list</child>
+            <child>p</child>
+            <child>*</child>
+            <child>trailer</child>
         </children>
     </order>
     <order>
-        <parents>
-            <parent>app</parent>
-        </parents>
-        <children><item>lem</item><item>rdgGrp</item>item><item>rdg</item><item>*</item></children>
+        <parent>castGroup</parent>
+        <children>
+            <child>head</child>
+            <child>list</child>
+            <child>p</child>
+            <child>*</child>
+            <child>trailer</child>
+        </children>
     </order>
     <order>
-        <parents>
-            <parent>sp</parent>
-        </parents>
-        <children><item>speaker</item><item>*</item></children>
+        <parent>app</parent>
+        <children><child>lem</child><child>rdgGrp</child>item><child>rdg</child><child>*</child></children>
+    </order>
+    <order>
+        <parent>sp</parent>
+        <children>
+            <child>speaker</child>
+            <child>*</child>
+        </children>
     </order>
 </orders>
+
 
 let $doc := doc('/db/apps/shakespeare/data/ham.xml')
 (:let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml'):)
@@ -472,7 +463,7 @@ let $doc := doc('/db/apps/shakespeare/data/ham.xml')
 let $default-namespaced-element := <TEI xmlns="http://www.tei-c.org/ns/1.0"/>
 let $attributes-to-suppress-from-paths := ''
 (:('xml:id', 'n'):)
-let $attributes-to-output-with-value := 'who'
+let $attributes-to-output-with-value := 'rendition'
 (:('type', 'rend', 'rendition'):)
 let $empty-elements-to-remove := ('pb', 'lb', 'cb', 'milestone')
 let $path-attributes-to-remove-from-trees := ('tc:count', 'tc:seq-no', 'tc:depth')
