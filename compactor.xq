@@ -305,15 +305,7 @@ declare function local:order-children($element as element(), $orders as element(
             then
                 for $child in $order-local
                 return
-                    if ($child eq '*')
-                    then 
-                        for $child in $children[not(local-name(.) = $order-local)]
-                        return 
-                            if ($child instance of element())
-                            then local:order-children($child, $orders)
-                            else ()
-                    else 
-                        for $child in $children[local-name(.) eq $child]
+                    for $child in $children[local-name(.) eq $child]
                         return 
                             if ($child instance of element())
                             then local:order-children($child, $orders)
@@ -331,132 +323,7 @@ declare function local:order-children($element as element(), $orders as element(
       }
 };
 
-
-let $orders :=
-<orders>
-    <order>
-        <parent>TEI</parent>
-        <children>
-            <child>teiHeader</child>
-            <child>text</child>
-        </children>
-    </order>
-    <order>
-        <parent>teiHeader</parent>
-        <children>
-            <child>fileDesc</child>
-            <child>profileDesc</child>
-            <child>revisionDesc</child>
-            <child>*</child>
-        </children>
-    </order>
-    <order>
-        <parent>fileDesc</parent>
-        <children>
-            <child>titleStmt</child>
-            <child>editionStmt</child>
-            <child>extent</child>
-            <child>publicationStmt</child>
-            <child>seriesStmt</child>
-            <child>notesStmt</child>
-            <child>sourceDesc</child>
-            <child>*</child>
-        </children>
-    </order>
-    <order>
-        <parent>titleStmt</parent>
-        <children>
-            <child>title</child>
-            <child>author</child>
-            <child>editor</child>
-            <child>sponsor</child>
-            <child>funder</child>
-            <child>principal</child>
-            <child>respStmt</child>
-            <child>*</child>
-        </children>
-    </order>
-    <order>
-        <parent>publicationStmt</parent>
-        <children>
-            <child>publisher</child>
-            <child>distributor</child>
-            <child>authority</child>
-            <child>pubPlace</child>
-            <child>address</child>
-            <child>idno</child>
-            <child>availability</child>
-            <child>date</child>
-            <child>licence</child>
-            <child>*</child>
-        </children>
-    </order>
-    <order>
-        <parent>biblFull</parent>
-        <children>
-            <child>titleStmt</child>
-            <child>editionStmt</child>
-            <child>extent</child>
-            <child>publicationStmt</child>
-            <child>sourceDesc</child>
-            <child>*</child>
-        </children>
-    </order>
-    <order>
-        <parent>msIdentifier</parent>
-        <children>
-            <child>country</child>
-            <child>region</child>
-            <child>settlement</child>
-            <child>repository</child>
-            <child>collection</child>
-            <child>idno</child>
-            <child>msName</child>
-            <child>*</child>
-        </children>
-    </order>
-    <order>
-        <parent>text</parent>
-        <children>
-            <child>front</child>
-            <child>body</child>
-            <child>back</child>
-        </children>
-    </order>
-    <order>
-        <parent>div</parent>
-        <children>
-            <child>head</child>
-            <child>list</child>
-            <child>p</child>
-            <child>*</child>
-            <child>trailer</child>
-        </children>
-    </order>
-    <order>
-        <parent>castGroup</parent>
-        <children>
-            <child>head</child>
-            <child>list</child>
-            <child>p</child>
-            <child>*</child>
-            <child>trailer</child>
-        </children>
-    </order>
-    <order>
-        <parent>app</parent>
-        <children><child>lem</child><child>rdgGrp</child>item><child>rdg</child><child>*</child></children>
-    </order>
-    <order>
-        <parent>sp</parent>
-        <children>
-            <child>speaker</child>
-            <child>*</child>
-        </children>
-    </order>
-</orders>
-
-
+let $orders := doc('/db/test/schema-to-child-order.output.xml')
 let $doc := doc('/db/apps/shakespeare/data/ham.xml')
 (:let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml'):)
 
@@ -473,4 +340,4 @@ let $target := 'compacted-tree'
 return 
     if ($target eq 'paths')
     then local:build-paths($doc, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $target)
-    else local:construct-compacted-tree($doc/*, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $path-attributes-to-remove-from-trees, $default-namespaced-element, $orders, $target)
+    else local:construct-compacted-tree($doc/*, $attributes-to-suppress-from-paths, $attributes-to-output-with-value, $empty-elements-to-remove, $path-attributes-to-remove-from-trees, $default-namespaced-element, $orders/*, $target)
