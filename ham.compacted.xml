@@ -6,59 +6,57 @@
                 <title>text</title>
                 <author>text</author>
                 <respStmt>
-                    <name>text</name>
                     <resp>text</resp>
+                    <name>text</name>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
-                <p>text
-                    <title>text</title>
+                <p>text <title>text</title>
                 </p>
             </publicationStmt>
             <sourceDesc default="true">
-                <p>text
-                    <title>text</title>
+                <p>text <title>text</title>
                 </p>
             </sourceDesc>
         </fileDesc>
     </teiHeader>
     <text>
         <front>
-            <div xml:id="uuid-8b0dabfc-794a-43d2-84b4-ebe3253b293b" type="x">
+            <div xml:id="uuid-ec6090e7-8721-4981-8996-911f10a3b0e1" type="x">
                 <head>text</head>
                 <castList>
+                    <castItem type="role">
+                        <role xml:id="uuid-66af0d0b-d5c7-48e4-8fdf-0b5a3b07c5b3">text</role>
+                        <roleDesc>text</roleDesc>
+                    </castItem>
                     <castGroup>
                         <head>text</head>
                         <castItem type="role">
-                            <role xml:id="uuid-c657b0e5-307c-45b1-88f0-93e9a4e958db">text</role>
+                            <role xml:id="uuid-12e305b3-2cea-4907-a29e-ce7f4fc871eb">text</role>
                         </castItem>
                     </castGroup>
-                    <castItem type="role">
-                        <roleDesc>text</roleDesc>
-                        <role xml:id="uuid-61ecd6a6-8056-4bc7-bdde-352ee976e189">text</role>
-                    </castItem>
                 </castList>
             </div>
         </front>
         <body>
-            <div xml:id="uuid-86da69f1-221f-4fbc-95e0-fd4686876177">
+            <div xml:id="uuid-1819888c-e0d0-4330-b6e4-69dcf2e238c6">
                 <head>text</head>
-                <div xml:id="uuid-4e0d42d7-7987-4fc6-aa65-ec000abba2a3">
+                <div xml:id="uuid-8c2686d0-d49b-4cf1-9dbd-258d801a1a94">
                     <head>text</head>
                     <sp who="x">
                         <speaker>text</speaker>
-                        <ab xml:id="uuid-0691ff45-072b-4fc9-a7ce-593a657a71a6" n="x">text</ab>
-                        <l xml:id="uuid-0275b9ef-d087-463d-8094-02daed3688b4" n="x">text
-                            <stage>text</stage>
-                        </l>
                         <lg type="x">
-                            <l xml:id="uuid-e5c2d196-2c5f-4887-955d-37c76fac0860" n="x">text
-                                <stage>text</stage>
+                            <l xml:id="uuid-668b907d-046e-4407-ab0c-e2809fdb6fdf" n="x">text
+                                    <stage>text</stage>
                             </l>
                             <lg type="x">
-                                <l xml:id="uuid-2c9a54b6-c4e6-4739-8c35-875226333d3d" n="x">text</l>
+                                <l xml:id="uuid-40ee0737-e41b-40f0-8474-ed6aae207588" n="x">text</l>
                             </lg>
                         </lg>
+                        <l xml:id="uuid-af8660d8-46f7-4c85-82b2-ac4176a4fe4c" n="x">text
+                                <stage>text</stage>
+                        </l>
+                        <ab xml:id="uuid-ef4fbfde-4c05-44c2-b6e1-8d3d9d61e61b" n="x">text</ab>
                         <stage>text</stage>
                     </sp>
                     <stage>text</stage>

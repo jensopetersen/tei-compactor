@@ -23,19 +23,27 @@ let $definitions := collection('/db/test/rng')//rng:define[not(@combine)][not(co
 return
     <definitions>{
     for $definition in $definitions
-    let $parent := $definition/@name/string()
-    let $children := $definition//rng:ref[contains(./@name, 'content')]/@name/string()
-    let $children := 
-        for $child in $children
-        return local:content-to-element($child)
+    let $parent-name := $definition/@name/string()
+    let $children-names := $definition//rng:ref[contains(./@name, 'content')]/@name/string()
+    let $children-names := 
+        for $child-name in $children-names
+        return local:content-to-element($child-name)
     let $children :=
-        for $child in $children
+        for $child-name in $children-names[not(. eq $parent-name)] (:self-nesting elements must be ordered last:)
         return
-            <child>{$child}</child>
-    order by $parent
+            <child>{$child-name}</child>
+    let $children := 
+        (
+            $children
+            ,
+            if ($parent-name = $children-names)
+            then <child>{$parent-name}</child>
+            else ()
+        )
+    order by $parent-name
         return
             <order>
-            <parent>{$parent}</parent>
+            <parent>{$parent-name}</parent>
             <children><child>text-node</child>{$children}</children>
             </order>
     }</definitions>
