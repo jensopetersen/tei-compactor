@@ -18,7 +18,7 @@ declare function local:content-to-element($content-name as xs:string) as xs:stri
 };
 
 let $definitions := collection('/db/test/rng')//rng:define[not(@combine)][not(contains(./@name, '.'))]
-[./@name eq 'text']
+(:[./@name eq 'text']:)
 
 return
     <definitions>{
@@ -36,6 +36,6 @@ return
         return
             <order>
             <parent>{$parent}</parent>
-            <children>{$children}</children>
+            <children><child>text-node</child>{$children}</children>
             </order>
     }</definitions>

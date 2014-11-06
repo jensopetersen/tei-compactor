@@ -187,7 +187,7 @@ declare function local:make-element-list($element as element()) as element() {
         let $name := functx:substring-before-if-contains($clean, '[')
         let $text :=
             if (matches(replace(functx:substring-after-if-contains($clean, '[t'), '\]', ''), 'ext\(\)')) 
-            then 'text' 
+            then <text-node/>
             else ''
         let $attributes := 
             if (contains($clean, '['))
@@ -255,6 +255,7 @@ declare function local:construct-compacted-tree($doc as item()*, $attributes-to-
 
 };
 
+(: author: Jens Erat, https://stackoverflow.com/questions/21527660/transforming-sequence-of-elements-to-tree :)
 declare function local:get-level($node as element()) as xs:integer {
     $node/@tc:depth
 };
@@ -301,31 +302,28 @@ declare function local:order-children($element as element(), $orders as element(
             for $child in $children
             return local-name($child)
         return
-            if ($children-names = $order-local)
+            if ($children-names = $order-local) (:effectively: if the node is an element node:)
             then
                 for $child in $order-local
                 return
                     for $child in $children[local-name(.) eq $child]
                         return 
-                            if ($child instance of element())
-                            then local:order-children($child, $orders)
-                            else ()
-                else
-                    for $child in $children
-                    return 
-                        if ($child instance of element())
-                        then 
-                            if ($orders) 
-                            then local:order-children($child, $orders)
-                            else ()
-                        else $child
-                    
+                            if ($child instance of element() and local-name($child) eq 'text-node')
+                            then 'text'
+                            else 
+                                if ($child instance of element())
+                                then local:order-children($child, $orders)
+                                else ()
+            else
+                for $child in $children
+                return 
+                    $child
       }
 };
 
 let $orders := doc('/db/test/schema-to-child-order.output.xml')
-let $doc := doc('/db/apps/shakespeare/data/ham.xml')
-(:let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml'):)
+(:let $doc := doc('/db/apps/shakespeare/data/ham.xml'):)
+let $doc := doc('/db/test/abel_leibmedicus_1699.TEI-P5.xml')
 
 let $default-namespaced-element := <TEI xmlns="http://www.tei-c.org/ns/1.0"/>
 let $attributes-to-suppress-from-paths := ''
