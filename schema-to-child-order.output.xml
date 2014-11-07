@@ -254,6 +254,7 @@
             <child>stamp</child>
             <child>watermark</child>
             <child>choice</child>
+            <child>abbr</child>
             <child>expan</child>
             <child>ex</child>
             <child>am</child>
@@ -372,7 +373,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>abbr</child>
         </children>
     </order>
     <order>
@@ -1159,6 +1159,7 @@
             <child>corr</child>
             <child>reg</child>
             <child>orig</child>
+            <child>add</child>
             <child>del</child>
             <child>unclear</child>
             <child>damage</child>
@@ -1307,7 +1308,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>add</child>
         </children>
     </order>
     <order>
@@ -1419,6 +1419,7 @@
             <child>forename</child>
             <child>genName</child>
             <child>nameLink</child>
+            <child>addName</child>
             <child>roleName</child>
             <child>idno</child>
             <child>rs</child>
@@ -1470,7 +1471,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>addName</child>
         </children>
     </order>
     <order>
@@ -2042,6 +2042,7 @@
             <child>geo</child>
             <child>email</child>
             <child>address</child>
+            <child>affiliation</child>
             <child>name</child>
             <child>orgName</child>
             <child>persName</child>
@@ -2116,7 +2117,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>affiliation</child>
         </children>
     </order>
     <order>
@@ -3039,6 +3039,7 @@
             <child>extent</child>
             <child>series</child>
             <child>citedRange</child>
+            <child>bibl</child>
             <child>relatedItem</child>
             <child>msIdentifier</child>
             <child>textLang</child>
@@ -3087,7 +3088,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>bibl</child>
         </children>
     </order>
     <order>
@@ -3580,6 +3580,7 @@
             <child>offset</child>
             <child>geogFeat</child>
             <child>placeName</child>
+            <child>bloc</child>
             <child>country</child>
             <child>region</child>
             <child>district</child>
@@ -3647,7 +3648,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>bloc</child>
         </children>
     </order>
     <order>
@@ -4130,6 +4130,7 @@
             <child>stage</child>
             <child>move</child>
             <child>view</child>
+            <child>camera</child>
             <child>sound</child>
             <child>caption</child>
             <child>tech</child>
@@ -4183,7 +4184,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>camera</child>
         </children>
     </order>
     <order>
@@ -4334,6 +4334,7 @@
             <child>view</child>
             <child>camera</child>
             <child>sound</child>
+            <child>caption</child>
             <child>tech</child>
             <child>quote</child>
             <child>cit</child>
@@ -4385,7 +4386,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>caption</child>
         </children>
     </order>
     <order>
@@ -4639,9 +4639,9 @@
             <child>figure</child>
             <child>head</child>
             <child>castItem</child>
+            <child>castGroup</child>
             <child>roleDesc</child>
             <child>trailer</child>
-            <child>castGroup</child>
         </children>
     </order>
     <order>
@@ -5043,6 +5043,7 @@
             <child>graphic</child>
             <child>binaryObject</child>
             <child>formula</child>
+            <child>catchwords</child>
             <child>dimensions</child>
             <child>heraldry</child>
             <child>locus</child>
@@ -5175,7 +5176,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>catchwords</child>
         </children>
     </order>
     <order>
@@ -5416,8 +5416,8 @@
             <child>text-node</child>
             <child>desc</child>
             <child>precision</child>
-            <child>respons</child>
             <child>certainty</child>
+            <child>respons</child>
         </children>
     </order>
     <order>
@@ -5822,6 +5822,7 @@
         <children>
             <child>text-node</child>
             <child>quote</child>
+            <child>cit</child>
             <child>said</child>
             <child>q</child>
             <child>floatingText</child>
@@ -5895,7 +5896,6 @@
             <child>lbl</child>
             <child>xr</child>
             <child>re</child>
-            <child>cit</child>
         </children>
     </order>
     <order>
@@ -6068,6 +6068,7 @@
             <child>g</child>
             <child>seg</child>
             <child>s</child>
+            <child>cl</child>
             <child>phr</child>
             <child>w</child>
             <child>m</child>
@@ -6221,7 +6222,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>cl</child>
         </children>
     </order>
     <order>
@@ -7589,6 +7589,7 @@
             <child>am</child>
             <child>subst</child>
             <child>sic</child>
+            <child>corr</child>
             <child>reg</child>
             <child>orig</child>
             <child>add</child>
@@ -7740,7 +7741,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>corr</child>
         </children>
     </order>
     <order>
@@ -7845,6 +7845,7 @@
             <child>geogFeat</child>
             <child>placeName</child>
             <child>bloc</child>
+            <child>country</child>
             <child>region</child>
             <child>district</child>
             <child>settlement</child>
@@ -7911,7 +7912,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>country</child>
         </children>
     </order>
     <order>
@@ -8274,6 +8274,7 @@
             <child>add</child>
             <child>del</child>
             <child>unclear</child>
+            <child>damage</child>
             <child>handShift</child>
             <child>restore</child>
             <child>supplied</child>
@@ -8419,7 +8420,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>damage</child>
         </children>
     </order>
     <order>
@@ -8509,6 +8509,7 @@
             <child>val</child>
             <child>specList</child>
             <child>specDesc</child>
+            <child>date</child>
             <child>time</child>
             <child>num</child>
             <child>measure</child>
@@ -8595,7 +8596,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>date</child>
         </children>
     </order>
     <order>
@@ -9415,6 +9415,7 @@
             <child>reg</child>
             <child>orig</child>
             <child>add</child>
+            <child>del</child>
             <child>unclear</child>
             <child>damage</child>
             <child>handShift</child>
@@ -9562,7 +9563,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>del</child>
         </children>
     </order>
     <order>
@@ -9797,6 +9797,7 @@
             <child>biblStruct</child>
             <child>listBibl</child>
             <child>msDesc</child>
+            <child>desc</child>
             <child>label</child>
             <child>list</child>
             <child>listApp</child>
@@ -9820,7 +9821,6 @@
             <child>q</child>
             <child>floatingText</child>
             <child>castList</child>
-            <child>desc</child>
         </children>
     </order>
     <order>
@@ -10083,6 +10083,7 @@
             <child>hi</child>
             <child>foreign</child>
             <child>emph</child>
+            <child>distinct</child>
             <child>mentioned</child>
             <child>soCalled</child>
             <child>gloss</child>
@@ -10227,7 +10228,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>distinct</child>
         </children>
     </order>
     <order>
@@ -10489,6 +10489,7 @@
             <child>bloc</child>
             <child>country</child>
             <child>region</child>
+            <child>district</child>
             <child>settlement</child>
             <child>geogName</child>
             <child>climate</child>
@@ -10553,7 +10554,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>district</child>
         </children>
     </order>
     <order>
@@ -12396,11 +12396,11 @@
         <children>
             <child>text-node</child>
             <child>label</child>
+            <child>eTree</child>
             <child>triangle</child>
             <child>eLeaf</child>
             <child>ptr</child>
             <child>ref</child>
-            <child>eTree</child>
         </children>
     </order>
     <order>
@@ -13201,6 +13201,7 @@
             <child>depth</child>
             <child>width</child>
             <child>geo</child>
+            <child>email</child>
             <child>address</child>
             <child>affiliation</child>
             <child>name</child>
@@ -13277,7 +13278,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>email</child>
         </children>
     </order>
     <order>
@@ -13295,6 +13295,7 @@
             <child>pc</child>
             <child>hi</child>
             <child>foreign</child>
+            <child>emph</child>
             <child>distinct</child>
             <child>mentioned</child>
             <child>soCalled</child>
@@ -13479,7 +13480,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>emph</child>
         </children>
     </order>
     <order>
@@ -14322,6 +14322,7 @@
             <child>watermark</child>
             <child>choice</child>
             <child>abbr</child>
+            <child>expan</child>
             <child>ex</child>
             <child>am</child>
             <child>subst</child>
@@ -14439,7 +14440,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>expan</child>
         </children>
     </order>
     <order>
@@ -15450,6 +15450,7 @@
             <child>shift</child>
             <child>metamark</child>
             <child>notatedMusic</child>
+            <child>figure</child>
             <child>meeting</child>
             <child>byline</child>
             <child>dateline</child>
@@ -15462,7 +15463,6 @@
             <child>closer</child>
             <child>signed</child>
             <child>postscript</child>
-            <child>figure</child>
         </children>
     </order>
     <order>
@@ -16299,6 +16299,7 @@
             <child>c</child>
             <child>pc</child>
             <child>hi</child>
+            <child>foreign</child>
             <child>emph</child>
             <child>distinct</child>
             <child>mentioned</child>
@@ -16445,7 +16446,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>foreign</child>
         </children>
     </order>
     <order>
@@ -16554,6 +16554,7 @@
             <child>terrain</child>
             <child>trait</child>
             <child>surname</child>
+            <child>forename</child>
             <child>genName</child>
             <child>nameLink</child>
             <child>addName</child>
@@ -16608,7 +16609,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>forename</child>
         </children>
     </order>
     <order>
@@ -16776,6 +16776,7 @@
             <child>q</child>
             <child>floatingText</child>
             <child>castList</child>
+            <child>form</child>
             <child>orth</child>
             <child>pron</child>
             <child>hyph</child>
@@ -16838,7 +16839,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>form</child>
         </children>
     </order>
     <order>
@@ -16848,8 +16848,8 @@
             <child>media</child>
             <child>graphic</child>
             <child>binaryObject</child>
-            <child>hi</child>
             <child>formula</child>
+            <child>hi</child>
         </children>
     </order>
     <order>
@@ -17372,6 +17372,7 @@
             <child>pb</child>
             <child>lb</child>
             <child>cb</child>
+            <child>fw</child>
             <child>anchor</child>
             <child>note</child>
             <child>witDetail</child>
@@ -17389,7 +17390,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>fw</child>
         </children>
     </order>
     <order>
@@ -17723,6 +17723,7 @@
             <child>trait</child>
             <child>surname</child>
             <child>forename</child>
+            <child>genName</child>
             <child>nameLink</child>
             <child>addName</child>
             <child>roleName</child>
@@ -17776,7 +17777,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>genName</child>
         </children>
     </order>
     <order>
@@ -18039,6 +18039,7 @@
             <child>orgName</child>
             <child>persName</child>
             <child>offset</child>
+            <child>geogFeat</child>
             <child>placeName</child>
             <child>bloc</child>
             <child>country</child>
@@ -18108,7 +18109,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>geogFeat</child>
         </children>
     </order>
     <order>
@@ -18209,6 +18209,7 @@
             <child>region</child>
             <child>district</child>
             <child>settlement</child>
+            <child>geogName</child>
             <child>climate</child>
             <child>location</child>
             <child>population</child>
@@ -18271,7 +18272,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>geogName</child>
         </children>
     </order>
     <order>
@@ -18299,6 +18299,7 @@
             <child>distinct</child>
             <child>mentioned</child>
             <child>soCalled</child>
+            <child>gloss</child>
             <child>term</child>
             <child>title</child>
             <child>code</child>
@@ -18440,7 +18441,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>gloss</child>
         </children>
     </order>
     <order>
@@ -18832,6 +18832,7 @@
             <child>tns</child>
             <child>mood</child>
             <child>iType</child>
+            <child>gramGrp</child>
             <child>pos</child>
             <child>subc</child>
             <child>colloc</child>
@@ -18880,7 +18881,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>gramGrp</child>
         </children>
     </order>
     <order>
@@ -19001,10 +19001,10 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>text</child>
+            <child>group</child>
             <child>trailer</child>
             <child>closer</child>
             <child>postscript</child>
-            <child>group</child>
         </children>
     </order>
     <order>
@@ -19810,6 +19810,7 @@
             <child>formula</child>
             <child>catchwords</child>
             <child>dimensions</child>
+            <child>heraldry</child>
             <child>locus</child>
             <child>locusGrp</child>
             <child>material</child>
@@ -19940,7 +19941,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>heraldry</child>
         </children>
     </order>
     <order>
@@ -19956,6 +19956,7 @@
             <child>m</child>
             <child>c</child>
             <child>pc</child>
+            <child>hi</child>
             <child>foreign</child>
             <child>emph</child>
             <child>distinct</child>
@@ -20142,7 +20143,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>hi</child>
         </children>
     </order>
     <order>
@@ -22011,6 +22011,7 @@
             <child>roleName</child>
             <child>idno</child>
             <child>rs</child>
+            <child>lang</child>
             <child>oRef</child>
             <child>oVar</child>
             <child>pRef</child>
@@ -22097,7 +22098,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>lang</child>
         </children>
     </order>
     <order>
@@ -23079,10 +23079,10 @@
             <child>tech</child>
             <child>desc</child>
             <child>label</child>
+            <child>lg</child>
             <child>trailer</child>
             <child>closer</child>
             <child>postscript</child>
-            <child>lg</child>
         </children>
     </order>
     <order>
@@ -23476,6 +23476,7 @@
             <child>biblFull</child>
             <child>bibl</child>
             <child>biblStruct</child>
+            <child>listBibl</child>
             <child>msDesc</child>
             <child>milestone</child>
             <child>gb</child>
@@ -23484,15 +23485,14 @@
             <child>cb</child>
             <child>fw</child>
             <child>anchor</child>
-            <child>listBibl</child>
         </children>
     </order>
     <order>
         <parent>listChange</parent>
         <children>
             <child>text-node</child>
-            <child>change</child>
             <child>listChange</child>
+            <child>change</child>
         </children>
     </order>
     <order>
@@ -23501,10 +23501,10 @@
             <child>text-node</child>
             <child>head</child>
             <child>event</child>
+            <child>listEvent</child>
             <child>relation</child>
             <child>relationGrp</child>
             <child>listRelation</child>
-            <child>listEvent</child>
         </children>
     </order>
     <order>
@@ -23520,10 +23520,10 @@
             <child>text-node</child>
             <child>head</child>
             <child>nym</child>
+            <child>listNym</child>
             <child>listRelation</child>
             <child>relationGrp</child>
             <child>relation</child>
-            <child>listNym</child>
         </children>
     </order>
     <order>
@@ -23532,10 +23532,10 @@
             <child>text-node</child>
             <child>head</child>
             <child>org</child>
+            <child>listOrg</child>
             <child>listRelation</child>
             <child>relationGrp</child>
             <child>relation</child>
-            <child>listOrg</child>
         </children>
     </order>
     <order>
@@ -23546,10 +23546,10 @@
             <child>org</child>
             <child>person</child>
             <child>personGrp</child>
+            <child>listPerson</child>
             <child>relation</child>
             <child>listRelation</child>
             <child>relationGrp</child>
-            <child>listPerson</child>
         </children>
     </order>
     <order>
@@ -23558,10 +23558,10 @@
             <child>text-node</child>
             <child>head</child>
             <child>place</child>
+            <child>listPlace</child>
             <child>listRelation</child>
             <child>relationGrp</child>
             <child>relation</child>
-            <child>listPlace</child>
         </children>
     </order>
     <order>
@@ -23790,6 +23790,7 @@
             <child>text-node</child>
             <child>g</child>
             <child>seg</child>
+            <child>m</child>
             <child>c</child>
             <child>index</child>
             <child>substJoin</child>
@@ -23834,7 +23835,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>m</child>
         </children>
     </order>
     <order>
@@ -23899,6 +23899,7 @@
             <child>heraldry</child>
             <child>locus</child>
             <child>locusGrp</child>
+            <child>material</child>
             <child>objectType</child>
             <child>origDate</child>
             <child>origPlace</child>
@@ -24026,7 +24027,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>material</child>
         </children>
     </order>
     <order>
@@ -24106,6 +24106,7 @@
             <child>date</child>
             <child>time</child>
             <child>num</child>
+            <child>measure</child>
             <child>measureGrp</child>
             <child>dim</child>
             <child>height</child>
@@ -24189,7 +24190,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>measure</child>
         </children>
     </order>
     <order>
@@ -24199,12 +24199,12 @@
             <child>g</child>
             <child>num</child>
             <child>measure</child>
+            <child>measureGrp</child>
             <child>dim</child>
             <child>height</child>
             <child>depth</child>
             <child>width</child>
             <child>geo</child>
-            <child>measureGrp</child>
         </children>
     </order>
     <order>
@@ -24358,6 +24358,7 @@
             <child>foreign</child>
             <child>emph</child>
             <child>distinct</child>
+            <child>mentioned</child>
             <child>soCalled</child>
             <child>gloss</child>
             <child>term</child>
@@ -24501,7 +24502,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>mentioned</child>
         </children>
     </order>
     <order>
@@ -24849,9 +24849,9 @@
             <child>incident</child>
             <child>writing</child>
             <child>shift</child>
+            <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>metamark</child>
         </children>
     </order>
     <order>
@@ -24919,6 +24919,7 @@
             <child>restore</child>
             <child>supplied</child>
             <child>surplus</child>
+            <child>mod</child>
             <child>redo</child>
             <child>retrace</child>
             <child>undo</child>
@@ -25059,7 +25060,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>mod</child>
         </children>
     </order>
     <order>
@@ -25403,6 +25403,7 @@
             <child>rubric</child>
             <child>idno</child>
             <child>filiation</child>
+            <child>msItem</child>
             <child>msItemStruct</child>
             <child>textLang</child>
             <child>decoNote</child>
@@ -25449,7 +25450,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>msItem</child>
         </children>
     </order>
     <order>
@@ -25465,6 +25465,7 @@
             <child>title</child>
             <child>rubric</child>
             <child>incipit</child>
+            <child>msItemStruct</child>
             <child>explicit</child>
             <child>finalRubric</child>
             <child>colophon</child>
@@ -25475,7 +25476,6 @@
             <child>note</child>
             <child>witDetail</child>
             <child>textLang</child>
-            <child>msItemStruct</child>
         </children>
     </order>
     <order>
@@ -25802,6 +25802,7 @@
             <child>email</child>
             <child>address</child>
             <child>affiliation</child>
+            <child>name</child>
             <child>orgName</child>
             <child>persName</child>
             <child>offset</child>
@@ -25875,7 +25876,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>name</child>
         </children>
     </order>
     <order>
@@ -25986,6 +25986,7 @@
             <child>surname</child>
             <child>forename</child>
             <child>genName</child>
+            <child>nameLink</child>
             <child>addName</child>
             <child>roleName</child>
             <child>idno</child>
@@ -26038,7 +26039,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>nameLink</child>
         </children>
     </order>
     <order>
@@ -26434,6 +26434,7 @@
             <child>cb</child>
             <child>fw</child>
             <child>anchor</child>
+            <child>note</child>
             <child>witDetail</child>
             <child>gap</child>
             <child>addSpan</child>
@@ -26449,7 +26450,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>note</child>
         </children>
     </order>
     <order>
@@ -26537,6 +26537,7 @@
             <child>specDesc</child>
             <child>date</child>
             <child>time</child>
+            <child>num</child>
             <child>measure</child>
             <child>measureGrp</child>
             <child>dim</child>
@@ -26621,7 +26622,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>num</child>
         </children>
     </order>
     <order>
@@ -26917,6 +26917,7 @@
             <child>locus</child>
             <child>locusGrp</child>
             <child>material</child>
+            <child>objectType</child>
             <child>origDate</child>
             <child>origPlace</child>
             <child>secFol</child>
@@ -27043,7 +27044,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>objectType</child>
         </children>
     </order>
     <order>
@@ -27434,9 +27434,9 @@
             <child>msDesc</child>
             <child>linkGrp</child>
             <child>link</child>
+            <child>org</child>
             <child>person</child>
             <child>personGrp</child>
-            <child>org</child>
         </children>
     </order>
     <order>
@@ -27527,6 +27527,7 @@
             <child>address</child>
             <child>affiliation</child>
             <child>name</child>
+            <child>orgName</child>
             <child>persName</child>
             <child>offset</child>
             <child>geogFeat</child>
@@ -27599,7 +27600,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>orgName</child>
         </children>
     </order>
     <order>
@@ -27652,6 +27652,7 @@
             <child>sic</child>
             <child>corr</child>
             <child>reg</child>
+            <child>orig</child>
             <child>add</child>
             <child>del</child>
             <child>unclear</child>
@@ -27801,7 +27802,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>orig</child>
         </children>
     </order>
     <order>
@@ -27839,6 +27839,7 @@
             <child>locusGrp</child>
             <child>material</child>
             <child>objectType</child>
+            <child>origDate</child>
             <child>origPlace</child>
             <child>secFol</child>
             <child>signatures</child>
@@ -27964,7 +27965,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>origDate</child>
         </children>
     </order>
     <order>
@@ -28003,6 +28003,7 @@
             <child>material</child>
             <child>objectType</child>
             <child>origDate</child>
+            <child>origPlace</child>
             <child>secFol</child>
             <child>signatures</child>
             <child>stamp</child>
@@ -28127,7 +28128,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>origPlace</child>
         </children>
     </order>
     <order>
@@ -29226,6 +29226,7 @@
             <child>affiliation</child>
             <child>name</child>
             <child>orgName</child>
+            <child>persName</child>
             <child>offset</child>
             <child>geogFeat</child>
             <child>placeName</child>
@@ -29297,7 +29298,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>persName</child>
         </children>
     </order>
     <order>
@@ -29415,6 +29415,7 @@
             <child>seg</child>
             <child>s</child>
             <child>cl</child>
+            <child>phr</child>
             <child>w</child>
             <child>m</child>
             <child>c</child>
@@ -29567,7 +29568,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>phr</child>
         </children>
     </order>
     <order>
@@ -29621,8 +29621,8 @@
             <child>idno</child>
             <child>linkGrp</child>
             <child>link</child>
-            <child>listPlace</child>
             <child>place</child>
+            <child>listPlace</child>
         </children>
     </order>
     <order>
@@ -29717,6 +29717,7 @@
             <child>persName</child>
             <child>offset</child>
             <child>geogFeat</child>
+            <child>placeName</child>
             <child>bloc</child>
             <child>country</child>
             <child>region</child>
@@ -29785,7 +29786,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>placeName</child>
         </children>
     </order>
     <order>
@@ -30135,9 +30135,9 @@
         <children>
             <child>text-node</child>
             <child>desc</child>
+            <child>precision</child>
             <child>certainty</child>
             <child>respons</child>
-            <child>precision</child>
         </children>
     </order>
     <order>
@@ -31581,6 +31581,7 @@
             <child>quote</child>
             <child>cit</child>
             <child>said</child>
+            <child>q</child>
             <child>floatingText</child>
             <child>castList</child>
             <child>l</child>
@@ -31639,7 +31640,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>q</child>
         </children>
     </order>
     <order>
@@ -31800,6 +31800,7 @@
             <child>sound</child>
             <child>caption</child>
             <child>tech</child>
+            <child>quote</child>
             <child>cit</child>
             <child>said</child>
             <child>q</child>
@@ -31861,7 +31862,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>quote</child>
         </children>
     </order>
     <order>
@@ -32074,10 +32074,10 @@
         <parent>rdgGrp</parent>
         <children>
             <child>text-node</child>
+            <child>rdgGrp</child>
             <child>wit</child>
             <child>lem</child>
             <child>rdg</child>
-            <child>rdgGrp</child>
         </children>
     </order>
     <order>
@@ -32094,6 +32094,7 @@
             <child>etym</child>
             <child>usg</child>
             <child>xr</child>
+            <child>re</child>
             <child>seg</child>
             <child>s</child>
             <child>cl</child>
@@ -32250,7 +32251,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>re</child>
         </children>
     </order>
     <order>
@@ -32357,6 +32357,7 @@
             <child>undo</child>
             <child>app</child>
             <child>ptr</child>
+            <child>ref</child>
             <child>caesura</child>
             <child>rhyme</child>
             <child>att</child>
@@ -32491,7 +32492,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>ref</child>
         </children>
     </order>
     <order>
@@ -32559,6 +32559,7 @@
             <child>subst</child>
             <child>sic</child>
             <child>corr</child>
+            <child>reg</child>
             <child>orig</child>
             <child>add</child>
             <child>del</child>
@@ -32709,7 +32710,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>reg</child>
         </children>
     </order>
     <order>
@@ -32807,6 +32807,7 @@
             <child>placeName</child>
             <child>bloc</child>
             <child>country</child>
+            <child>region</child>
             <child>district</child>
             <child>settlement</child>
             <child>geogName</child>
@@ -32872,7 +32873,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>region</child>
         </children>
     </order>
     <order>
@@ -33403,6 +33403,7 @@
             <child>unclear</child>
             <child>damage</child>
             <child>handShift</child>
+            <child>restore</child>
             <child>supplied</child>
             <child>surplus</child>
             <child>mod</child>
@@ -33546,7 +33547,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>restore</child>
         </children>
     </order>
     <order>
@@ -33610,6 +33610,7 @@
             <child>surplus</child>
             <child>mod</child>
             <child>redo</child>
+            <child>retrace</child>
             <child>undo</child>
             <child>app</child>
             <child>ptr</child>
@@ -33748,7 +33749,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>retrace</child>
         </children>
     </order>
     <order>
@@ -33827,6 +33827,7 @@
             <child>ptr</child>
             <child>ref</child>
             <child>caesura</child>
+            <child>rhyme</child>
             <child>att</child>
             <child>gi</child>
             <child>tag</child>
@@ -33959,7 +33960,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>rhyme</child>
         </children>
     </order>
     <order>
@@ -34398,6 +34398,7 @@
             <child>genName</child>
             <child>nameLink</child>
             <child>addName</child>
+            <child>roleName</child>
             <child>idno</child>
             <child>rs</child>
             <child>lang</child>
@@ -34448,7 +34449,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>roleName</child>
         </children>
     </order>
     <order>
@@ -34577,6 +34577,7 @@
             <child>addName</child>
             <child>roleName</child>
             <child>idno</child>
+            <child>rs</child>
             <child>lang</child>
             <child>oRef</child>
             <child>oVar</child>
@@ -34625,7 +34626,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>rs</child>
         </children>
     </order>
     <order>
@@ -35105,6 +35105,7 @@
             <child>tech</child>
             <child>quote</child>
             <child>cit</child>
+            <child>said</child>
             <child>q</child>
             <child>floatingText</child>
             <child>castList</child>
@@ -35164,7 +35165,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>said</child>
         </children>
     </order>
     <order>
@@ -35694,6 +35694,7 @@
             <child>objectType</child>
             <child>origDate</child>
             <child>origPlace</child>
+            <child>secFol</child>
             <child>signatures</child>
             <child>stamp</child>
             <child>watermark</child>
@@ -35817,7 +35818,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>secFol</child>
         </children>
     </order>
     <order>
@@ -35825,6 +35825,7 @@
         <children>
             <child>text-node</child>
             <child>g</child>
+            <child>seg</child>
             <child>s</child>
             <child>cl</child>
             <child>phr</child>
@@ -36019,7 +36020,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>seg</child>
         </children>
     </order>
     <order>
@@ -36035,6 +36035,7 @@
         <children>
             <child>text-node</child>
             <child>g</child>
+            <child>sense</child>
             <child>cit</child>
             <child>dictScrap</child>
             <child>form</child>
@@ -36200,7 +36201,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>sense</child>
         </children>
     </order>
     <order>
@@ -36210,8 +36210,8 @@
             <child>classRef</child>
             <child>elementRef</child>
             <child>macroRef</child>
-            <child>alternate</child>
             <child>sequence</child>
+            <child>alternate</child>
         </children>
     </order>
     <order>
@@ -36512,6 +36512,7 @@
             <child>country</child>
             <child>region</child>
             <child>district</child>
+            <child>settlement</child>
             <child>geogName</child>
             <child>climate</child>
             <child>location</child>
@@ -36575,7 +36576,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>settlement</child>
         </children>
     </order>
     <order>
@@ -36794,6 +36794,7 @@
             <child>ex</child>
             <child>am</child>
             <child>subst</child>
+            <child>sic</child>
             <child>corr</child>
             <child>reg</child>
             <child>orig</child>
@@ -36946,7 +36947,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>sic</child>
         </children>
     </order>
     <order>
@@ -36987,6 +36987,7 @@
             <child>origDate</child>
             <child>origPlace</child>
             <child>secFol</child>
+            <child>signatures</child>
             <child>stamp</child>
             <child>watermark</child>
             <child>choice</child>
@@ -37109,7 +37110,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>signatures</child>
         </children>
     </order>
     <order>
@@ -37332,6 +37332,7 @@
             <child>emph</child>
             <child>distinct</child>
             <child>mentioned</child>
+            <child>soCalled</child>
             <child>gloss</child>
             <child>term</child>
             <child>title</child>
@@ -37474,7 +37475,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>soCalled</child>
         </children>
     </order>
     <order>
@@ -37787,6 +37787,7 @@
             <child>move</child>
             <child>view</child>
             <child>camera</child>
+            <child>sound</child>
             <child>caption</child>
             <child>tech</child>
             <child>quote</child>
@@ -37839,7 +37840,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>sound</child>
         </children>
     </order>
     <order>
@@ -38368,6 +38368,7 @@
             <child>joinGrp</child>
             <child>alt</child>
             <child>altGrp</child>
+            <child>span</child>
             <child>spanGrp</child>
             <child>interp</child>
             <child>interpGrp</child>
@@ -38400,7 +38401,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>span</child>
         </children>
     </order>
     <order>
@@ -38584,6 +38584,7 @@
         <children>
             <child>text-node</child>
             <child>moduleSpec</child>
+            <child>specGrp</child>
             <child>specGrpRef</child>
             <child>elementSpec</child>
             <child>classSpec</child>
@@ -38606,7 +38607,6 @@
             <child>forest</child>
             <child>listForest</child>
             <child>schemaSpec</child>
-            <child>specGrp</child>
         </children>
     </order>
     <order>
@@ -38890,6 +38890,7 @@
             <child>listPlace</child>
             <child>listNym</child>
             <child>table</child>
+            <child>stage</child>
             <child>move</child>
             <child>view</child>
             <child>camera</child>
@@ -38958,7 +38959,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>stage</child>
         </children>
     </order>
     <order>
@@ -39000,6 +39000,7 @@
             <child>origPlace</child>
             <child>secFol</child>
             <child>signatures</child>
+            <child>stamp</child>
             <child>watermark</child>
             <child>choice</child>
             <child>abbr</child>
@@ -39121,13 +39122,13 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>stamp</child>
         </children>
     </order>
     <order>
         <parent>state</parent>
         <children>
             <child>text-node</child>
+            <child>state</child>
             <child>head</child>
             <child>p</child>
             <child>ab</child>
@@ -39140,7 +39141,6 @@
             <child>msDesc</child>
             <child>desc</child>
             <child>label</child>
-            <child>state</child>
         </children>
     </order>
     <order>
@@ -39987,6 +39987,7 @@
             <child>damage</child>
             <child>handShift</child>
             <child>restore</child>
+            <child>supplied</child>
             <child>surplus</child>
             <child>mod</child>
             <child>redo</child>
@@ -40129,7 +40130,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>supplied</child>
         </children>
     </order>
     <order>
@@ -40414,8 +40414,8 @@
             <child>formula</child>
             <child>zone</child>
             <child>line</child>
-            <child>surfaceGrp</child>
             <child>surface</child>
+            <child>surfaceGrp</child>
         </children>
     </order>
     <order>
@@ -40574,6 +40574,7 @@
             <child>state</child>
             <child>terrain</child>
             <child>trait</child>
+            <child>surname</child>
             <child>forename</child>
             <child>genName</child>
             <child>nameLink</child>
@@ -40629,7 +40630,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>surname</child>
         </children>
     </order>
     <order>
@@ -40690,6 +40690,7 @@
             <child>handShift</child>
             <child>restore</child>
             <child>supplied</child>
+            <child>surplus</child>
             <child>mod</child>
             <child>redo</child>
             <child>retrace</child>
@@ -40831,7 +40832,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>surplus</child>
         </children>
     </order>
     <order>
@@ -41622,6 +41622,7 @@
             <child>camera</child>
             <child>sound</child>
             <child>caption</child>
+            <child>tech</child>
             <child>quote</child>
             <child>cit</child>
             <child>said</child>
@@ -41672,7 +41673,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>tech</child>
         </children>
     </order>
     <order>
@@ -41717,6 +41717,7 @@
             <child>mentioned</child>
             <child>soCalled</child>
             <child>gloss</child>
+            <child>term</child>
             <child>title</child>
             <child>code</child>
             <child>ident</child>
@@ -41857,7 +41858,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>term</child>
         </children>
     </order>
     <order>
@@ -42199,6 +42199,7 @@
             <child>specList</child>
             <child>specDesc</child>
             <child>date</child>
+            <child>time</child>
             <child>num</child>
             <child>measure</child>
             <child>measureGrp</child>
@@ -42284,7 +42285,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>time</child>
         </children>
     </order>
     <order>
@@ -42315,6 +42315,7 @@
             <child>soCalled</child>
             <child>gloss</child>
             <child>term</child>
+            <child>title</child>
             <child>code</child>
             <child>ident</child>
             <child>media</child>
@@ -42493,7 +42494,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>title</child>
         </children>
     </order>
     <order>
@@ -43182,6 +43182,7 @@
         <parent>trait</parent>
         <children>
             <child>text-node</child>
+            <child>trait</child>
             <child>head</child>
             <child>p</child>
             <child>ab</child>
@@ -43194,7 +43195,6 @@
             <child>msDesc</child>
             <child>desc</child>
             <child>label</child>
-            <child>trait</child>
         </children>
     </order>
     <order>
@@ -43220,8 +43220,8 @@
             <child>text-node</child>
             <child>label</child>
             <child>eTree</child>
-            <child>eLeaf</child>
             <child>triangle</child>
+            <child>eLeaf</child>
         </children>
     </order>
     <order>
@@ -43664,6 +43664,7 @@
             <child>orig</child>
             <child>add</child>
             <child>del</child>
+            <child>unclear</child>
             <child>damage</child>
             <child>handShift</child>
             <child>restore</child>
@@ -43810,7 +43811,6 @@
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>unclear</child>
         </children>
     </order>
     <order>
@@ -44088,9 +44088,9 @@
             <child>symbol</child>
             <child>numeric</child>
             <child>string</child>
+            <child>vLabel</child>
             <child>default</child>
             <child>vAlt</child>
-            <child>vLabel</child>
         </children>
     </order>
     <order>
@@ -44100,6 +44100,7 @@
             <child>fs</child>
             <child>vColl</child>
             <child>vNot</child>
+            <child>vMerge</child>
             <child>binary</child>
             <child>symbol</child>
             <child>numeric</child>
@@ -44107,7 +44108,6 @@
             <child>vLabel</child>
             <child>default</child>
             <child>vAlt</child>
-            <child>vMerge</child>
         </children>
     </order>
     <order>
@@ -44116,6 +44116,7 @@
             <child>text-node</child>
             <child>fs</child>
             <child>vColl</child>
+            <child>vNot</child>
             <child>vMerge</child>
             <child>binary</child>
             <child>symbol</child>
@@ -44124,7 +44125,6 @@
             <child>vLabel</child>
             <child>default</child>
             <child>vAlt</child>
-            <child>vNot</child>
         </children>
     </order>
     <order>
@@ -44450,6 +44450,7 @@
             <child>table</child>
             <child>stage</child>
             <child>move</child>
+            <child>view</child>
             <child>camera</child>
             <child>sound</child>
             <child>caption</child>
@@ -44516,7 +44517,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>view</child>
         </children>
     </order>
     <order>
@@ -44532,6 +44532,7 @@
             <child>text-node</child>
             <child>g</child>
             <child>seg</child>
+            <child>w</child>
             <child>m</child>
             <child>c</child>
             <child>pc</child>
@@ -44604,7 +44605,6 @@
             <child>retrace</child>
             <child>undo</child>
             <child>app</child>
-            <child>w</child>
         </children>
     </order>
     <order>
@@ -44647,6 +44647,7 @@
             <child>secFol</child>
             <child>signatures</child>
             <child>stamp</child>
+            <child>watermark</child>
             <child>choice</child>
             <child>abbr</child>
             <child>expan</child>
@@ -44767,7 +44768,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>watermark</child>
         </children>
     </order>
     <order>
@@ -45092,6 +45092,7 @@
             <child>fw</child>
             <child>anchor</child>
             <child>note</child>
+            <child>witDetail</child>
             <child>gap</child>
             <child>addSpan</child>
             <child>damageSpan</child>
@@ -45106,7 +45107,6 @@
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
-            <child>witDetail</child>
         </children>
     </order>
     <order>
@@ -45435,12 +45435,12 @@
             <child>vocal</child>
             <child>kinesic</child>
             <child>incident</child>
+            <child>writing</child>
             <child>shift</child>
             <child>metamark</child>
             <child>notatedMusic</child>
             <child>figure</child>
             <child>lg</child>
-            <child>writing</child>
         </children>
     </order>
     <order>
@@ -45725,8 +45725,8 @@
             <child>undo</child>
             <child>app</child>
             <child>choice</child>
-            <child>line</child>
             <child>zone</child>
+            <child>line</child>
         </children>
     </order>
 </definitions>

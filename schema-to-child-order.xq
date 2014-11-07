@@ -2,6 +2,20 @@ xquery version "3.0";
 
 declare namespace rng="http://relaxng.org/ns/structure/1.0";
 
+declare function local:delete-doubles($sequence as element(), $come-last as xs:string) as element()* {
+    for $item in $sequence/*
+    return
+        if ($item eq $come-last)
+        then
+            if ($item/following-sibling::item = $item)
+            then ()
+            else $item
+        else
+            if (not($item/preceding-sibling::item = $item))
+            then $item
+            else ()
+};
+
 declare function local:content-to-element($content-name as xs:string) as xs:string* {
     let $elements := collection('/db/test/rng')//rng:define[not(@combine)][./@name eq $content-name]//rng:ref
     let $elements := 
@@ -11,14 +25,12 @@ declare function local:content-to-element($content-name as xs:string) as xs:stri
             if (contains($name, '.') and not($name eq 'macro.anyXML'))
             then local:content-to-element($name)
             else $name
-    (:NB: using distinct-values() assumes that order of introduction is maintained, i.e. first appearance on an item is kept and the rest discarded, but the function is not deterministic, so another approach should be used:)
-    let $elements := distinct-values($elements)
     return
         $elements
 };
 
 let $definitions := collection('/db/test/rng')//rng:define[not(@combine)][not(contains(./@name, '.'))]
-(:[./@name eq 'text']:)
+(:[./@name eq 'div']:)
 
 return
     <definitions>{
@@ -28,18 +40,16 @@ return
     let $children-names := 
         for $child-name in $children-names
         return local:content-to-element($child-name)
+    let $children-names := 
+        <sequence>{
+        for $item in $children-names
+        return <item>{$item}</item>
+    }</sequence>
+    let $children-names := local:delete-doubles($children-names, $parent-name)
     let $children :=
-        for $child-name in $children-names[not(. eq $parent-name)] (:self-nesting elements must be ordered last:)
+        for $child-name in $children-names
         return
-            <child>{$child-name}</child>
-    let $children := 
-        (
-            $children
-            ,
-            if ($parent-name = $children-names)
-            then <child>{$parent-name}</child>
-            else ()
-        )
+            <child>{$child-name/text()}</child>
     order by $parent-name
         return
             <order>
