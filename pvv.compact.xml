@@ -1,0 +1,270 @@
+<!--compacted version of https://github.com/eXistSolutions/sarit-data/blob/master/data/pvv.xml with pb, lb, cb, and milestone elements removed, with default values for a number of attributes, and with non-tei attributes removed-->
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader xml:lang="x">
+        <fileDesc>
+            <titleStmt>
+                <title type="x" subtype="x">text</title>
+                <funder>text</funder>
+                <principal>
+                    <persName>text</persName>
+                </principal>
+                <author role="x">text</author>
+                <respStmt>
+                    <resp>text</resp>
+                    <name xml:id="uuid-badcc7f9-3835-4600-a522-e59f39f5d62a">text</name>
+                    <persName xml:id="uuid-4c06a366-75d8-44f7-a0af-50d95ae32fe0">text</persName>
+                </respStmt>
+            </titleStmt>
+            <editionStmt>
+                <p/>
+            </editionStmt>
+            <publicationStmt>
+                <publisher>text</publisher>
+                <idno>text</idno>
+                <availability status="free">
+                    <licence>
+                        <list>
+                            <item>text</item>
+                        </list>
+                        <p>text
+                            <ref target="x">text</ref>
+                        </p>
+                    </licence>
+                    <p>text</p>
+                </availability>
+                <date>text</date>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl xml:id="uuid-4f14c020-466f-4951-8c55-61292ef1d81e">
+                    <title type="x">text
+                        <persName>text</persName>
+                    </title>
+                    <date>text</date>
+                    <author>text</author>
+                    <editor xml:id="uuid-d84ad10f-1dac-4d8d-a304-8a9c6ae4981f">text</editor>
+                    <publisher>text</publisher>
+                    <pubPlace>text</pubPlace>
+                    <note>text</note>
+                </bibl>
+                <msDesc>
+                    <msIdentifier>
+                        <idno/>
+                        <altIdentifier>
+                            <idno>text</idno>
+                            <note>text</note>
+                        </altIdentifier>
+                    </msIdentifier>
+                    <msContents>
+                        <msItem>
+                            <author>text</author>
+                            <title>text</title>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <p>text</p>
+                        </objectDesc>
+                    </physDesc>
+                    <history>
+                        <p>text</p>
+                    </history>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <p>text
+                <ref sameAs="x"/>
+                <list>
+                    <item>text
+                        <ref target="x">text</ref>
+                    </item>
+                </list>
+            </p>
+        </encodingDesc>
+        <profileDesc/>
+        <revisionDesc>
+            <change who="x" when="2014-01-01">text</change>
+        </revisionDesc>
+    </teiHeader>
+    <text xml:id="uuid-f50ff3ca-c61c-406f-a8c8-f1526ff02422" xml:lang="x">
+        <front xml:id="uuid-f32fa400-0f2c-4c25-b3d6-00668d407d85">
+            <p xml:id="uuid-5a6964a1-51d3-421e-97ad-6ef925dcaaa5">text</p>
+            <docTitle xml:id="uuid-6392cbeb-cea4-4dec-832a-11064a84562f">
+                <titlePart type="x" xml:id="uuid-152cb461-3e8a-494f-b993-245150e5b6bd">text</titlePart>
+            </docTitle>
+        </front>
+        <body xml:id="uuid-ff9a529e-3870-4c1c-afea-42c6bfcf2001">
+            <div n="x" type="x" subtype="x" xml:id="uuid-fe49b951-154c-4c06-beb0-8c1fd9efd542">
+                <head xml:id="uuid-4d01edef-d115-4e96-b7f9-56d0fdb642f0">text
+                    <note xml:id="uuid-35d199fe-ddc0-4da0-a05c-c656973b1389">
+                        <p xml:id="uuid-42e395fb-fc0a-4b69-94d5-fae0694f994e">text
+                            <quote xml:id="uuid-2196ad42-e0d0-4ecb-826e-7506f10fd730">text</quote>
+                        </p>
+                    </note>
+                </head>
+                <div n="x" type="x" xml:id="uuid-b5c6b39e-127c-4c13-83f2-35294cd88e26">
+                    <head xml:id="uuid-e4d73276-c1d5-4201-aeb9-b520474ba87c">text</head>
+                    <label type="x">text</label>
+                    <div n="x" xml:id="uuid-59ef690c-9f94-4d6f-abca-73a795064979">
+                        <note xml:id="uuid-3e7d07c8-2f99-4de1-9a57-7947e8872991">
+                            <p xml:id="uuid-8c67ad5a-62f1-4dfb-b625-ce0c5aa60f94">text</p>
+                            <p xml:lang="x" xml:id="uuid-a2e3b7c2-30f8-49ce-b138-e3bda2c8f5cc">text</p>
+                        </note>
+                        <p xml:id="uuid-21621e36-fac9-4d6a-b33f-4bb041cf5e26">text
+                            <ref cRef="x" xml:id="uuid-e3bffd12-047c-4105-91a2-eb2f61739ef5">text</ref>
+                            <quote sameAs="x" xml:id="uuid-70515130-d8d3-4961-8910-e8a9d266cc61">text
+                                <q type="x" xml:id="uuid-0d2ec1b3-2611-4602-b68c-f3e46b1ff137">text</q>
+                                <lg xml:id="uuid-03fba70a-ff7a-438f-9d5a-23bf6b9bd4ee">
+                                    <l xml:id="uuid-7c8c111a-344d-421b-9246-52626a39cc75">text</l>
+                                </lg>
+                                <note xml:id="uuid-50f3c4fb-5672-4e77-8fdc-3b74c6c7919a">
+                                    <p xml:id="uuid-bc53d075-19ab-4c7a-a104-358c8bd3307e">text</p>
+                                </note>
+                            </quote>
+                            <quote xml:id="uuid-05bd6e4c-5e8f-45a7-b132-70ca5b282152">text
+                                <q type="x" xml:id="uuid-3ec43584-8124-4356-baee-e1791b971a73">text</q>
+                                <note xml:id="uuid-5b422db2-6302-4eed-817b-978347493c40">
+                                    <p xml:id="uuid-333ffee2-b153-4090-a0c6-11460aa789d9">text</p>
+                                </note>
+                            </quote>
+                            <q type="x" xml:id="uuid-d2289820-7f9f-43bb-a52d-9a83266667d6">text
+                                <ref cRef="x" xml:id="uuid-4a82839c-30b3-4c92-a4ad-d0048d45979b"/>
+                                <quote xml:id="uuid-e3ed1bdf-89ea-4c9b-b21c-30b30f4a09bb">text</quote>
+                                <note xml:id="uuid-bf978078-a3a0-4248-b0bb-6faf37b8571c">text
+                                    <quote xml:id="uuid-bc36c759-b152-4bd6-808b-6068ecfbaad5">text
+                                        <ref cRef="x" xml:id="uuid-084d7a8b-2bfa-4b8f-a381-412c338ef683"/>
+                                        <lg xml:id="uuid-72443ee3-fef0-41d2-83db-e3b0f19baefb">
+                                            <l xml:id="uuid-3e5e08cb-789f-455a-9d8a-6fd1d3da5f90">text</l>
+                                        </lg>
+                                    </quote>
+                                    <p xml:id="uuid-e956db12-bb5e-4a56-abc1-9f417292f49b">text
+                                        <ref cRef="x" xml:id="uuid-f8b1c4d2-43a5-4508-9f34-68c7ce265d18">text</ref>
+                                        <quote sameAs="x" xml:id="uuid-0030f306-a40a-4081-8d9e-07614e3c1314">text</quote>
+                                        <quote xml:id="uuid-a0cf2be7-dd8e-4d4b-bffb-a53ba7256a48">text</quote>
+                                        <q type="x" xml:id="uuid-55b95689-673c-4844-8a86-7cc7337cd51a">text</q>
+                                    </p>
+                                    <p xml:lang="x" xml:id="uuid-ec951334-d6ed-4591-844a-da8081c0c6f4">text</p>
+                                </note>
+                                <q type="x" xml:id="uuid-e796b70e-2398-42cb-8320-5b1ff189a32d">text</q>
+                            </q>
+                            <note xml:id="uuid-932a5b04-7b28-4461-b40c-40230a3b069f">text
+                                <quote type="x" xml:id="uuid-2807217a-d5aa-4ed0-8d86-026d012bb587">
+                                    <lg sameAs="x" xml:id="uuid-549aaa27-4f75-4c21-99be-46206bcd9052">
+                                        <l xml:id="uuid-203115e3-4bfe-4f85-a3fd-71a62320d340">text</l>
+                                    </lg>
+                                </quote>
+                                <quote xml:id="uuid-49c11858-eeae-40a9-ad86-96f47a18e268">
+                                    <lg xml:id="uuid-14a06fdd-87cd-49f5-930d-d6d7000118af">
+                                        <l xml:id="uuid-a38342ef-7462-4c6b-bca5-ee6e0113fed7">text</l>
+                                    </lg>
+                                </quote>
+                                <p xml:id="uuid-77f6224f-7f98-4d6e-9d90-b5e8f66ada42">text
+                                    <hi rend="x" xml:id="uuid-9f2e3cc2-1e54-46b1-8565-9e0b591d0505">text
+                                        <note xml:id="uuid-a74e0b94-32ff-4fcc-a7ad-5c9f41507e58">
+                                            <p xml:id="uuid-1f13d035-8f12-46c7-9c20-0a2eda17b152">text</p>
+                                        </note>
+                                    </hi>
+                                    <ref cRef="x" xml:id="uuid-05d0064d-4cbd-4258-be59-49b3973a3832">text</ref>
+                                    <quote sameAs="x" xml:id="uuid-65fd9c09-b85e-4782-8437-e18c79e27cad">text</quote>
+                                    <quote xml:id="uuid-8656453f-5c3e-4c36-9c44-3ac2166c81f3">text
+                                        <ref cRef="x" xml:id="uuid-3b0dad82-851a-44b4-b012-316dca75bea0"/>
+                                        <lg xml:id="uuid-594f60fb-df2e-4114-82a0-e08e7ca0af1e">
+                                            <l xml:id="uuid-c16e9fb9-8c6a-46c4-8976-1fa216767262">text</l>
+                                        </lg>
+                                    </quote>
+                                    <note xml:id="uuid-82edffb0-5ff7-49fc-a9d0-c1ae587140e4">
+                                        <p xml:id="uuid-8d1799f0-c66b-4686-acaf-713b9b97a650">text
+                                            <q type="x" xml:id="uuid-2c407544-ed42-4b4d-adbb-c57d0a11073c">text</q>
+                                        </p>
+                                    </note>
+                                </p>
+                                <p xml:lang="x" xml:id="uuid-1d0525ea-8ef0-4481-bdae-bba4b0a9fbd1">text</p>
+                            </note>
+                        </p>
+                        <lg xml:id="uuid-aa5f9a14-6110-4dc6-aa84-e59320503631">
+                            <l xml:id="uuid-d41103e6-1c65-4ba0-adb2-8f2565fd2d2b">text</l>
+                        </lg>
+                        <label>text</label>
+                        <label type="x">text
+                            <note xml:id="uuid-680f09f6-6801-44dd-adfe-48e80ef3f7c6">
+                                <p>text</p>
+                            </note>
+                        </label>
+                        <quote type="x" xml:id="uuid-36f7f631-5980-4f09-b267-66fcd498271c">
+                            <lg xml:id="uuid-721874a6-31b9-4e3d-9862-ec5b80c4ac51">
+                                <l xml:id="uuid-57195dc9-81c9-4909-a013-4bb1ea7b0716">text
+                                    <note xml:id="uuid-8e0de654-c9f9-41af-a45c-0e183bc0513a">
+                                        <p xml:id="uuid-ad48e347-155b-490c-942f-ad4fc384d184">text</p>
+                                    </note>
+                                </l>
+                            </lg>
+                            <lg xml:id="uuid-0daa8539-893e-4317-abc1-fa30a1009700" next="x">
+                                <l xml:id="uuid-b636719d-9c8c-415a-9317-a12281504f9d">text
+                                    <quote xml:id="uuid-7dac1668-5532-429f-81aa-e19428f3a42d">text</quote>
+                                    <note xml:id="uuid-d58050bf-493a-48ea-a606-c620fe148dfe">
+                                        <p xml:id="uuid-1a79a045-2b47-4400-8357-bf0c376d1f49">text</p>
+                                    </note>
+                                </l>
+                            </lg>
+                            <lg xml:id="uuid-8d1a76df-3c9e-4beb-8069-6d6db9b11991" prev="x">
+                                <l xml:id="uuid-1dcd45cd-9ea6-41aa-aca0-6a66ef8e90e8">text</l>
+                            </lg>
+                            <lg xml:id="uuid-e620a7af-30ac-413a-931b-5929b73fc684" prev="x" next="x">
+                                <l xml:id="uuid-28343958-1e58-4cda-8a2f-c635908eca33">text
+                                    <note xml:id="uuid-6871c1ab-0f3f-4d2c-92e5-4c2e6403c4e6">
+                                        <p xml:id="uuid-6c90923c-6069-4504-be42-a31056ca8971">text</p>
+                                    </note>
+                                </l>
+                            </lg>
+                        </quote>
+                    </div>
+                    <div xml:id="uuid-0ca24a1d-9fe1-4ee2-ab10-d5504195e74f">
+                        <p xml:id="uuid-e1b6a4bc-f2af-4f09-adf6-1ca407b25198">text
+                            <note xml:id="uuid-6f247e99-654a-4ce0-ad41-c100a3bfe422">
+                                <p xml:id="uuid-43ae60a0-e1d9-40b8-be8b-0516edd7de22">text</p>
+                            </note>
+                        </p>
+                    </div>
+                    <trailer xml:id="uuid-b39bdf45-ab51-47ab-84d3-7909ef8433b6">text</trailer>
+                </div>
+                <div n="x" xml:id="uuid-8f88e440-2524-40b7-8387-9c80db6c390e">
+                    <p xml:id="uuid-7666ed6d-c59d-4564-bbc1-45aac074ea99">text
+                        <note xml:id="uuid-79c46166-cd61-41fb-b929-7d070bdcfc61">
+                            <p xml:id="uuid-cf90e860-273b-4d9e-a85e-e5537ae12faf">text</p>
+                        </note>
+                    </p>
+                    <div n="x" xml:id="uuid-274cf76b-1a5f-4e9c-81c5-b31131dbb870">
+                        <p xml:id="uuid-8e954c6a-69c4-428c-aeb3-76d2e654c42c">text
+                            <q type="x" xml:id="uuid-3595b690-65a4-4b2d-92ac-495826394b04">text</q>
+                            <note xml:id="uuid-757a2e6d-1e65-42cc-9945-d9b821206644">
+                                <p xml:id="uuid-b40344ba-14d0-488b-a90b-96152ce11593">text</p>
+                            </note>
+                        </p>
+                        <label type="x">text</label>
+                        <quote type="x" xml:id="uuid-5f0d9c51-c10b-4c86-9c4f-df8950fbeafe">
+                            <lg xml:id="uuid-6c5d9a3e-b303-4d5d-8c80-0d140c575652">
+                                <l xml:id="uuid-a794a702-1861-4570-86c4-36532f0662c3">text
+                                    <note xml:id="uuid-8a382754-ed4f-4722-8402-64eafdf4add9">
+                                        <p xml:id="uuid-46d7a792-3c9f-4c05-bcdd-e913aa56edfe">text</p>
+                                    </note>
+                                </l>
+                            </lg>
+                        </quote>
+                    </div>
+                    <div xml:id="uuid-a470b044-2cd3-48ed-9cb0-e10e6f86003e">
+                        <p xml:id="uuid-6716280e-0f83-4e85-9175-ea4468c20e0b">text
+                            <note xml:id="uuid-04bfb41d-39a3-4928-bf67-35accc3be07c">
+                                <p xml:id="uuid-d7f159a6-512c-4c9d-88f4-64d26369465f">text</p>
+                            </note>
+                        </p>
+                        <lg xml:id="uuid-4f01c8aa-d8df-4bf8-9cc6-ccab8ea8db7f">
+                            <l xml:id="uuid-82c2795b-2ab1-45b8-9247-069a34664dfa">text</l>
+                        </lg>
+                        <label type="x">text</label>
+                    </div>
+                </div>
+                <trailer xml:id="uuid-922227f7-444c-4063-997b-0412bd26d475">text</trailer>
+            </div>
+        </body>
+    </text>
+</TEI>
