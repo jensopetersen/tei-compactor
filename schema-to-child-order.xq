@@ -18,15 +18,12 @@ declare function local:delete-doubles($sequence as element(), $come-last as xs:s
 
 declare function local:content-to-element($content-name as xs:string) as xs:string* {
     let $elements := collection('/db/test/rng')//rng:define[not(@combine)][./@name eq $content-name]//rng:ref
-    let $elements := 
         for $element in $elements
         let $name := $element/@name/string()
         return 
-            if (contains($name, '.') and not($name eq 'macro.anyXML'))
-            then local:content-to-element($name)
-            else $name
-    return
-        $elements
+            if (not((contains($name, '.') and not($name eq 'macro.anyXML'))))
+            then $name
+            else local:content-to-element($name)
 };
 
 let $definitions := collection('/db/test/rng')//rng:define[not(@combine)][not(contains(./@name, '.'))]
@@ -51,9 +48,9 @@ return
         return
             <child>{$child-name/text()}</child>
     order by $parent-name
-        return
-            <order>
-            <parent>{$parent-name}</parent>
-            <children><child>text-node</child>{$children}</children>
-            </order>
+    return
+        <order>
+        <parent>{$parent-name}</parent>
+        <children><child>text-node</child>{$children}</children>
+        </order>
     }</definitions>
